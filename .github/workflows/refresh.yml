@@ -1,0 +1,25 @@
+name: Refresh iCal
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"   # every 15 minutes
+  workflow_dispatch:         # allows manual runs
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Fetch latest ICS from Dash
+        run: |
+          curl -L "https://sportsix.sports-it.com/ical?cid=aerodrome&facility=1" -o facility.ics
+
+      - name: Commit updated ICS
+        run: |
+          git config user.name "ical-bot"
+          git config user.email "ical-bot@example.com"
+          git add facility.ics
+          git commit -m "Update ICS" || echo "No changes to commit"
+          git push
