@@ -14,7 +14,7 @@ jobs:
 
       - name: Fetch latest ICS from Dash
         run: |
-          curl -L "https://sportsix.sports-it.com/ical?cid=aerodrome&facility=1" -o facility.ics
+          curl -L "https://sportsix.sports-it.com/ical?cid=aerodrome&eid=37&k=a5bfc9e07964f8dddeb95fc584cd965d" -o facility.ics
 
       - name: Commit updated ICS
         run: |
