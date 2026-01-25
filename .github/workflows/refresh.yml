@@ -19,10 +19,11 @@ jobs:
         run: |
           curl -L "https://sportsix.sports-it.com/ical?cid=aerodrome&eid=37&k=a5bfc9e07964f8dddeb95fc584cd965d" -o facility.ics
 
-      - name: Commit updated ICS
+            - name: Commit updated ICS
         run: |
           git config user.name "ical-bot"
           git config user.email "ical-bot@example.com"
           git add facility.ics
           git commit -m "Update ICS" || echo "No changes to commit"
-          git push
+          git push --force
+
