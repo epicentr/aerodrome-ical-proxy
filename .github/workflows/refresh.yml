@@ -24,4 +24,4 @@ jobs:
           git config user.email "ical-bot@example.com"
           git add facility.ics
           git commit -m "Update ICS" || echo "No changes to commit"
-          git push
+          git push --force
