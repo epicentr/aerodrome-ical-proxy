@@ -2,7 +2,6 @@ import csv
 import os
 from datetime import datetime, timedelta
 from icalendar import Calendar, Event
-from zoneinfo import ZoneInfo
 from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
 
@@ -22,39 +21,14 @@ def parse_datetime(dt_str):
     return datetime.strptime(dt_str.strip(), "%m/%d/%Y %I:%M:%S %p")
 
 # -----------------------------
-# CREATE CALENDAR WITH TIMEZONE
+# CREATE CALENDAR (NO VTIMEZONE)
 # -----------------------------
 def make_calendar(tzid):
     cal = Calendar()
     cal.add('prodid', '-//Aerodrome League Calendar//mxm.dk//')
     cal.add('version', '2.0')
-    cal.add('X-WR-TIMEZONE', tzid)
-    add_timezone(cal, tzid)
+    # DO NOT add VTIMEZONE — Google will use its internal definition
     return cal
-
-# -----------------------------
-# ADD STATIC VTIMEZONE BLOCK
-# -----------------------------
-def add_timezone(cal, tzid):
-    vt_raw = f"""BEGIN:VTIMEZONE
-TZID:{tzid}
-X-LIC-LOCATION:{tzid}
-BEGIN:STANDARD
-TZOFFSETFROM:-0500
-TZOFFSETTO:-0600
-TZNAME:CST
-DTSTART:19701101T020000
-RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
-END:STANDARD
-BEGIN:DAYLIGHT
-TZOFFSETFROM:-0600
-TZOFFSETTO:-0500
-TZNAME:CDT
-DTSTART:19700308T020000
-RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
-END:DAYLIGHT
-END:VTIMEZONE"""
-    cal.add_component(Calendar.from_ical(vt_raw))
 
 # -----------------------------
 # ADD EVENT TO CALENDAR
@@ -68,8 +42,11 @@ def add_event(cal, row, tzid):
 
     event = Event()
     event.add('summary', title)
+
+    # CRITICAL: Use TZID but NO VTIMEZONE block
     event.add('dtstart', start, parameters={'TZID': tzid})
     event.add('dtend', end, parameters={'TZID': tzid})
+
     event.add('location', location)
     event.add('description', row.get('description', ''))
 
