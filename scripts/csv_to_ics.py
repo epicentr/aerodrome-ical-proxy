@@ -18,15 +18,15 @@ RINK_NAMES = {
 # -----------------------------
 # DETECT SYSTEM TIMEZONE (GitHub Actions compatible)
 # -----------------------------
-def detect_timezone():
+#def detect_timezone():
+#    """
+#    Detects the system timezone by reading /etc/localtime.
+#    Works on GitHub Actions, Linux servers, Docker, macOS.
     """
-    Detects the system timezone by reading /etc/localtime.
-    Works on GitHub Actions, Linux servers, Docker, macOS.
-    """
-    tz_path = os.path.realpath("/etc/localtime")
-    if "zoneinfo" in tz_path:
-        return tz_path.split("zoneinfo/")[1]
-    return "America/Chicago"  # fallback
+#   tz_path = os.path.realpath("/etc/localtime")
+#    if "zoneinfo" in tz_path:
+#        return tz_path.split("zoneinfo/")[1]
+#    return "America/Chicago"  # fallback
 
 # -----------------------------
 # PARSE CSV DATETIME
@@ -122,7 +122,9 @@ def generate_weekly_pdf(rows, tzid):
 # MAIN CSV → ICS PROCESSOR
 # -----------------------------
 def csv_to_ics(csv_path):
-    tzid = detect_timezone()
+   # tzid = detect_timezone()
+   tzid = "America/Chicago"
+
 
     cal_all = make_calendar(tzid)
     cal_rink = make_calendar(tzid)
