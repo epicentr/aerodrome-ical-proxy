@@ -22,7 +22,7 @@ RINK_NAMES = {
 #    """
 #    Detects the system timezone by reading /etc/localtime.
 #    Works on GitHub Actions, Linux servers, Docker, macOS.
-    """
+#    """
 #   tz_path = os.path.realpath("/etc/localtime")
 #    if "zoneinfo" in tz_path:
 #        return tz_path.split("zoneinfo/")[1]
