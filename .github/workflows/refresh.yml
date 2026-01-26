@@ -26,7 +26,9 @@ jobs:
           python-version: '3.x'
 
       - name: Install dependencies
-        run: pip install icalendar
+        run: |
+          pip install icalendar
+          pip install reportlab
 
       - name: Convert CSV to ICS
         run: python scripts/csv_to_ics.py
