@@ -2,9 +2,9 @@ import csv
 from datetime import datetime
 from icalendar import Calendar, Event
 
-def parse_datetime(date_str, time_str):
-    # CSV uses YYYY-MM-DD and HH:MM
-    return datetime.strptime(f"{date_str} {time_str}", "%Y-%m-%d %H:%M")
+def parse_datetime(dt_str):
+    # Format: M/D/YYYY H:MM
+    return datetime.strptime(dt_str, "%m/%d/%Y %H:%M")
 
 def csv_to_ics(csv_path, ics_path):
     cal = Calendar()
@@ -15,21 +15,10 @@ def csv_to_ics(csv_path, ics_path):
         reader = csv.DictReader(csvfile)
         for row in reader:
             try:
-                start = parse_datetime(row['start_date'], row['start'])
-                end = parse_datetime(row['start_date'], row['end'])
-
-                title = (
-                    row.get('best_desc')
-                    or row.get('desc')
-                    or row.get('description')
-                    or 'Event'
-                )
-
-                location = (
-                    row.get('resource_area_id')
-                    or row.get('resource_id')
-                    or 'Aerodrome'
-                )
+                start = parse_datetime(row['start'])
+                end = parse_datetime(row['end'])
+                title = row.get('best_desc') or row.get('desc') or 'Event'
+                location = row.get('resource_id') or row.get('resource_area_id') or 'Aerodrome'
 
                 event = Event()
                 event.add('summary', title)
