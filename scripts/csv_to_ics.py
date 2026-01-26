@@ -3,8 +3,8 @@ from datetime import datetime
 from icalendar import Calendar, Event
 
 def parse_datetime(dt_str):
-    # Format: M/D/YYYY H:MM
-    return datetime.strptime(dt_str, "%m/%d/%Y %H:%M")
+    # Format: M/D/YYYY H:MM AM/PM
+    return datetime.strptime(dt_str.strip(), "%m/%d/%Y %I:%M %p")
 
 def csv_to_ics(csv_path, ics_path):
     cal = Calendar()
