@@ -145,6 +145,7 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 1/30/2026 12:00:00 AM,1/30/2026 4:00:00 PM,1/30/2026 4:30:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 1/30/2026 12:00:00 AM,1/30/2026 4:30:00 PM,1/30/2026 5:30:00 PM,Junior Blades Practice S,,12,1,0,False,,#e8be55
 1/30/2026 12:00:00 AM,1/30/2026 5:40:00 PM,1/30/2026 6:55:00 PM,Game,,g,1,0,False,,#6e8bf7
+1/30/2026 12:00:00 AM,1/30/2026 6:30:00 PM,1/30/2026 10:00:00 PM,Party room - FairCreek h,,13,3,0,False,,#fb42d3
 1/30/2026 12:00:00 AM,1/30/2026 7:05:00 PM,1/30/2026 8:35:00 PM,ISHL Game,,8,1,0,False,,#6e8bf7
 1/30/2026 12:00:00 AM,1/30/2026 8:35:00 PM,1/30/2026 8:45:00 PM,Takedown - ISHL Game,,b,1,0,False,,#d1c9c9
 1/30/2026 12:00:00 AM,1/30/2026 8:45:00 PM,1/30/2026 10:15:00 PM,Game,,g,1,0,False,Winter Novice League 2026 GOALIE vs Winter Novice 2026 PLAYER,#6e8bf7
@@ -191,6 +192,7 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 1/31/2026 12:00:00 AM,1/31/2026 12:15:00 PM,1/31/2026 12:45:00 PM,Learn to Skate Sat 12:15,,c,1,1,True,,#04ba00
 1/31/2026 12:00:00 AM,1/31/2026 12:45:00 PM,1/31/2026 1:00:00 PM,LTS Open Time,,b,1,0,False,,#d1c9c9
 1/31/2026 12:00:00 AM,1/31/2026 1:00:00 PM,1/31/2026 3:30:00 PM,Public Skating (ice cut ,,11,1,0,False,,#f0f509
+1/31/2026 12:00:00 AM,1/31/2026 1:45:00 PM,1/31/2026 2:45:00 PM,Room rental - Lauren Fit,,13,3,0,False,,#fb42d3
 1/31/2026 12:00:00 AM,1/31/2026 3:30:00 PM,1/31/2026 3:40:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
 1/31/2026 12:00:00 AM,1/31/2026 3:40:00 PM,1/31/2026 4:40:00 PM,In-House,,8,1,0,False,,#6e8bf7
 1/31/2026 12:00:00 AM,1/31/2026 4:40:00 PM,1/31/2026 4:50:00 PM,Takedown - In-House,,b,1,0,False,,#d1c9c9
@@ -223,7 +225,7 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 2/1/2026 12:00:00 AM,2/1/2026 6:20:00 PM,2/1/2026 6:30:00 PM,Takedown - In-House,,b,1,0,False,,#d1c9c9
 2/1/2026 12:00:00 AM,2/1/2026 6:30:00 PM,2/1/2026 7:45:00 PM,Game,,g,1,0,False,,#6e8bf7
 2/1/2026 12:00:00 AM,2/1/2026 8:00:00 PM,2/1/2026 9:30:00 PM,ISHL Game,,8,1,0,False,,#6e8bf7
-2/1/2026 12:00:00 AM,2/1/2026 8:55:00 PM,2/1/2026 9:25:00 PM,Party room - TOI off-ice,,13,3,0,False,,#fb42d3
+2/1/2026 12:00:00 AM,2/1/2026 8:00:00 PM,2/1/2026 9:30:00 PM,Party room - TOI off-ice,,13,3,0,True,,#fb42d3
 2/1/2026 12:00:00 AM,2/1/2026 9:30:00 PM,2/1/2026 9:40:00 PM,Takedown - ISHL Game,,b,1,0,False,,#d1c9c9
 2/1/2026 12:00:00 AM,2/1/2026 9:45:00 PM,2/1/2026 10:45:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
 2/2/2026 12:00:00 AM,2/2/2026 5:15:00 AM,2/2/2026 5:45:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
