@@ -1,27 +1,40 @@
-name: Refresh iCal
+name: Refresh Calendar
 
 permissions:
   contents: write
 
 on:
   schedule:
-    - cron: "*/15 * * * *"   # every 15 minutes
-  workflow_dispatch:         # allows manual runs
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
 
 jobs:
   update:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
-      - name: Fetch latest ICS from Dash
+      - name: Download CSV
         run: |
-          curl -L "https://sportsix.sports-it.com/ical?cid=aerodrome&eid=37&k=a5bfc9e07964f8dddeb95fc584cd965d" -o facility.ics
-      - name: Commit updated ICS
+          curl -L "https://lab540.com/aero/scheduleweek-a.csv" -o events.csv
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install icalendar
+
+      - name: Convert CSV to ICS
+        run: python scripts/csv_to_ics.py
+
+      - name: Commit updated files
         run: |
           git config user.name "ical-bot"
           git config user.email "ical-bot@example.com"
-          git add facility.ics
-          git commit -m "Update ICS" || echo "No changes to commit"
+          git add events.csv facility.ics
+          git commit -m "Update calendar data" || echo "No changes to commit"
           git push --force
