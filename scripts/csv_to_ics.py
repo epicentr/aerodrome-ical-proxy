@@ -2,7 +2,6 @@ import csv
 from datetime import datetime, timedelta
 from icalendar import Calendar, Event
 from zoneinfo import ZoneInfo
-import pytz
 from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
 
@@ -34,7 +33,7 @@ def make_calendar(tzid):
     return cal
 
 # -----------------------------
-# ADD VTIMEZONE BLOCK
+# ADD STATIC VTIMEZONE BLOCK
 # -----------------------------
 def add_timezone(cal, tzid):
     """
