@@ -1,13 +1,30 @@
 import csv
-from datetime import datetime
+from datetime import datetime, timedelta
 from icalendar import Calendar, Event
 from zoneinfo import ZoneInfo
 import pytz
+from reportlab.lib.pagesizes import letter
+from reportlab.pdfgen import canvas
 
+# -----------------------------
+# RINK NAME MAPPING
+# -----------------------------
+RINK_NAMES = {
+    "1": "Ice Rink",
+    "2": "Locker Room",
+    "3": "Room Rental"
+}
+
+# -----------------------------
+# PARSE CSV DATETIME
+# -----------------------------
 def parse_datetime(dt_str):
     # CSV format: M/D/YYYY H:MM:SS AM/PM
     return datetime.strptime(dt_str.strip(), "%m/%d/%Y %I:%M:%S %p")
 
+# -----------------------------
+# CREATE CALENDAR WITH TIMEZONE
+# -----------------------------
 def make_calendar(tzid):
     cal = Calendar()
     cal.add('prodid', '-//Aerodrome League Calendar//mxm.dk//')
@@ -16,23 +33,14 @@ def make_calendar(tzid):
     add_timezone(cal, tzid)
     return cal
 
+# -----------------------------
+# ADD VTIMEZONE BLOCK
+# -----------------------------
 def add_timezone(cal, tzid):
     """
-    Generates a VTIMEZONE block dynamically using pytz.
-    This ensures Google Calendar interprets times correctly.
+    Adds a VTIMEZONE block that Google Calendar understands.
+    This prevents Google from assuming GMT.
     """
-    tz = pytz.timezone(tzid)
-    now = datetime.now(tz)
-
-    # Build VTIMEZONE
-    vt = Calendar()
-    vt.add('TZID', tzid)
-
-    # Standard / Daylight transitions
-    for trans in tz._utc_transition_times[-4:]:
-        pass  # pytz doesn't expose full transition metadata cleanly
-
-    # Minimal VTIMEZONE (Google accepts this)
     vt_raw = f"""BEGIN:VTIMEZONE
 TZID:{tzid}
 X-LIC-LOCATION:{tzid}
@@ -51,15 +59,17 @@ DTSTART:19700308T020000
 RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
 END:DAYLIGHT
 END:VTIMEZONE"""
-
     cal.add_component(Calendar.from_ical(vt_raw))
 
+# -----------------------------
+# ADD EVENT TO CALENDAR
+# -----------------------------
 def add_event(cal, row, tzid):
     start = parse_datetime(row['start'])
     end = parse_datetime(row['end'])
 
     title = row.get('best_desc') or row.get('desc') or 'Event'
-    location = row.get('resource_id') or row.get('resource_area_id') or 'Aerodrome'
+    location = RINK_NAMES.get(row.get('resource_id'), 'Aerodrome')
 
     event = Event()
     event.add('summary', title)
@@ -70,6 +80,39 @@ def add_event(cal, row, tzid):
 
     cal.add_component(event)
 
+# -----------------------------
+# WEEKLY PDF EXPORT
+# -----------------------------
+def generate_weekly_pdf(rows, tzid):
+    today = datetime.now()
+    monday = today - timedelta(days=today.weekday())
+    sunday = monday + timedelta(days=6)
+
+    filename = f"week_{monday.strftime('%Y-%m-%d')}.pdf"
+    c = canvas.Canvas(filename, pagesize=letter)
+
+    c.setFont("Helvetica-Bold", 16)
+    c.drawString(50, 750, f"Aerodrome Weekly Schedule ({monday.strftime('%b %d')} - {sunday.strftime('%b %d')})")
+
+    y = 720
+    c.setFont("Helvetica", 10)
+
+    for row in rows:
+        start = parse_datetime(row['start'])
+        if monday <= start <= sunday:
+            line = f"{start.strftime('%a %m/%d %I:%M %p')} — {row['desc']} ({RINK_NAMES.get(row['resource_id'], 'Unknown')})"
+            c.drawString(50, y, line)
+            y -= 14
+            if y < 50:
+                c.showPage()
+                y = 750
+
+    c.save()
+    return filename
+
+# -----------------------------
+# MAIN CSV → ICS PROCESSOR
+# -----------------------------
 def csv_to_ics(csv_path):
     # Detect system timezone dynamically
     tzid = ZoneInfo.local().key
@@ -80,9 +123,12 @@ def csv_to_ics(csv_path):
     cal_locker = make_calendar(tzid)   # resource_id = 2
     cal_room = make_calendar(tzid)     # resource_id = 3
 
+    all_rows = []
+
     with open(csv_path, newline='') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
+            all_rows.append(row)
             try:
                 resource = row.get('resource_id')
 
@@ -105,4 +151,18 @@ def csv_to_ics(csv_path):
     with open('facility_rink.ics', 'wb') as f:
         f.write(cal_rink.to_ical())
 
-    with open('facility_locker
+    with open('facility_locker.ics', 'wb') as f:
+        f.write(cal_locker.to_ical())
+
+    with open('facility_room.ics', 'wb') as f:
+        f.write(cal_room.to_ical())
+
+    # Generate weekly PDF
+    pdf_file = generate_weekly_pdf(all_rows, tzid)
+    print(f"Generated weekly PDF: {pdf_file}")
+
+# -----------------------------
+# ENTRY POINT
+# -----------------------------
+if __name__ == "__main__":
+    csv_to_ics('events.csv')
