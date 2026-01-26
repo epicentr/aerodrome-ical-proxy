@@ -1,4 +1,5 @@
 import csv
+import os
 from datetime import datetime, timedelta
 from icalendar import Calendar, Event
 from zoneinfo import ZoneInfo
@@ -15,10 +16,22 @@ RINK_NAMES = {
 }
 
 # -----------------------------
+# DETECT SYSTEM TIMEZONE (GitHub Actions compatible)
+# -----------------------------
+def detect_timezone():
+    """
+    Detects the system timezone by reading /etc/localtime.
+    Works on GitHub Actions, Linux servers, Docker, macOS.
+    """
+    tz_path = os.path.realpath("/etc/localtime")
+    if "zoneinfo" in tz_path:
+        return tz_path.split("zoneinfo/")[1]
+    return "America/Chicago"  # fallback
+
+# -----------------------------
 # PARSE CSV DATETIME
 # -----------------------------
 def parse_datetime(dt_str):
-    # CSV format: M/D/YYYY H:MM:SS AM/PM
     return datetime.strptime(dt_str.strip(), "%m/%d/%Y %I:%M:%S %p")
 
 # -----------------------------
@@ -36,10 +49,6 @@ def make_calendar(tzid):
 # ADD STATIC VTIMEZONE BLOCK
 # -----------------------------
 def add_timezone(cal, tzid):
-    """
-    Adds a VTIMEZONE block that Google Calendar understands.
-    This prevents Google from assuming GMT.
-    """
     vt_raw = f"""BEGIN:VTIMEZONE
 TZID:{tzid}
 X-LIC-LOCATION:{tzid}
@@ -113,14 +122,12 @@ def generate_weekly_pdf(rows, tzid):
 # MAIN CSV → ICS PROCESSOR
 # -----------------------------
 def csv_to_ics(csv_path):
-    # Detect system timezone dynamically
-    tzid = ZoneInfo.local().key
+    tzid = detect_timezone()
 
-    # Create calendars
     cal_all = make_calendar(tzid)
-    cal_rink = make_calendar(tzid)     # resource_id = 1
-    cal_locker = make_calendar(tzid)   # resource_id = 2
-    cal_room = make_calendar(tzid)     # resource_id = 3
+    cal_rink = make_calendar(tzid)
+    cal_locker = make_calendar(tzid)
+    cal_room = make_calendar(tzid)
 
     all_rows = []
 
@@ -143,7 +150,6 @@ def csv_to_ics(csv_path):
             except Exception as e:
                 print(f"Skipping row due to error: {e}")
 
-    # Write ICS files
     with open('facility.ics', 'wb') as f:
         f.write(cal_all.to_ical())
 
@@ -156,7 +162,6 @@ def csv_to_ics(csv_path):
     with open('facility_room.ics', 'wb') as f:
         f.write(cal_room.to_ical())
 
-    # Generate weekly PDF
     pdf_file = generate_weekly_pdf(all_rows, tzid)
     print(f"Generated weekly PDF: {pdf_file}")
 
