@@ -127,6 +127,23 @@ def csv_to_ics(csv_path):
     with open('facility_room.ics', 'wb') as f:
         f.write(cal_room.to_ical())
 
+    # -----------------------------------------
+    # GENERATE HTML PAGES (place this block here)
+    # -----------------------------------------
+    generate_html("facility.html", all_rows, "Aerodrome – All Events")
+
+    generate_html("facility_rink.html",
+                  [r for r in all_rows if r.get("resource_id") == "1"],
+                  "Aerodrome – Ice Rink")
+
+    generate_html("facility_locker.html",
+                  [r for r in all_rows if r.get("resource_id") == "2"],
+                  "Aerodrome – Locker Rooms")
+
+    generate_html("facility_room.html",
+                  [r for r in all_rows if r.get("resource_id") == "3"],
+                  "Aerodrome – Room Rentals")
+
     pdf_file = generate_weekly_pdf(all_rows, tzid)
     print(f"Generated weekly PDF: {pdf_file}")
 
