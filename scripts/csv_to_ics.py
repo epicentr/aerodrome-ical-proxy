@@ -85,7 +85,7 @@ def generate_weekly_pdf(rows, tzid):
 # GENERATE MOBILE FRIENDLY HTML
 # ----------------------------- 
 def generate_html(filename, events, title):
-    # Sort events by start time to ensure day separators work
+    # Sort events by start time so day separators appear correctly
     events = sorted(events, key=lambda r: parse_datetime(r['start']))
 
     html = f"""
@@ -168,6 +168,11 @@ def generate_html(filename, events, title):
         background: rgba(0,0,0,0.08);
     }}
 
+    /* Narrower Date / Start / End columns */
+    th:nth-child(1), td:nth-child(1) {{ min-width: 8ch; }}
+    th:nth-child(2), td:nth-child(2) {{ min-width: 8ch; }}
+    th:nth-child(3), td:nth-child(3) {{ min-width: 8ch; }}
+
     /* Day separator row */
     .day-separator td {{
         background: #2f6243 !important;
@@ -221,7 +226,7 @@ def generate_html(filename, events, title):
 """
             last_date = date_str
 
-        # Color coding
+        # Color coding from CSV
         color = row.get('et_color', '').strip()
 
         # Automatic text contrast detection
@@ -263,9 +268,6 @@ def generate_html(filename, events, title):
     html = html.strip()
     with open(filename, "w", encoding="utf-8") as f:
         f.write(html)
-
-
-
 
 
 # -----------------------------
