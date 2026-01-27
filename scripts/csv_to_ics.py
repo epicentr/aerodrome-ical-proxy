@@ -148,11 +148,16 @@ def generate_html(filename, events, title):
         table-layout: fixed;
     }}
 
+    /* Sticky header */
     th {{
         background: #e0e0e0;
         padding: 10px;
         text-align: left;
         font-size: 0.9rem;
+        position: sticky;
+        top: 0;
+        z-index: 5;
+        border-bottom: 2px solid #ccc;
     }}
 
     td {{
@@ -182,6 +187,9 @@ def generate_html(filename, events, title):
         text-align: center;
         border-top: 2px solid #1e402c;
         border-bottom: 2px solid #1e402c;
+        position: sticky;
+        top: 42px; /* sits just under the sticky header */
+        z-index: 4;
     }}
 
     .desc {{
@@ -210,6 +218,7 @@ def generate_html(filename, events, title):
 """
 
     last_date = None
+    current_event_marked = False
 
     for row in events:
         start = parse_datetime(row['start'])
@@ -226,7 +235,13 @@ def generate_html(filename, events, title):
 """
             last_date = date_str
 
-        # Color coding from CSV
+        # Determine if this is today's first event
+        is_today = start.date() == datetime.now().date()
+        row_id = "current-event" if (is_today and not current_event_marked) else ""
+        if row_id:
+            current_event_marked = True
+
+        # Color coding
         color = row.get('et_color', '').strip()
 
         # Automatic text contrast detection
@@ -246,7 +261,7 @@ def generate_html(filename, events, title):
         row_style = f"background:{color}; color:{fg};" if color else ""
 
         html += f"""
-<tr style="{row_style}">
+<tr id="{row_id}" style="{row_style}">
     <td>{date_str}</td>
     <td>{start.strftime('%I:%M %p')}</td>
     <td>{end.strftime('%I:%M %p')}</td>
@@ -260,6 +275,7 @@ def generate_html(filename, events, title):
     html += """
 </table>
 </div>
+
 <script>
     const el = document.getElementById("current-event");
     if (el) {
@@ -274,6 +290,7 @@ def generate_html(filename, events, title):
     html = html.strip()
     with open(filename, "w", encoding="utf-8") as f:
         f.write(html)
+
 
 
 # -----------------------------
