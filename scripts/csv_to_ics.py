@@ -85,6 +85,9 @@ def generate_weekly_pdf(rows, tzid):
 # GENERATE MOBILE FRIENDLY HTML
 # ----------------------------- 
 def generate_html(filename, events, title):
+    # Sort events by start time to ensure day separators work
+    events = sorted(events, key=lambda r: parse_datetime(r['start']))
+
     html = f"""
 <!DOCTYPE html>
 <html lang="en">
@@ -155,17 +158,29 @@ def generate_html(filename, events, title):
     td {{
         padding: 12px 10px;
         border-bottom: 1px solid #ddd;
-        background: white;
         word-wrap: break-word;
         white-space: normal;
+        transition: background 0.2s ease;
     }}
 
-    tr:nth-child(even) td {{
-        background: #f2f2f2;
+    /* Hover highlighting */
+    tr:hover td {{
+        background: rgba(0,0,0,0.08);
+    }}
+
+    /* Day separator row */
+    .day-separator td {{
+        background: #2f6243 !important;
+        color: white !important;
+        font-weight: bold;
+        padding: 8px;
+        text-align: center;
+        border-top: 2px solid #1e402c;
+        border-bottom: 2px solid #1e402c;
     }}
 
     .desc {{
-        color: #555;
+        color: inherit;
         font-size: 0.85rem;
         margin-top: 4px;
     }}
@@ -189,17 +204,45 @@ def generate_html(filename, events, title):
 </tr>
 """
 
+    last_date = None
+
     for row in events:
         start = parse_datetime(row['start'])
         end = parse_datetime(row['end'])
+        date_str = start.strftime('%m/%d')
         desc = row.get('best_desc') or row.get('desc') or "Event"
 
+        # Insert day separator when date changes
+        if last_date != date_str:
+            html += f"""
+<tr class="day-separator">
+    <td colspan="4">{start.strftime('%A – %B %d')}</td>
+</tr>
+"""
+            last_date = date_str
+
+        # Color coding
         color = row.get('et_color', '').strip()
-        row_style = f"background:{color};" if color else ""
+
+        # Automatic text contrast detection
+        def text_color(bg):
+            if not bg or not bg.startswith("#") or len(bg) not in (4, 7):
+                return "black"
+            bg = bg.lstrip("#")
+            if len(bg) == 3:
+                bg = "".join(c*2 for c in bg)
+            r = int(bg[0:2], 16)
+            g = int(bg[2:4], 16)
+            b = int(bg[4:6], 16)
+            luminance = (0.299*r + 0.587*g + 0.114*b)
+            return "white" if luminance < 140 else "black"
+
+        fg = text_color(color)
+        row_style = f"background:{color}; color:{fg};" if color else ""
 
         html += f"""
 <tr style="{row_style}">
-    <td>{start.strftime('%m/%d')}</td>
+    <td>{date_str}</td>
     <td>{start.strftime('%I:%M %p')}</td>
     <td>{end.strftime('%I:%M %p')}</td>
     <td>
@@ -220,6 +263,7 @@ def generate_html(filename, events, title):
     html = html.strip()
     with open(filename, "w", encoding="utf-8") as f:
         f.write(html)
+
 
 
 
