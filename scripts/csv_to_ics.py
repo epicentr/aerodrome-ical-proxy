@@ -260,6 +260,12 @@ def generate_html(filename, events, title):
     html += """
 </table>
 </div>
+<script>
+    const el = document.getElementById("current-event");
+    if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+</script>
 
 </body>
 </html>
