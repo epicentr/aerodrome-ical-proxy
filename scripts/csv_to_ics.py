@@ -189,7 +189,7 @@ def generate_html(filename, events, title):
 </tr>
 """
 
-    ffor row in events:
+    for row in events:
     start = parse_datetime(row['start'])
     end = parse_datetime(row['end'])
     desc = row.get('best_desc') or row.get('desc') or "Event"
