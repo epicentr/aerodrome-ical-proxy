@@ -142,7 +142,7 @@ def generate_html(filename, events, title):
         border-collapse: collapse;
         margin: 0;
         font-size: 1rem;
-        table-layout: fixed; /* prevents squeezing columns */
+        table-layout: fixed;
     }}
 
     th {{
@@ -156,8 +156,8 @@ def generate_html(filename, events, title):
         padding: 12px 10px;
         border-bottom: 1px solid #ddd;
         background: white;
-        word-wrap: break-word;   /* allows long words to wrap */
-        white-space: normal;     /* prevents cutoff */
+        word-wrap: break-word;
+        white-space: normal;
     }}
 
     tr:nth-child(even) td {{
@@ -190,14 +190,14 @@ def generate_html(filename, events, title):
 """
 
     for row in events:
-    start = parse_datetime(row['start'])
-    end = parse_datetime(row['end'])
-    desc = row.get('best_desc') or row.get('desc') or "Event"
+        start = parse_datetime(row['start'])
+        end = parse_datetime(row['end'])
+        desc = row.get('best_desc') or row.get('desc') or "Event"
 
-    color = row.get('et_color', '').strip()
-    row_style = f"background:{color};" if color else ""
+        color = row.get('et_color', '').strip()
+        row_style = f"background:{color};" if color else ""
 
-    html += f"""
+        html += f"""
 <tr style="{row_style}">
     <td>{start.strftime('%m/%d')}</td>
     <td>{start.strftime('%I:%M %p')}</td>
@@ -208,7 +208,6 @@ def generate_html(filename, events, title):
     </td>
 </tr>
 """
-
 
     html += """
 </table>
