@@ -81,6 +81,97 @@ def generate_weekly_pdf(rows, tzid):
 
     c.save()
     return filename
+# -----------------------------
+# GENERATE MOBILE FRIENDLY HTML
+# ----------------------------- 
+def generate_html(filename, events, title):
+    html = f"""
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{title}</title>
+<style>
+    body {{
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f7f7f7;
+    }}
+    h1 {{
+        text-align: center;
+        padding: 20px;
+        background: #003366;
+        color: white;
+        margin: 0;
+        font-size: 1.4rem;
+    }}
+    table {{
+        width: 100%;
+        border-collapse: collapse;
+        margin: 0;
+        font-size: 1rem;
+    }}
+    th {{
+        background: #e0e0e0;
+        padding: 10px;
+        text-align: left;
+        font-size: 0.9rem;
+    }}
+    td {{
+        padding: 12px 10px;
+        border-bottom: 1px solid #ddd;
+        background: white;
+    }}
+    tr:nth-child(even) td {{
+        background: #f2f2f2;
+    }}
+    .desc {{
+        color: #555;
+        font-size: 0.85rem;
+        margin-top: 4px;
+    }}
+</style>
+</head>
+<body>
+<h1>{title}</h1>
+<table>
+<tr>
+    <th>Date</th>
+    <th>Start</th>
+    <th>End</th>
+    <th>Event</th>
+</tr>
+"""
+
+    for row in events:
+        start = parse_datetime(row['start'])
+        end = parse_datetime(row['end'])
+        desc = row.get('best_desc') or row.get('desc') or "Event"
+
+        html += f"""
+<tr>
+    <td>{start.strftime('%m/%d')}</td>
+    <td>{start.strftime('%I:%M %p')}</td>
+    <td>{end.strftime('%I:%M %p')}</td>
+    <td>
+        {desc}
+        <div class="desc">{RINK_NAMES.get(row.get('resource_id'), '')}</div>
+    </td>
+</tr>
+"""
+
+    html += """
+</table>
+</body>
+</html>
+"""
+    html = html.strip()
+    with open(filename, "w", encoding="utf-8") as f:
+        f.write(html)
+
+
 
 # -----------------------------
 # MAIN CSV → ICS PROCESSOR
