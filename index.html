@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aerodrome Schedules</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f7f7f7;
+        color: #333;
+    }
+
+    header {
+        background: #2f6243;
+        padding: 20px;
+        text-align: center;
+        color: white;
+    }
+
+    header img {
+        max-width: 140px;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        margin: 0;
+        font-size: 1.8rem;
+    }
+
+    .container {
+        padding: 20px;
+        max-width: 600px;
+        margin: auto;
+    }
+
+    .link-card {
+        background: white;
+        padding: 18px;
+        margin: 12px 0;
+        border-radius: 8px;
+        border-left: 6px solid #2f6243;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        text-decoration: none;
+        color: #2f6243;
+        font-size: 1.1rem;
+        display: block;
+    }
+
+    .link-card:hover {
+        background: #e8f1ec;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        font-size: 0.85rem;
+        color: #666;
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <!-- Replace logo.png with your actual logo filename -->
+    <img src="logo.png" alt="Aerodrome Logo">
+    <h1>Aerodrome Schedules</h1>
+</header>
+
+<div class="container">
+
+    <a class="link-card" href="facility.html">All Events</a>
+    <a class="link-card" href="facility_rink.html">Ice Rink Schedule</a>
+    <a class="link-card" href="facility_locker.html">Locker Room Schedule</a>
+    <a class="link-card" href="facility_room.html">Room Rentals</a>
+
+</div>
+
+<footer>
+    Updated automatically from facility CSV feeds
+</footer>
+
+</body>
+</html>
