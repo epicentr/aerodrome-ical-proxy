@@ -189,13 +189,18 @@ def generate_html(filename, events, title):
 </tr>
 """
 
-    for row in events:
-        start = parse_datetime(row['start'])
-        end = parse_datetime(row['end'])
-        desc = row.get('best_desc') or row.get('desc') or "Event"
+    for row in events: 
+    start = parse_datetime(row['start']) 
+    end = parse_datetime(row['end']) 
+    desc = row.get('best_desc') or row.get('desc') or "Event" 
 
-        html += f"""
-<tr>
+    color = row.get('et_color', '').strip() 
+    row_style = f"background:{color};" if color else "" 
+
+    html += f""" 
+
+<tr style="{row_style}">
+    
     <td>{start.strftime('%m/%d')}</td>
     <td>{start.strftime('%I:%M %p')}</td>
     <td>{end.strftime('%I:%M %p')}</td>
