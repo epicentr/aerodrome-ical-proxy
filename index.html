@@ -10,31 +10,43 @@
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-        background: #f7f7f7;
+        background-image: url('/media/background.png');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
         color: #333;
     }
 
-    header {
+    /* Banner */
+    .banner {
+        width: 100%;
+        margin: 0;
+        padding: 0;
         background: #2f6243;
-        padding: 20px;
         text-align: center;
-        color: white;
     }
 
-    header img {
-        max-width: 140px;
-        margin-bottom: 10px;
+    .banner img {
+        width: 100%;
+        max-height: 200px;
+        object-fit: cover;
+        display: block;
     }
 
     h1 {
         margin: 0;
+        padding: 20px;
+        color: white;
         font-size: 1.8rem;
+        background: rgba(0,0,0,0.35);
     }
 
     .container {
         padding: 20px;
         max-width: 600px;
-        margin: auto;
+        margin: 20px auto;
+        background: rgba(255,255,255,0.92);
+        border-radius: 10px;
     }
 
     .link-card {
@@ -58,26 +70,25 @@
         text-align: center;
         padding: 20px;
         font-size: 0.85rem;
-        color: #666;
+        color: #eee;
+        text-shadow: 0 1px 2px black;
     }
 </style>
 </head>
 
 <body>
 
-<header>
-    <!-- Replace logo.png with your actual logo filename -->
-    <img src="logo.png" alt="Aerodrome Logo">
+<!-- Banner -->
+<div class="banner">
+    <img src="/media/banner.png" alt="Aerodrome Banner">
     <h1>Aerodrome Schedules</h1>
-</header>
+</div>
 
 <div class="container">
-
     <a class="link-card" href="facility.html">All Events</a>
     <a class="link-card" href="facility_rink.html">Ice Rink Schedule</a>
     <a class="link-card" href="facility_locker.html">Locker Room Schedule</a>
     <a class="link-card" href="facility_room.html">Room Rentals</a>
-
 </div>
 
 <footer>
