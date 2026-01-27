@@ -164,6 +164,7 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 1/31/2026 12:00:00 AM,1/31/2026 1:00:00 PM,1/31/2026 3:30:00 PM,Public Skating (ice cut ,,11,1,0,False,,#f0f509
 1/31/2026 12:00:00 AM,1/31/2026 1:45:00 PM,1/31/2026 2:45:00 PM,Room rental - Lauren Fit,,13,3,0,False,,#fb42d3
 1/31/2026 12:00:00 AM,1/31/2026 3:30:00 PM,1/31/2026 3:40:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
+1/31/2026 12:00:00 AM,1/31/2026 3:30:00 PM,1/31/2026 4:30:00 PM,Room rental - Alison Ros,,13,3,0,True,,#fb42d3
 1/31/2026 12:00:00 AM,1/31/2026 3:40:00 PM,1/31/2026 4:40:00 PM,In-House,,8,1,0,False,,#6e8bf7
 1/31/2026 12:00:00 AM,1/31/2026 4:40:00 PM,1/31/2026 4:50:00 PM,Takedown - In-House,,b,1,0,False,,#d1c9c9
 1/31/2026 12:00:00 AM,1/31/2026 4:50:00 PM,1/31/2026 5:50:00 PM,In-House,,8,1,0,False,,#6e8bf7
