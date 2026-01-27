@@ -54,7 +54,7 @@
         border-collapse: collapse;
         margin: 0;
         font-size: 1rem;
-        table-layout: fixed; /* prevents squeezing columns */
+        table-layout: fixed;
     }
 
     th {
@@ -67,17 +67,29 @@
     td {
         padding: 12px 10px;
         border-bottom: 1px solid #ddd;
-        background: white;
-        word-wrap: break-word;   /* allows long words to wrap */
-        white-space: normal;     /* prevents cutoff */
+        word-wrap: break-word;
+        white-space: normal;
+        transition: background 0.2s ease;
     }
 
-    tr:nth-child(even) td {
-        background: #f2f2f2;
+    /* Hover highlighting */
+    tr:hover td {
+        background: rgba(0,0,0,0.08);
+    }
+
+    /* Day separator row */
+    .day-separator td {
+        background: #2f6243 !important;
+        color: white !important;
+        font-weight: bold;
+        padding: 8px;
+        text-align: center;
+        border-top: 2px solid #1e402c;
+        border-bottom: 2px solid #1e402c;
     }
 
     .desc {
-        color: #555;
+        color: inherit;
         font-size: 0.85rem;
         margin-top: 4px;
     }
@@ -100,7 +112,11 @@
     <th>Event</th>
 </tr>
 
-<tr>
+<tr class="day-separator">
+    <td colspan="4">Sunday – February 08</td>
+</tr>
+
+<tr style="background:#d1c9c9; color:black;">
     <td>02/08</td>
     <td>02:00 PM</td>
     <td>03:00 PM</td>
