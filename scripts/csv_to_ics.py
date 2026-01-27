@@ -108,7 +108,6 @@ def generate_html(filename, events, title):
         color: #333;
     }}
 
-    /* Banner */
     .banner {{
         width: 100%;
         margin: 0;
@@ -148,7 +147,6 @@ def generate_html(filename, events, title):
         table-layout: fixed;
     }}
 
-    /* Sticky header */
     th {{
         background: #e0e0e0;
         padding: 10px;
@@ -168,17 +166,14 @@ def generate_html(filename, events, title):
         transition: background 0.2s ease;
     }}
 
-    /* Hover highlighting */
     tr:hover td {{
         background: rgba(0,0,0,0.08);
     }}
 
-    /* Narrower Date / Start / End columns */
     th:nth-child(1), td:nth-child(1) {{ min-width: 8ch; }}
     th:nth-child(2), td:nth-child(2) {{ min-width: 8ch; }}
     th:nth-child(3), td:nth-child(3) {{ min-width: 8ch; }}
 
-    /* Day separator row */
     .day-separator td {{
         background: #2f6243 !important;
         color: white !important;
@@ -188,7 +183,7 @@ def generate_html(filename, events, title):
         border-top: 2px solid #1e402c;
         border-bottom: 2px solid #1e402c;
         position: sticky;
-        top: 42px; /* sits just under the sticky header */
+        top: 42px;
         z-index: 4;
     }}
 
@@ -220,13 +215,26 @@ def generate_html(filename, events, title):
     last_date = None
     current_event_marked = False
 
+    now_local_dt = datetime.now().astimezone()
+    today_local = now_local_dt.date()
+
     for row in events:
         start = parse_datetime(row['start'])
         end = parse_datetime(row['end'])
-        date_str = start.strftime('%m/%d')
-        desc = row.get('best_desc') or row.get('desc') or "Event"
+        duration_minutes = int((end - start).total_seconds() / 60)
 
-        # Insert day separator when date changes
+        raw_desc = row.get('best_desc') or row.get('desc') or "Event"
+        desc_lower = raw_desc.lower()
+
+        # ICE CUT detection (Option A)
+        is_ice_cut = ("takedown" in desc_lower) and (duration_minutes == 10)
+
+        # Replace displayed text
+        desc = "ICE CUT" if is_ice_cut else raw_desc
+
+        date_str = start.strftime('%m/%d')
+
+        # Insert day separator
         if last_date != date_str:
             html += f"""
 <tr class="day-separator">
@@ -235,16 +243,23 @@ def generate_html(filename, events, title):
 """
             last_date = date_str
 
-        # Determine if this is today's first event
-        is_today = start.date() == datetime.now().date()
-        row_id = "current-event" if (is_today and not current_event_marked) else ""
+        # TIME-BASED CURRENT EVENT LOGIC
+        is_today = start.date() == today_local
+        is_current_event = False
+
+        if is_today:
+            if start <= now_local_dt <= end:
+                is_current_event = True
+            elif start > now_local_dt and not current_event_marked:
+                is_current_event = True
+
+        row_id = "current-event" if (is_current_event and not current_event_marked) else ""
         if row_id:
             current_event_marked = True
 
         # Color coding
         color = row.get('et_color', '').strip()
 
-        # Automatic text contrast detection
         def text_color(bg):
             if not bg or not bg.startswith("#") or len(bg) not in (4, 7):
                 return "black"
@@ -261,7 +276,7 @@ def generate_html(filename, events, title):
         row_style = f"background:{color}; color:{fg};" if color else ""
 
         html += f"""
-<tr id="{row_id}" style="{row_style}">
+<tr {'id="current-event"' if row_id else ''} style="{row_style}">
     <td>{date_str}</td>
     <td>{start.strftime('%I:%M %p')}</td>
     <td>{end.strftime('%I:%M %p')}</td>
@@ -297,7 +312,6 @@ def generate_html(filename, events, title):
 # MAIN CSV → ICS PROCESSOR
 # -----------------------------
 def csv_to_ics(csv_path):
-    # FIXED TIMEZONE — REQUIRED FOR GOOGLE CALENDAR
     tzid = "America/Chicago"
 
     cal_all = make_calendar(tzid)
@@ -326,6 +340,7 @@ def csv_to_ics(csv_path):
             except Exception as e:
                 print(f"Skipping row due to error: {e}")
 
+    # Write ICS files
     with open('facility.ics', 'wb') as f:
         f.write(cal_all.to_ical())
 
@@ -338,9 +353,7 @@ def csv_to_ics(csv_path):
     with open('facility_room.ics', 'wb') as f:
         f.write(cal_room.to_ical())
 
-    # -----------------------------------------
-    # GENERATE HTML PAGES (place this block here)
-    # -----------------------------------------
+    # Generate HTML pages
     generate_html("facility.html", all_rows, "Aerodrome – All Events")
 
     generate_html("facility_rink.html",
@@ -355,8 +368,24 @@ def csv_to_ics(csv_path):
                   [r for r in all_rows if r.get("resource_id") == "3"],
                   "Aerodrome – Room Rentals")
 
+    # ICE CUT PAGE
+    ice_cut_rows = []
+    for r in all_rows:
+        start = parse_datetime(r['start'])
+        end = parse_datetime(r['end'])
+        duration = int((end - start).total_seconds() / 60)
+        desc = (r.get("best_desc") or r.get("desc") or "").lower()
+
+        if "takedown" in desc and duration == 10:
+            ice_cut_rows.append(r)
+
+    generate_html("facility_icecut.html",
+                  ice_cut_rows,
+                  "Aerodrome – ICE CUT Schedule")
+
     pdf_file = generate_weekly_pdf(all_rows, tzid)
     print(f"Generated weekly PDF: {pdf_file}")
+
 
 # -----------------------------
 # ENTRY POINT
