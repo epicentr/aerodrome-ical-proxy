@@ -4,41 +4,78 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Aerodrome – Room Rentals</title>
+
 <style>
     body {
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-        background: #f7f7f7;
+        background-image: url('media/background.png');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        color: #333;
     }
-    h1 {
-        text-align: center;
-        padding: 20px;
-        background: #003366;
-        color: white;
+
+    /* Banner */
+    .banner {
+        width: 100%;
         margin: 0;
-        font-size: 1.4rem;
+        padding: 0;
+        background: #2f6243;
+        text-align: center;
     }
+
+    .banner img {
+        width: 100%;
+        max-height: 200px;
+        object-fit: cover;
+        display: block;
+    }
+
+    h1 {
+        margin: 0;
+        padding: 20px;
+        color: white;
+        font-size: 1.8rem;
+        background: rgba(0,0,0,0.35);
+    }
+
+    .container {
+        padding: 20px;
+        max-width: 900px;
+        margin: 20px auto;
+        background: rgba(255,255,255,0.92);
+        border-radius: 10px;
+    }
+
     table {
         width: 100%;
         border-collapse: collapse;
         margin: 0;
         font-size: 1rem;
+        table-layout: fixed; /* prevents squeezing columns */
     }
+
     th {
         background: #e0e0e0;
         padding: 10px;
         text-align: left;
         font-size: 0.9rem;
     }
+
     td {
         padding: 12px 10px;
         border-bottom: 1px solid #ddd;
         background: white;
+        word-wrap: break-word;   /* allows long words to wrap */
+        white-space: normal;     /* prevents cutoff */
     }
+
     tr:nth-child(even) td {
         background: #f2f2f2;
     }
+
     .desc {
         color: #555;
         font-size: 0.85rem;
@@ -46,8 +83,15 @@
     }
 </style>
 </head>
+
 <body>
-<h1>Aerodrome – Room Rentals</h1>
+
+<div class="banner">
+    <img src="media/banner.png" alt="Aerodrome Banner">
+    <h1>Aerodrome – Room Rentals</h1>
+</div>
+
+<div class="container">
 <table>
 <tr>
     <th>Date</th>
@@ -197,5 +241,7 @@
 </tr>
 
 </table>
+</div>
+
 </body>
 </html>
