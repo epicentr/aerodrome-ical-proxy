@@ -57,11 +57,16 @@
         table-layout: fixed;
     }
 
+    /* Sticky header */
     th {
         background: #e0e0e0;
         padding: 10px;
         text-align: left;
         font-size: 0.9rem;
+        position: sticky;
+        top: 0;
+        z-index: 5;
+        border-bottom: 2px solid #ccc;
     }
 
     td {
@@ -91,6 +96,9 @@
         text-align: center;
         border-top: 2px solid #1e402c;
         border-bottom: 2px solid #1e402c;
+        position: sticky;
+        top: 42px; /* sits just under the sticky header */
+        z-index: 4;
     }
 
     .desc {
@@ -121,7 +129,7 @@
     <td colspan="4">Sunday – February 08</td>
 </tr>
 
-<tr style="background:#d1c9c9; color:black;">
+<tr id="" style="background:#d1c9c9; color:black;">
     <td>02/08</td>
     <td>02:00 PM</td>
     <td>03:00 PM</td>
@@ -133,6 +141,13 @@
 
 </table>
 </div>
+
+<script>
+    const el = document.getElementById("current-event");
+    if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+</script>
 
 </body>
 </html>
