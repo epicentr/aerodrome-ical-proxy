@@ -48,6 +48,20 @@
         border-radius: 10px;
     }
 
+    /* Dark mode toggle inside container */
+    .controls {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-bottom: 10px;
+        font-size: 0.9rem;
+    }
+
+    .dark-toggle label {
+        cursor: pointer;
+        user-select: none;
+    }
+
     table {
         width: 100%;
         border-collapse: collapse;
@@ -56,6 +70,7 @@
         table-layout: fixed;
     }
 
+    /* Sticky header */
     th {
         background: #e0e0e0;
         padding: 10px;
@@ -79,10 +94,12 @@
         background: rgba(0,0,0,0.08);
     }
 
+    /* Narrow Date/Start/End columns */
     th:nth-child(1), td:nth-child(1) { min-width: 8ch; }
     th:nth-child(2), td:nth-child(2) { min-width: 8ch; }
     th:nth-child(3), td:nth-child(3) { min-width: 8ch; }
 
+    /* Sticky day separator */
     .day-separator td {
         background: #2f6243 !important;
         color: white !important;
@@ -101,6 +118,64 @@
         font-size: 0.85rem;
         margin-top: 4px;
     }
+
+    /* Short events (< 60 minutes) 50% height */
+    .short-event td {
+        padding-top: 6px !important;
+        padding-bottom: 6px !important;
+    }
+
+    /* NOW marker */
+    #current-event td {
+        border-left: 6px solid #ff4444;
+        position: relative;
+    }
+
+    #current-event td:first-child::before {
+        content: "NOW";
+        position: absolute;
+        left: -45px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: #ff4444;
+        color: white;
+        padding: 2px 6px;
+        font-size: 0.7rem;
+        border-radius: 4px;
+        font-weight: bold;
+    }
+
+    /* Dark mode */
+    body.dark {
+        background: #111 !important;
+        color: #eee !important;
+    }
+
+    body.dark .container {
+        background: rgba(30,30,30,0.9) !important;
+    }
+
+    body.dark table {
+        color: #eee !important;
+    }
+
+    body.dark th {
+        background: #333 !important;
+        color: #eee !important;
+    }
+
+    body.dark td {
+        border-bottom: 1px solid #444 !important;
+    }
+
+    body.dark .day-separator td {
+        background: #444 !important;
+        color: #eee !important;
+    }
+
+    body.dark .banner {
+        background: #222 !important;
+    }
 </style>
 </head>
 
@@ -112,6 +187,15 @@
 </div>
 
 <div class="container">
+    <div class="controls">
+        <div class="dark-toggle">
+            <label>
+                <input type="checkbox" id="darkModeSwitch">
+                🌙 Dark Mode
+            </label>
+        </div>
+    </div>
+
 <table>
 <tr>
     <th>Date</th>
@@ -124,7 +208,27 @@
     <td colspan="4">Wednesday – January 28</td>
 </tr>
 
-<tr id="current-event" style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
+    <td>01/28</td>
+    <td>08:15 AM</td>
+    <td>08:30 AM</td>
+    <td>
+        ICE CUT
+        <div class="desc">Ice Rink</div>
+    </td>
+</tr>
+
+<tr id="current-event" class="short-event" style="background:#cccccc; color:black;">
+    <td>01/28</td>
+    <td>02:00 PM</td>
+    <td>02:10 PM</td>
+    <td>
+        ICE CUT
+        <div class="desc">Ice Rink</div>
+    </td>
+</tr>
+
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>01/28</td>
     <td>03:20 PM</td>
     <td>03:30 PM</td>
@@ -134,7 +238,17 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#999999; color:black;">
+    <td>01/28</td>
+    <td>05:30 PM</td>
+    <td>05:40 PM</td>
+    <td>
+        ICE CUT?
+        <div class="desc">Ice Rink</div>
+    </td>
+</tr>
+
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>01/28</td>
     <td>06:40 PM</td>
     <td>06:50 PM</td>
@@ -144,7 +258,7 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>01/28</td>
     <td>07:50 PM</td>
     <td>08:00 PM</td>
@@ -154,7 +268,7 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>01/28</td>
     <td>09:00 PM</td>
     <td>09:10 PM</td>
@@ -164,7 +278,7 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>01/28</td>
     <td>10:10 PM</td>
     <td>10:20 PM</td>
@@ -174,7 +288,7 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>01/28</td>
     <td>11:35 PM</td>
     <td>11:45 PM</td>
@@ -188,7 +302,27 @@
     <td colspan="4">Thursday – January 29</td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
+    <td>01/29</td>
+    <td>09:15 AM</td>
+    <td>09:30 AM</td>
+    <td>
+        ICE CUT
+        <div class="desc">Ice Rink</div>
+    </td>
+</tr>
+
+<tr class="short-event" style="background:#cccccc; color:black;">
+    <td>01/29</td>
+    <td>02:00 PM</td>
+    <td>02:10 PM</td>
+    <td>
+        ICE CUT
+        <div class="desc">Ice Rink</div>
+    </td>
+</tr>
+
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>01/29</td>
     <td>03:20 PM</td>
     <td>03:30 PM</td>
@@ -198,7 +332,17 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#999999; color:black;">
+    <td>01/29</td>
+    <td>05:30 PM</td>
+    <td>05:40 PM</td>
+    <td>
+        ICE CUT?
+        <div class="desc">Ice Rink</div>
+    </td>
+</tr>
+
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>01/29</td>
     <td>06:40 PM</td>
     <td>06:50 PM</td>
@@ -208,7 +352,7 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>01/29</td>
     <td>07:50 PM</td>
     <td>08:00 PM</td>
@@ -218,7 +362,7 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>01/29</td>
     <td>09:00 PM</td>
     <td>09:10 PM</td>
@@ -228,7 +372,7 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>01/29</td>
     <td>10:10 PM</td>
     <td>10:20 PM</td>
@@ -238,7 +382,7 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>01/29</td>
     <td>11:35 PM</td>
     <td>11:45 PM</td>
@@ -252,7 +396,17 @@
     <td colspan="4">Friday – January 30</td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
+    <td>01/30</td>
+    <td>12:45 PM</td>
+    <td>01:00 PM</td>
+    <td>
+        ICE CUT
+        <div class="desc">Ice Rink</div>
+    </td>
+</tr>
+
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>01/30</td>
     <td>02:00 PM</td>
     <td>02:10 PM</td>
@@ -262,7 +416,7 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>01/30</td>
     <td>03:20 PM</td>
     <td>03:30 PM</td>
@@ -272,7 +426,27 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#999999; color:black;">
+    <td>01/30</td>
+    <td>05:30 PM</td>
+    <td>05:40 PM</td>
+    <td>
+        ICE CUT?
+        <div class="desc">Ice Rink</div>
+    </td>
+</tr>
+
+<tr class="short-event" style="background:#999999; color:black;">
+    <td>01/30</td>
+    <td>06:55 PM</td>
+    <td>07:05 PM</td>
+    <td>
+        ICE CUT?
+        <div class="desc">Ice Rink</div>
+    </td>
+</tr>
+
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>01/30</td>
     <td>08:35 PM</td>
     <td>08:45 PM</td>
@@ -282,11 +456,51 @@
     </td>
 </tr>
 
+<tr class="short-event" style="background:#999999; color:black;">
+    <td>01/30</td>
+    <td>10:15 PM</td>
+    <td>10:25 PM</td>
+    <td>
+        ICE CUT?
+        <div class="desc">Ice Rink</div>
+    </td>
+</tr>
+
 <tr class="day-separator">
     <td colspan="4">Saturday – January 31</td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
+    <td>01/31</td>
+    <td>09:00 AM</td>
+    <td>09:10 AM</td>
+    <td>
+        ICE CUT
+        <div class="desc">Ice Rink</div>
+    </td>
+</tr>
+
+<tr class="short-event" style="background:#cccccc; color:black;">
+    <td>01/31</td>
+    <td>10:50 AM</td>
+    <td>11:00 AM</td>
+    <td>
+        ICE CUT
+        <div class="desc">Ice Rink</div>
+    </td>
+</tr>
+
+<tr class="short-event" style="background:#cccccc; color:black;">
+    <td>01/31</td>
+    <td>03:30 PM</td>
+    <td>03:40 PM</td>
+    <td>
+        ICE CUT
+        <div class="desc">Ice Rink</div>
+    </td>
+</tr>
+
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>01/31</td>
     <td>04:40 PM</td>
     <td>04:50 PM</td>
@@ -296,7 +510,7 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>01/31</td>
     <td>05:50 PM</td>
     <td>06:00 PM</td>
@@ -306,7 +520,7 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>01/31</td>
     <td>07:00 PM</td>
     <td>07:10 PM</td>
@@ -316,7 +530,7 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>01/31</td>
     <td>08:10 PM</td>
     <td>08:20 PM</td>
@@ -326,11 +540,21 @@
     </td>
 </tr>
 
+<tr class="short-event" style="background:#999999; color:black;">
+    <td>01/31</td>
+    <td>09:35 PM</td>
+    <td>09:45 PM</td>
+    <td>
+        ICE CUT?
+        <div class="desc">Ice Rink</div>
+    </td>
+</tr>
+
 <tr class="day-separator">
     <td colspan="4">Sunday – February 01</td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/01</td>
     <td>07:20 AM</td>
     <td>07:30 AM</td>
@@ -340,7 +564,7 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/01</td>
     <td>09:00 AM</td>
     <td>09:10 AM</td>
@@ -350,7 +574,7 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/01</td>
     <td>12:50 PM</td>
     <td>01:00 PM</td>
@@ -360,7 +584,17 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#999999; color:black;">
+    <td>02/01</td>
+    <td>05:10 PM</td>
+    <td>05:20 PM</td>
+    <td>
+        ICE CUT?
+        <div class="desc">Ice Rink</div>
+    </td>
+</tr>
+
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/01</td>
     <td>06:20 PM</td>
     <td>06:30 PM</td>
@@ -370,7 +604,7 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/01</td>
     <td>09:30 PM</td>
     <td>09:40 PM</td>
@@ -384,7 +618,27 @@
     <td colspan="4">Monday – February 02</td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
+    <td>02/02</td>
+    <td>08:15 AM</td>
+    <td>08:30 AM</td>
+    <td>
+        ICE CUT
+        <div class="desc">Ice Rink</div>
+    </td>
+</tr>
+
+<tr class="short-event" style="background:#cccccc; color:black;">
+    <td>02/02</td>
+    <td>02:00 PM</td>
+    <td>02:10 PM</td>
+    <td>
+        ICE CUT
+        <div class="desc">Ice Rink</div>
+    </td>
+</tr>
+
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/02</td>
     <td>03:20 PM</td>
     <td>03:30 PM</td>
@@ -394,7 +648,17 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
+    <td>02/02</td>
+    <td>06:40 PM</td>
+    <td>06:50 PM</td>
+    <td>
+        ICE CUT
+        <div class="desc">Ice Rink</div>
+    </td>
+</tr>
+
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/02</td>
     <td>07:50 PM</td>
     <td>08:00 PM</td>
@@ -404,7 +668,7 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/02</td>
     <td>09:00 PM</td>
     <td>09:10 PM</td>
@@ -414,7 +678,7 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/02</td>
     <td>10:10 PM</td>
     <td>10:20 PM</td>
@@ -424,7 +688,7 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/02</td>
     <td>11:35 PM</td>
     <td>11:45 PM</td>
@@ -438,7 +702,37 @@
     <td colspan="4">Tuesday – February 03</td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
+    <td>02/03</td>
+    <td>07:00 AM</td>
+    <td>07:15 AM</td>
+    <td>
+        ICE CUT
+        <div class="desc">Ice Rink</div>
+    </td>
+</tr>
+
+<tr class="short-event" style="background:#cccccc; color:black;">
+    <td>02/03</td>
+    <td>09:15 AM</td>
+    <td>09:30 AM</td>
+    <td>
+        ICE CUT
+        <div class="desc">Ice Rink</div>
+    </td>
+</tr>
+
+<tr class="short-event" style="background:#cccccc; color:black;">
+    <td>02/03</td>
+    <td>02:00 PM</td>
+    <td>02:10 PM</td>
+    <td>
+        ICE CUT
+        <div class="desc">Ice Rink</div>
+    </td>
+</tr>
+
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/03</td>
     <td>03:20 PM</td>
     <td>03:30 PM</td>
@@ -448,7 +742,17 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
+    <td>02/03</td>
+    <td>05:30 PM</td>
+    <td>05:40 PM</td>
+    <td>
+        ICE CUT
+        <div class="desc">Ice Rink</div>
+    </td>
+</tr>
+
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/03</td>
     <td>06:40 PM</td>
     <td>06:50 PM</td>
@@ -458,7 +762,7 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/03</td>
     <td>07:50 PM</td>
     <td>08:00 PM</td>
@@ -468,7 +772,7 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/03</td>
     <td>09:00 PM</td>
     <td>09:10 PM</td>
@@ -478,7 +782,7 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/03</td>
     <td>10:10 PM</td>
     <td>10:20 PM</td>
@@ -488,7 +792,7 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/03</td>
     <td>11:35 PM</td>
     <td>11:45 PM</td>
@@ -502,7 +806,27 @@
     <td colspan="4">Wednesday – February 04</td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
+    <td>02/04</td>
+    <td>08:15 AM</td>
+    <td>08:30 AM</td>
+    <td>
+        ICE CUT
+        <div class="desc">Ice Rink</div>
+    </td>
+</tr>
+
+<tr class="short-event" style="background:#cccccc; color:black;">
+    <td>02/04</td>
+    <td>02:00 PM</td>
+    <td>02:10 PM</td>
+    <td>
+        ICE CUT
+        <div class="desc">Ice Rink</div>
+    </td>
+</tr>
+
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/04</td>
     <td>03:20 PM</td>
     <td>03:30 PM</td>
@@ -512,7 +836,17 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
+    <td>02/04</td>
+    <td>05:30 PM</td>
+    <td>05:40 PM</td>
+    <td>
+        ICE CUT
+        <div class="desc">Ice Rink</div>
+    </td>
+</tr>
+
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/04</td>
     <td>06:40 PM</td>
     <td>06:50 PM</td>
@@ -522,7 +856,7 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/04</td>
     <td>07:50 PM</td>
     <td>08:00 PM</td>
@@ -532,7 +866,7 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/04</td>
     <td>09:00 PM</td>
     <td>09:10 PM</td>
@@ -542,7 +876,7 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/04</td>
     <td>10:10 PM</td>
     <td>10:20 PM</td>
@@ -552,7 +886,7 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/04</td>
     <td>11:35 PM</td>
     <td>11:45 PM</td>
@@ -566,7 +900,37 @@
     <td colspan="4">Thursday – February 05</td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
+    <td>02/05</td>
+    <td>07:00 AM</td>
+    <td>07:15 AM</td>
+    <td>
+        ICE CUT
+        <div class="desc">Ice Rink</div>
+    </td>
+</tr>
+
+<tr class="short-event" style="background:#cccccc; color:black;">
+    <td>02/05</td>
+    <td>09:15 AM</td>
+    <td>09:30 AM</td>
+    <td>
+        ICE CUT
+        <div class="desc">Ice Rink</div>
+    </td>
+</tr>
+
+<tr class="short-event" style="background:#cccccc; color:black;">
+    <td>02/05</td>
+    <td>02:00 PM</td>
+    <td>02:10 PM</td>
+    <td>
+        ICE CUT
+        <div class="desc">Ice Rink</div>
+    </td>
+</tr>
+
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/05</td>
     <td>03:20 PM</td>
     <td>03:30 PM</td>
@@ -576,7 +940,17 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
+    <td>02/05</td>
+    <td>05:30 PM</td>
+    <td>05:40 PM</td>
+    <td>
+        ICE CUT
+        <div class="desc">Ice Rink</div>
+    </td>
+</tr>
+
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/05</td>
     <td>06:40 PM</td>
     <td>06:50 PM</td>
@@ -586,7 +960,7 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/05</td>
     <td>07:50 PM</td>
     <td>08:00 PM</td>
@@ -596,7 +970,7 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/05</td>
     <td>09:00 PM</td>
     <td>09:10 PM</td>
@@ -606,7 +980,7 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/05</td>
     <td>10:10 PM</td>
     <td>10:20 PM</td>
@@ -616,7 +990,7 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/05</td>
     <td>11:35 PM</td>
     <td>11:45 PM</td>
@@ -630,7 +1004,17 @@
     <td colspan="4">Friday – February 06</td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
+    <td>02/06</td>
+    <td>12:45 PM</td>
+    <td>01:00 PM</td>
+    <td>
+        ICE CUT
+        <div class="desc">Ice Rink</div>
+    </td>
+</tr>
+
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/06</td>
     <td>02:00 PM</td>
     <td>02:10 PM</td>
@@ -640,7 +1024,7 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/06</td>
     <td>03:20 PM</td>
     <td>03:30 PM</td>
@@ -650,7 +1034,27 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
+    <td>02/06</td>
+    <td>05:30 PM</td>
+    <td>05:40 PM</td>
+    <td>
+        ICE CUT
+        <div class="desc">Ice Rink</div>
+    </td>
+</tr>
+
+<tr class="short-event" style="background:#999999; color:black;">
+    <td>02/06</td>
+    <td>06:55 PM</td>
+    <td>07:05 PM</td>
+    <td>
+        ICE CUT?
+        <div class="desc">Ice Rink</div>
+    </td>
+</tr>
+
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/06</td>
     <td>08:35 PM</td>
     <td>08:45 PM</td>
@@ -660,11 +1064,51 @@
     </td>
 </tr>
 
+<tr class="short-event" style="background:#999999; color:black;">
+    <td>02/06</td>
+    <td>10:15 PM</td>
+    <td>10:25 PM</td>
+    <td>
+        ICE CUT?
+        <div class="desc">Ice Rink</div>
+    </td>
+</tr>
+
 <tr class="day-separator">
     <td colspan="4">Saturday – February 07</td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
+    <td>02/07</td>
+    <td>09:00 AM</td>
+    <td>09:10 AM</td>
+    <td>
+        ICE CUT
+        <div class="desc">Ice Rink</div>
+    </td>
+</tr>
+
+<tr class="short-event" style="background:#cccccc; color:black;">
+    <td>02/07</td>
+    <td>10:50 AM</td>
+    <td>11:00 AM</td>
+    <td>
+        ICE CUT
+        <div class="desc">Ice Rink</div>
+    </td>
+</tr>
+
+<tr class="short-event" style="background:#cccccc; color:black;">
+    <td>02/07</td>
+    <td>03:30 PM</td>
+    <td>03:40 PM</td>
+    <td>
+        ICE CUT
+        <div class="desc">Ice Rink</div>
+    </td>
+</tr>
+
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/07</td>
     <td>04:40 PM</td>
     <td>04:50 PM</td>
@@ -674,7 +1118,7 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/07</td>
     <td>05:50 PM</td>
     <td>06:00 PM</td>
@@ -684,7 +1128,7 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/07</td>
     <td>07:00 PM</td>
     <td>07:10 PM</td>
@@ -694,7 +1138,7 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/07</td>
     <td>08:10 PM</td>
     <td>08:20 PM</td>
@@ -704,11 +1148,21 @@
     </td>
 </tr>
 
+<tr class="short-event" style="background:#999999; color:black;">
+    <td>02/07</td>
+    <td>09:35 PM</td>
+    <td>09:45 PM</td>
+    <td>
+        ICE CUT?
+        <div class="desc">Ice Rink</div>
+    </td>
+</tr>
+
 <tr class="day-separator">
     <td colspan="4">Sunday – February 08</td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/08</td>
     <td>08:35 AM</td>
     <td>08:45 AM</td>
@@ -718,7 +1172,7 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/08</td>
     <td>09:45 AM</td>
     <td>09:55 AM</td>
@@ -728,7 +1182,7 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/08</td>
     <td>10:55 AM</td>
     <td>11:05 AM</td>
@@ -738,7 +1192,7 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/08</td>
     <td>12:50 PM</td>
     <td>01:00 PM</td>
@@ -748,11 +1202,41 @@
     </td>
 </tr>
 
+<tr class="short-event" style="background:#999999; color:black;">
+    <td>02/08</td>
+    <td>03:35 PM</td>
+    <td>03:45 PM</td>
+    <td>
+        ICE CUT?
+        <div class="desc">Ice Rink</div>
+    </td>
+</tr>
+
 <tr class="day-separator">
     <td colspan="4">Monday – February 09</td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
+    <td>02/09</td>
+    <td>08:15 AM</td>
+    <td>08:30 AM</td>
+    <td>
+        ICE CUT
+        <div class="desc">Ice Rink</div>
+    </td>
+</tr>
+
+<tr class="short-event" style="background:#cccccc; color:black;">
+    <td>02/09</td>
+    <td>02:00 PM</td>
+    <td>02:10 PM</td>
+    <td>
+        ICE CUT
+        <div class="desc">Ice Rink</div>
+    </td>
+</tr>
+
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/09</td>
     <td>03:20 PM</td>
     <td>03:30 PM</td>
@@ -762,7 +1246,17 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
+    <td>02/09</td>
+    <td>06:40 PM</td>
+    <td>06:50 PM</td>
+    <td>
+        ICE CUT
+        <div class="desc">Ice Rink</div>
+    </td>
+</tr>
+
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/09</td>
     <td>07:50 PM</td>
     <td>08:00 PM</td>
@@ -772,7 +1266,7 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/09</td>
     <td>09:00 PM</td>
     <td>09:10 PM</td>
@@ -782,7 +1276,7 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/09</td>
     <td>10:10 PM</td>
     <td>10:20 PM</td>
@@ -796,7 +1290,37 @@
     <td colspan="4">Tuesday – February 10</td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
+    <td>02/10</td>
+    <td>07:00 AM</td>
+    <td>07:15 AM</td>
+    <td>
+        ICE CUT
+        <div class="desc">Ice Rink</div>
+    </td>
+</tr>
+
+<tr class="short-event" style="background:#cccccc; color:black;">
+    <td>02/10</td>
+    <td>09:15 AM</td>
+    <td>09:30 AM</td>
+    <td>
+        ICE CUT
+        <div class="desc">Ice Rink</div>
+    </td>
+</tr>
+
+<tr class="short-event" style="background:#cccccc; color:black;">
+    <td>02/10</td>
+    <td>02:00 PM</td>
+    <td>02:10 PM</td>
+    <td>
+        ICE CUT
+        <div class="desc">Ice Rink</div>
+    </td>
+</tr>
+
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/10</td>
     <td>03:20 PM</td>
     <td>03:30 PM</td>
@@ -806,7 +1330,17 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
+    <td>02/10</td>
+    <td>05:30 PM</td>
+    <td>05:40 PM</td>
+    <td>
+        ICE CUT
+        <div class="desc">Ice Rink</div>
+    </td>
+</tr>
+
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/10</td>
     <td>06:40 PM</td>
     <td>06:50 PM</td>
@@ -816,7 +1350,7 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/10</td>
     <td>07:50 PM</td>
     <td>08:00 PM</td>
@@ -826,7 +1360,7 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/10</td>
     <td>09:00 PM</td>
     <td>09:10 PM</td>
@@ -836,7 +1370,7 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/10</td>
     <td>10:10 PM</td>
     <td>10:20 PM</td>
@@ -846,7 +1380,7 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/10</td>
     <td>11:35 PM</td>
     <td>11:45 PM</td>
@@ -860,7 +1394,27 @@
     <td colspan="4">Wednesday – February 11</td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
+    <td>02/11</td>
+    <td>08:15 AM</td>
+    <td>08:30 AM</td>
+    <td>
+        ICE CUT
+        <div class="desc">Ice Rink</div>
+    </td>
+</tr>
+
+<tr class="short-event" style="background:#cccccc; color:black;">
+    <td>02/11</td>
+    <td>02:00 PM</td>
+    <td>02:10 PM</td>
+    <td>
+        ICE CUT
+        <div class="desc">Ice Rink</div>
+    </td>
+</tr>
+
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/11</td>
     <td>03:20 PM</td>
     <td>03:30 PM</td>
@@ -870,7 +1424,17 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
+    <td>02/11</td>
+    <td>05:30 PM</td>
+    <td>05:40 PM</td>
+    <td>
+        ICE CUT
+        <div class="desc">Ice Rink</div>
+    </td>
+</tr>
+
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/11</td>
     <td>06:40 PM</td>
     <td>06:50 PM</td>
@@ -880,7 +1444,7 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/11</td>
     <td>07:50 PM</td>
     <td>08:00 PM</td>
@@ -890,7 +1454,7 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/11</td>
     <td>09:00 PM</td>
     <td>09:10 PM</td>
@@ -900,7 +1464,7 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/11</td>
     <td>10:10 PM</td>
     <td>10:20 PM</td>
@@ -910,7 +1474,7 @@
     </td>
 </tr>
 
-<tr  style="background:#d1c9c9; color:black;">
+<tr class="short-event" style="background:#cccccc; color:black;">
     <td>02/11</td>
     <td>11:35 PM</td>
     <td>11:45 PM</td>
@@ -924,9 +1488,18 @@
 </div>
 
 <script>
+    // Auto-scroll to current event
     const el = document.getElementById("current-event");
     if (el) {
         el.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+
+    // Dark mode toggle
+    const toggle = document.getElementById("darkModeSwitch");
+    if (toggle) {
+        toggle.addEventListener("change", () => {
+            document.body.classList.toggle("dark", toggle.checked);
+        });
     }
 </script>
 

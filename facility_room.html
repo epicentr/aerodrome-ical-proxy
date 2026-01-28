@@ -48,6 +48,20 @@
         border-radius: 10px;
     }
 
+    /* Dark mode toggle inside container */
+    .controls {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-bottom: 10px;
+        font-size: 0.9rem;
+    }
+
+    .dark-toggle label {
+        cursor: pointer;
+        user-select: none;
+    }
+
     table {
         width: 100%;
         border-collapse: collapse;
@@ -56,6 +70,7 @@
         table-layout: fixed;
     }
 
+    /* Sticky header */
     th {
         background: #e0e0e0;
         padding: 10px;
@@ -79,10 +94,12 @@
         background: rgba(0,0,0,0.08);
     }
 
+    /* Narrow Date/Start/End columns */
     th:nth-child(1), td:nth-child(1) { min-width: 8ch; }
     th:nth-child(2), td:nth-child(2) { min-width: 8ch; }
     th:nth-child(3), td:nth-child(3) { min-width: 8ch; }
 
+    /* Sticky day separator */
     .day-separator td {
         background: #2f6243 !important;
         color: white !important;
@@ -101,6 +118,64 @@
         font-size: 0.85rem;
         margin-top: 4px;
     }
+
+    /* Short events (< 60 minutes) 50% height */
+    .short-event td {
+        padding-top: 6px !important;
+        padding-bottom: 6px !important;
+    }
+
+    /* NOW marker */
+    #current-event td {
+        border-left: 6px solid #ff4444;
+        position: relative;
+    }
+
+    #current-event td:first-child::before {
+        content: "NOW";
+        position: absolute;
+        left: -45px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: #ff4444;
+        color: white;
+        padding: 2px 6px;
+        font-size: 0.7rem;
+        border-radius: 4px;
+        font-weight: bold;
+    }
+
+    /* Dark mode */
+    body.dark {
+        background: #111 !important;
+        color: #eee !important;
+    }
+
+    body.dark .container {
+        background: rgba(30,30,30,0.9) !important;
+    }
+
+    body.dark table {
+        color: #eee !important;
+    }
+
+    body.dark th {
+        background: #333 !important;
+        color: #eee !important;
+    }
+
+    body.dark td {
+        border-bottom: 1px solid #444 !important;
+    }
+
+    body.dark .day-separator td {
+        background: #444 !important;
+        color: #eee !important;
+    }
+
+    body.dark .banner {
+        background: #222 !important;
+    }
 </style>
 </head>
 
@@ -112,6 +187,15 @@
 </div>
 
 <div class="container">
+    <div class="controls">
+        <div class="dark-toggle">
+            <label>
+                <input type="checkbox" id="darkModeSwitch">
+                🌙 Dark Mode
+            </label>
+        </div>
+    </div>
+
 <table>
 <tr>
     <th>Date</th>
@@ -138,7 +222,7 @@
     <td colspan="4">Thursday – January 29</td>
 </tr>
 
-<tr  style="background:#fb42d3; color:white;">
+<tr style="background:#fb42d3; color:white;">
     <td>01/29</td>
     <td>05:00 PM</td>
     <td>06:55 PM</td>
@@ -152,7 +236,7 @@
     <td colspan="4">Friday – January 30</td>
 </tr>
 
-<tr  style="background:#fb42d3; color:white;">
+<tr style="background:#fb42d3; color:white;">
     <td>01/30</td>
     <td>06:30 PM</td>
     <td>10:00 PM</td>
@@ -166,7 +250,7 @@
     <td colspan="4">Saturday – January 31</td>
 </tr>
 
-<tr  style="background:#fb42d3; color:white;">
+<tr style="background:#fb42d3; color:white;">
     <td>01/31</td>
     <td>01:45 PM</td>
     <td>02:45 PM</td>
@@ -176,7 +260,7 @@
     </td>
 </tr>
 
-<tr  style="background:#fb42d3; color:white;">
+<tr style="background:#fb42d3; color:white;">
     <td>01/31</td>
     <td>03:30 PM</td>
     <td>04:30 PM</td>
@@ -190,7 +274,7 @@
     <td colspan="4">Sunday – February 01</td>
 </tr>
 
-<tr  style="background:#fb42d3; color:white;">
+<tr style="background:#fb42d3; color:white;">
     <td>02/01</td>
     <td>03:30 PM</td>
     <td>04:30 PM</td>
@@ -200,7 +284,7 @@
     </td>
 </tr>
 
-<tr  style="background:#fb42d3; color:white;">
+<tr style="background:#fb42d3; color:white;">
     <td>02/01</td>
     <td>08:00 PM</td>
     <td>09:30 PM</td>
@@ -214,7 +298,7 @@
     <td colspan="4">Wednesday – February 04</td>
 </tr>
 
-<tr  style="background:#fb42d3; color:white;">
+<tr style="background:#fb42d3; color:white;">
     <td>02/04</td>
     <td>05:00 PM</td>
     <td>06:55 PM</td>
@@ -228,7 +312,7 @@
     <td colspan="4">Thursday – February 05</td>
 </tr>
 
-<tr  style="background:#fb42d3; color:white;">
+<tr style="background:#fb42d3; color:white;">
     <td>02/05</td>
     <td>05:00 PM</td>
     <td>06:55 PM</td>
@@ -242,7 +326,7 @@
     <td colspan="4">Friday – February 06</td>
 </tr>
 
-<tr  style="background:#fb42d3; color:white;">
+<tr style="background:#fb42d3; color:white;">
     <td>02/06</td>
     <td>10:30 AM</td>
     <td>01:00 PM</td>
@@ -252,7 +336,7 @@
     </td>
 </tr>
 
-<tr  style="background:#fb42d3; color:white;">
+<tr style="background:#fb42d3; color:white;">
     <td>02/06</td>
     <td>06:00 PM</td>
     <td>10:00 PM</td>
@@ -266,7 +350,7 @@
     <td colspan="4">Saturday – February 07</td>
 </tr>
 
-<tr  style="background:#fb42d3; color:white;">
+<tr style="background:#fb42d3; color:white;">
     <td>02/07</td>
     <td>12:00 PM</td>
     <td>01:00 PM</td>
@@ -276,7 +360,7 @@
     </td>
 </tr>
 
-<tr  style="background:#fb42d3; color:white;">
+<tr style="background:#fb42d3; color:white;">
     <td>02/07</td>
     <td>02:00 PM</td>
     <td>04:00 PM</td>
@@ -290,7 +374,7 @@
     <td colspan="4">Sunday – February 08</td>
 </tr>
 
-<tr  style="background:#fb42d3; color:white;">
+<tr style="background:#fb42d3; color:white;">
     <td>02/08</td>
     <td>12:30 PM</td>
     <td>02:30 PM</td>
@@ -300,7 +384,7 @@
     </td>
 </tr>
 
-<tr  style="background:#fb42d3; color:white;">
+<tr class="short-event" style="background:#fb42d3; color:white;">
     <td>02/08</td>
     <td>02:55 PM</td>
     <td>03:25 PM</td>
@@ -314,7 +398,7 @@
     <td colspan="4">Wednesday – February 11</td>
 </tr>
 
-<tr  style="background:#fb42d3; color:white;">
+<tr style="background:#fb42d3; color:white;">
     <td>02/11</td>
     <td>05:00 PM</td>
     <td>06:55 PM</td>
@@ -328,9 +412,18 @@
 </div>
 
 <script>
+    // Auto-scroll to current event
     const el = document.getElementById("current-event");
     if (el) {
         el.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+
+    // Dark mode toggle
+    const toggle = document.getElementById("darkModeSwitch");
+    if (toggle) {
+        toggle.addEventListener("change", () => {
+            document.body.classList.toggle("dark", toggle.checked);
+        });
     }
 </script>
 
