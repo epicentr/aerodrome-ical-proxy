@@ -261,9 +261,9 @@ def generate_html(filename, events, title):
     #current-event td {
         border-left: 6px solid #ff4444;
         position: relative;
-    }
+    }}
 
-    #current-event td:first-child::before {
+    #current-event td:first-child::before {{
         content: "NOW";
         position: absolute;
         left: -40px;              /* distance from table */
@@ -279,7 +279,7 @@ def generate_html(filename, events, title):
         letter-spacing: 1px;
         text-align: center;
         white-space: nowrap;
-    }
+    }}
 
     /* Dark mode */
     body.dark {{
