@@ -82,6 +82,7 @@ def generate_weekly_pdf(rows, tzid):
 # GENERATE MOBILE FRIENDLY HTML
 # -----------------------------
 def generate_html(filename, events, title):
+    # Sort events by start time so day separators appear correctly
     events = sorted(events, key=lambda r: parse_datetime(r['start']))
 
     html = f"""
@@ -135,6 +136,7 @@ def generate_html(filename, events, title):
         border-radius: 10px;
     }}
 
+    /* Dark mode toggle inside container */
     .controls {{
         display: flex;
         justify-content: flex-end;
@@ -156,6 +158,7 @@ def generate_html(filename, events, title):
         table-layout: fixed;
     }}
 
+    /* Sticky header */
     th {{
         background: #e0e0e0;
         padding: 10px;
@@ -179,10 +182,12 @@ def generate_html(filename, events, title):
         background: rgba(0,0,0,0.08);
     }}
 
+    /* Narrow Date/Start/End columns */
     th:nth-child(1), td:nth-child(1) {{ min-width: 8ch; }}
     th:nth-child(2), td:nth-child(2) {{ min-width: 8ch; }}
     th:nth-child(3), td:nth-child(3) {{ min-width: 8ch; }}
 
+    /* Sticky day separator */
     .day-separator td {{
         background: #2f6243 !important;
         color: white !important;
@@ -272,13 +277,14 @@ def generate_html(filename, events, title):
             </label>
         </div>
     </div>
-    <table>
-        <tr>
-            <th>Date</th>
-            <th>Start</th>
-            <th>End</th>
-            <th>Event</th>
-        </tr>
+
+<table>
+<tr>
+    <th>Date</th>
+    <th>Start</th>
+    <th>End</th>
+    <th>Event</th>
+</tr>
 """
 
     last_date = None
@@ -304,11 +310,12 @@ def generate_html(filename, events, title):
 
         date_str = start.strftime('%m/%d')
 
+        # Insert day separator
         if last_date != date_str:
             html += f"""
-        <tr class="day-separator">
-            <td colspan="4">{start.strftime('%A – %B %d')}</td>
-        </tr>
+<tr class="day-separator">
+    <td colspan="4">{start.strftime('%A – %B %d')}</td>
+</tr>
 """
             last_date = date_str
 
@@ -348,19 +355,19 @@ def generate_html(filename, events, title):
             row_style = f"background:{color}; color:{fg};" if color else ""
 
         html += f"""
-        <tr {'id="current-event"' if row_id else ''} style="{row_style}">
-            <td>{date_str}</td>
-            <td>{start.strftime('%I:%M %p')}</td>
-            <td>{end.strftime('%I:%M %p')}</td>
-            <td>
-                {desc}
-                <div class="desc">{RINK_NAMES.get(row.get('resource_id'), '')}</div>
-            </td>
-        </tr>
+<tr {'id="current-event"' if row_id else ''} style="{row_style}">
+    <td>{date_str}</td>
+    <td>{start.strftime('%I:%M %p')}</td>
+    <td>{end.strftime('%I:%M %p')}</td>
+    <td>
+        {desc}
+        <div class="desc">{RINK_NAMES.get(row.get('resource_id'), '')}</div>
+    </td>
+</tr>
 """
 
     html += """
-    </table>
+</table>
 </div>
 
 <script>
@@ -385,6 +392,7 @@ def generate_html(filename, events, title):
 
     with open(filename, "w", encoding="utf-8") as f:
         f.write(html.strip())
+
 
 # -----------------------------
 # MAIN CSV → ICS PROCESSOR
