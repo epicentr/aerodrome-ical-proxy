@@ -257,25 +257,29 @@ def generate_html(filename, events, title):
         padding-bottom: 6px !important;
     }}
 
-    /* NOW marker */
-    #current-event td {{
+    /* Rotated NOW marker */
+    #current-event td {
         border-left: 6px solid #ff4444;
         position: relative;
-    }}
+    }
 
-    #current-event td:first-child::before {{
+    #current-event td:first-child::before {
         content: "NOW";
         position: absolute;
-        left: -45px;
+        left: -40px;              /* distance from table */
         top: 50%;
-        transform: translateY(-50%);
+        transform: translateY(-50%) rotate(-90deg);
+        transform-origin: center;
         background: #ff4444;
         color: white;
-        padding: 2px 6px;
+        padding: 4px 6px;
         font-size: 0.7rem;
         border-radius: 4px;
         font-weight: bold;
-    }}
+        letter-spacing: 1px;
+        text-align: center;
+        white-space: nowrap;
+    }
 
     /* Dark mode */
     body.dark {{
