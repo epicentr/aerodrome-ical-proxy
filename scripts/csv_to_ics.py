@@ -258,7 +258,7 @@ def generate_html(filename, events, title):
     }}
 
     /* Rotated NOW marker */
-    #current-event td {
+    #current-event td {{
         border-left: 6px solid #ff4444;
         position: relative;
     }}
