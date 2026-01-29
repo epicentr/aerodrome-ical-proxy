@@ -126,9 +126,8 @@ jobs:
           git add index.html
           # git add week_*.pdf   # enable if using weekly PDFs
 
-          git commit -m "Update calendar data
+          git commit -m "Update calendar data" -m "Diff summary: 
+          ${{ steps.diffsum.outputs.summary }}" || echo "No changes to commit"
 
-Diff summary:
-${{ steps.diffsum.outputs.summary }}" || echo "No changes to commit"
 
           git push --force
