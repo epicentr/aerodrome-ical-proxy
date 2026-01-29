@@ -38,7 +38,7 @@ jobs:
           git config user.name "ical-bot"
           git config user.email "ical-bot@example.com"
           git add events.csv facility.ics facility_rink.ics facility_locker.ics facility_room.ics
-          git add week_*.pdf
+#          git add week_*.pdf
           git add facility*.html
           git commit -m "Update calendar data" || echo "No changes to commit"
           git push --force
