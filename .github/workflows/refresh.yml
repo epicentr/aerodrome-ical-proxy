@@ -95,7 +95,7 @@ jobs:
       - name: Update timestamp in index.html
         run: |
           ts="$(TZ='America/Chicago' date +"%Y-%m-%d %I:%M %p CST")"
-          sed -i "s/{{LAST_UPDATED}}/$ts/" index.html
+          sed -i "s|{{LAST_UPDATED}}|$ts|" index.html
 
       # ---------------------------------------------------------
       # 6. Run CSV → ICS/HTML/PDF generator
