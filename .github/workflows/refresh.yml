@@ -5,7 +5,7 @@ permissions:
 
 on:
   schedule:
-    - cron: "*/59 * * * *"
+    - cron: "5 * * * *"   # Run at :05 past every hour
   workflow_dispatch:
 
 jobs:
@@ -16,10 +16,69 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
+      # ---------------------------------------------------------
+      # 1. Download CSV with fallback protection
+      # ---------------------------------------------------------
       - name: Download CSV
+        id: download
         run: |
-          curl -L "https://lab540.com/aero/scheduleweek-a.csv" -o events.csv
+          curl -L "https://lab540.com/aero/scheduleweek-a.csv" -o events.csv || true
 
+          # Check if file exists and is > 20 bytes
+          if [ ! -f events.csv ]; then
+            echo "downloaded=false" >> $GITHUB_OUTPUT
+          elif [ $(wc -c < events.csv) -lt 20 ]; then
+            echo "downloaded=false" >> $GITHUB_OUTPUT
+          else
+            echo "downloaded=true" >> $GITHUB_OUTPUT
+          fi
+
+      # Stop workflow if CSV failed to download
+      - name: Stop if CSV download failed
+        if: steps.download.outputs.downloaded == 'false'
+        run: |
+          echo "CSV download failed — skipping workflow."
+          exit 0
+
+      # ---------------------------------------------------------
+      # 2. Guard: Skip if CSV is empty
+      # ---------------------------------------------------------
+      - name: Check if CSV is empty
+        id: emptycheck
+        run: |
+          if [ ! -s events.csv ]; then
+            echo "empty=true" >> $GITHUB_OUTPUT
+          else
+            echo "empty=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Stop if CSV is empty
+        if: steps.emptycheck.outputs.empty == 'true'
+        run: |
+          echo "CSV is empty — skipping workflow."
+          exit 0
+
+      # ---------------------------------------------------------
+      # 3. Guard: Skip if CSV unchanged
+      # ---------------------------------------------------------
+      - name: Check if CSV changed
+        id: csvcheck
+        run: |
+          if git diff --quiet --exit-code events.csv; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Stop if CSV unchanged
+        if: steps.csvcheck.outputs.changed == 'false'
+        run: |
+          echo "CSV unchanged — skipping workflow."
+          exit 0
+
+      # ---------------------------------------------------------
+      # 4. Python environment
+      # ---------------------------------------------------------
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
@@ -28,16 +87,48 @@ jobs:
       - name: Install dependencies
         run: |
           pip install icalendar
- #         pip install reportlab  --> add "git add week_*.pdf" in commit below
+          # pip install reportlab   # enable if using weekly PDFs
 
-      - name: Convert CSV to ICS
+      # ---------------------------------------------------------
+      # 5. Update timestamp in index.html
+      # ---------------------------------------------------------
+      - name: Update timestamp in index.html
+        run: |
+          ts="$(TZ='America/Chicago' date +"%Y-%m-%d %I:%M %p CST")"
+          sed -i "s/{{LAST_UPDATED}}/$ts/" index.html
+
+      # ---------------------------------------------------------
+      # 6. Run CSV → ICS/HTML/PDF generator
+      # ---------------------------------------------------------
+      - name: Convert CSV to ICS/HTML/PDF
         run: python scripts/csv_to_ics.py
 
+      # ---------------------------------------------------------
+      # 7. Diff summary for commit message
+      # ---------------------------------------------------------
+      - name: Generate diff summary
+        id: diffsum
+        run: |
+          summary=$(git diff --unified=0 events.csv | sed 's/$/\\n/' | head -n 20)
+          echo "summary=$summary" >> $GITHUB_OUTPUT
+
+      # ---------------------------------------------------------
+      # 8. Commit updated files
+      # ---------------------------------------------------------
       - name: Commit updated files
         run: |
           git config user.name "ical-bot"
           git config user.email "ical-bot@example.com"
-          git add events.csv facility.ics facility_rink.ics facility_locker.ics facility_room.ics
+
+          git add events.csv
+          git add facility*.ics
           git add facility*.html
-          git commit -m "Update calendar data" || echo "No changes to commit"
+          git add index.html
+          # git add week_*.pdf   # enable if using weekly PDFs
+
+          git commit -m "Update calendar data
+
+Diff summary:
+${{ steps.diffsum.outputs.summary }}" || echo "No changes to commit"
+
           git push --force
