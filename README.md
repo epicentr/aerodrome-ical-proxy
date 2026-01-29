@@ -4,7 +4,7 @@ markdown
 This repository provides automatically updated iCalendar (`.ics`) feeds for Aerodrome events.  
 The feeds refresh every **15 minutes** and are generated from the Aerodrome’s official CSV export:
 
-https://lab540.com/aero/scheduleweek-a.csv
+
 
 Code
 
