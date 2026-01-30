@@ -5,7 +5,7 @@ permissions:
 
 on:
   schedule:
-    - cron: "5 * * * *"   # Run at :05 past every hour
+    - cron: "5 * * * *"
   workflow_dispatch:
 
 jobs:
@@ -24,7 +24,6 @@ jobs:
         run: |
           curl -L "https://lab540.com/aero/scheduleweek-a.csv" -o events.csv || true
 
-          # Check if file exists and is > 20 bytes
           if [ ! -f events.csv ]; then
             echo "downloaded=false" >> $GITHUB_OUTPUT
           elif [ $(wc -c < events.csv) -lt 20 ]; then
@@ -33,7 +32,6 @@ jobs:
             echo "downloaded=true" >> $GITHUB_OUTPUT
           fi
 
-      # Stop workflow if CSV failed to download
       - name: Stop if CSV download failed
         if: steps.download.outputs.downloaded == 'false'
         run: |
@@ -87,7 +85,6 @@ jobs:
       - name: Install dependencies
         run: |
           pip install icalendar
-          # pip install reportlab   # enable if using weekly PDFs
 
       # ---------------------------------------------------------
       # 5. Update timestamp in index.html
@@ -98,19 +95,24 @@ jobs:
           sed -i "s|{{LAST_UPDATED}}|$ts|" index.html
 
       # ---------------------------------------------------------
-      # 6. Run CSV → ICS/HTML/PDF generator
+      # 6. Run CSV → ICS/HTML generator
       # ---------------------------------------------------------
-      - name: Convert CSV to ICS/HTML/PDF
+      - name: Convert CSV to ICS/HTML
         run: python scripts/csv_to_ics.py
 
       # ---------------------------------------------------------
-      # 7. Diff summary for commit message
+      # 7. Multiline-safe diff summary
       # ---------------------------------------------------------
       - name: Generate diff summary
         id: diffsum
         run: |
-          summary=$(git diff --unified=0 events.csv | sed 's/$/\\n/' | head -n 20)
-          echo "summary=$summary" >> $GITHUB_OUTPUT
+          summary="$(git diff --unified=0 events.csv | head -n 20)"
+
+          {
+            echo "summary<<EOF"
+            echo "$summary"
+            echo "EOF"
+          } >> $GITHUB_OUTPUT
 
       # ---------------------------------------------------------
       # 8. Commit updated files
@@ -124,10 +126,7 @@ jobs:
           git add facility*.ics
           git add facility*.html
           git add index.html
-          # git add week_*.pdf   # enable if using weekly PDFs
 
-          git commit -m "Update calendar data" -m "Diff summary: 
-          ${{ steps.diffsum.outputs.summary }}" || echo "No changes to commit"
-
+          git commit -m "Update calendar data" -m "$(printf "Diff summary:\n%s" "${{ steps.diffsum.outputs.summary }}")" || echo "No changes to commit"
 
           git push --force
