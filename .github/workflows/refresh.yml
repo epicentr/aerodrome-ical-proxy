@@ -127,6 +127,8 @@ jobs:
           git add facility*.html
           git add index.html
 
-          git commit -m "Update calendar data" -m "$(printf "Diff summary:\n%s" "${{ steps.diffsum.outputs.summary }}")" || echo "No changes to commit"
+          git commit -m "Update calendar data" \
+            -m "$(printf "Diff summary:\n%s" "${{ steps.diffsum.outputs.summary }}")" \
+            || echo "No changes to commit"
 
           git push --force
