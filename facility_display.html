@@ -6,24 +6,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-    html, body {
+    body {
         margin: 0;
         padding: 0;
-        width: 100%;
-        height: 100%;
         background-image: url('media/background.png');
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
-        color: #fff;
         font-family: Arial, sans-serif;
-        overflow: hidden;
+        color: #fff;
     }
 
     .banner {
         width: 100%;
-        margin: 0;
-        padding: 0;
         background: #2f6243;
         text-align: center;
     }
@@ -37,25 +32,24 @@
 
     .banner-title {
         margin: 0;
-        padding: 16px;
+        padding: 20px;
         color: white;
-        font-size: 2.2rem;
+        font-size: 2.4rem;   /* bumped */
         background: rgba(0,0,0,0.35);
     }
 
     .screen {
-        box-sizing: border-box;
-        padding: 24px 40px 40px 40px;
         max-width: 1920px;
         margin: 0 auto;
+        padding: 30px 40px;
         background: rgba(0,0,0,0.65);
+        box-sizing: border-box;
         height: calc(100vh - 200px);
-        display: flex;
-        flex-direction: column;
+        overflow-y: auto;
     }
 
     .subheader {
-        font-size: 1.4rem;
+        font-size: 1.6rem;   /* bumped */
         margin-bottom: 20px;
         color: #ddd;
     }
@@ -63,19 +57,23 @@
     table {
         width: 100%;
         border-collapse: collapse;
-        font-size: 1.5rem;
+        font-size: 1.8rem;   /* bumped */
+        table-layout: fixed;
     }
 
     th {
         text-align: left;
         border-bottom: 3px solid #555;
-        padding: 10px 8px;
+        padding: 12px 8px;
         color: #eee;
+        font-size: 1.6rem;   /* bumped */
     }
 
     td {
-        padding: 12px 8px;
+        padding: 16px 10px;  /* slightly larger */
         vertical-align: middle;
+        word-wrap: break-word;
+        white-space: normal;
     }
 
     tr:nth-child(even) td {
@@ -83,20 +81,22 @@
     }
 
     .time-col {
-        width: 220px;
+        width: 240px;
         white-space: nowrap;
+        font-size: 1.7rem;   /* bumped */
     }
 
     .event-col {
         width: auto;
+        font-size: 1.8rem;   /* bumped */
     }
 
     .loc-col {
         width: 260px;
         text-align: right;
         color: #ddd;
-        font-size: 1.3rem;
         white-space: nowrap;
+        font-size: 1.6rem;   /* bumped */
     }
 
     .icecut {
@@ -124,84 +124,6 @@
             <th class="time-col">Time</th>
             <th class="event-col">Event</th>
             <th class="loc-col">Location</th>
-        </tr>
-
-        <tr style="background:#0ae8ea; color:black;">
-            <td class="time-col">05:00 AM – 05:30 AM</td>
-            <td class="event-col">Freestyle</td>
-            <td class="loc-col">Ice Rink</td>
-        </tr>
-
-        <tr style="background:#0ae8ea; color:black;">
-            <td class="time-col">05:30 AM – 06:00 AM</td>
-            <td class="event-col">Freestyle</td>
-            <td class="loc-col">Ice Rink</td>
-        </tr>
-
-        <tr style="background:#0ae8ea; color:black;">
-            <td class="time-col">06:00 AM – 06:30 AM</td>
-            <td class="event-col">Freestyle</td>
-            <td class="loc-col">Ice Rink</td>
-        </tr>
-
-        <tr style="background:#0ae8ea; color:black;">
-            <td class="time-col">06:30 AM – 07:00 AM</td>
-            <td class="event-col">Freestyle</td>
-            <td class="loc-col">Ice Rink</td>
-        </tr>
-
-        <tr style="background:#0ae8ea; color:black;">
-            <td class="time-col">07:00 AM – 07:30 AM</td>
-            <td class="event-col">Freestyle</td>
-            <td class="loc-col">Ice Rink</td>
-        </tr>
-
-        <tr style="background:#0ae8ea; color:black;">
-            <td class="time-col">07:30 AM – 08:00 AM</td>
-            <td class="event-col">Freestyle</td>
-            <td class="loc-col">Ice Rink</td>
-        </tr>
-
-        <tr style="background:#0ae8ea; color:black;">
-            <td class="time-col">08:00 AM – 08:30 AM</td>
-            <td class="event-col">Freestyle</td>
-            <td class="loc-col">Ice Rink</td>
-        </tr>
-
-        <tr style="background:#0ae8ea; color:black;">
-            <td class="time-col">08:30 AM – 09:00 AM</td>
-            <td class="event-col">Freestyle</td>
-            <td class="loc-col">Ice Rink</td>
-        </tr>
-
-        <tr style="background:#d1c9c9; color:black;">
-            <td class="time-col">09:00 AM – 11:00 AM</td>
-            <td class="event-col">ICE MAINTENANCE</td>
-            <td class="loc-col">Ice Rink</td>
-        </tr>
-
-        <tr style="background:#f0f509; color:black;">
-            <td class="time-col">11:00 AM – 12:45 PM</td>
-            <td class="event-col">Public Skating</td>
-            <td class="loc-col">Ice Rink</td>
-        </tr>
-
-        <tr class="icecut" style="background:#cccccc; color:black;">
-            <td class="time-col">12:45 PM – 01:00 PM</td>
-            <td class="event-col">ICE CUT</td>
-            <td class="loc-col">Ice Rink</td>
-        </tr>
-
-        <tr style="background:#a09999; color:black;">
-            <td class="time-col">01:00 PM – 02:00 PM</td>
-            <td class="event-col">Hack N Whack Oil Field</td>
-            <td class="loc-col">Ice Rink</td>
-        </tr>
-
-        <tr class="icecut" style="background:#cccccc; color:black;">
-            <td class="time-col">02:00 PM – 02:10 PM</td>
-            <td class="event-col">ICE CUT</td>
-            <td class="loc-col">Ice Rink</td>
         </tr>
 
         <tr class="now" style="background:#59f005; color:black;">
@@ -298,7 +220,6 @@
 </div>
 
 <script>
-    // Auto-refresh every 60 seconds
     setTimeout(() => location.reload(), 60000);
 </script>
 
