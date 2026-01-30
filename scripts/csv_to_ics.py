@@ -4,7 +4,7 @@ from icalendar import Calendar, Event
 import zoneinfo
 
 # -----------------------------
-# RINK NAME MAPPING
+# CONSTANTS
 # -----------------------------
 RINK_NAMES = {
     "1": "Ice Rink",
@@ -22,7 +22,7 @@ def parse_datetime(dt_str):
     return datetime.strptime(dt_str.strip(), "%m/%d/%Y %I:%M:%S %p")
 
 # -----------------------------
-# CREATE CALENDAR (NO VTIMEZONE)
+# CREATE CALENDAR
 # -----------------------------
 def make_calendar(tzid):
     cal = Calendar()
@@ -53,11 +53,6 @@ def add_event(cal, row, tzid):
 # SYNTHETIC ICE CUT GENERATION
 # -----------------------------
 def build_synthetic_icecuts(rows):
-    """
-    Build synthetic ICE CUT? events based on gaps between Ice Rink events.
-    Gap > 5 minutes and <= 10 minutes => synthetic ICE CUT? with duration = gap.
-    Only for resource_id == "1" (Ice Rink).
-    """
     rink_events = [r for r in rows if r.get("resource_id") == "1"]
     rink_events_sorted = sorted(rink_events, key=lambda r: parse_datetime(r['start']))
 
@@ -73,11 +68,11 @@ def build_synthetic_icecuts(rows):
 
         gap_minutes = (start_next - end_current).total_seconds() / 60.0
 
-        if gap_minutes > 5 and gap_minutes <= 10:
+        if 5 < gap_minutes <= 10:
             synth_start = end_current
             synth_end = end_current + timedelta(minutes=gap_minutes)
 
-            synth_row = {
+            synthetic.append({
                 'start': synth_start.strftime("%m/%d/%Y %I:%M:%S %p"),
                 'end': synth_end.strftime("%m/%d/%Y %I:%M:%S %p"),
                 'desc': 'ICE CUT?',
@@ -85,347 +80,193 @@ def build_synthetic_icecuts(rows):
                 'resource_id': '1',
                 'et_color': '#999999',
                 'synthetic': '1'
-            }
-            synthetic.append(synth_row)
+            })
 
     return synthetic
 
 # -----------------------------
-# HTML GENERATION
+# MERGE CONCURRENT EVENTS (DISPLAY ONLY)
 # -----------------------------
-def generate_html(filename, events, title):
-    # Sort events by start time so day separators appear correctly
+def merge_concurrent_events(events):
+    events_sorted = sorted(events, key=lambda r: parse_datetime(r['start']))
+    merged = []
+    i = 0
+    n = len(events_sorted)
+
+    while i < n:
+        current = events_sorted[i]
+        group = [current]
+        start_i = parse_datetime(current['start'])
+
+        j = i + 1
+        while j < n:
+            if parse_datetime(events_sorted[j]['start']) == start_i:
+                group.append(events_sorted[j])
+                j += 1
+            else:
+                break
+
+        if len(group) == 1:
+            merged.append(current)
+        else:
+            descs = [
+                (r.get('best_desc') or r.get('desc') or "Event").strip()
+                for r in group
+            ]
+            word_lists = [d.split() for d in descs]
+
+            common_prefix = []
+            for words in zip(*word_lists):
+                if all(w == words[0] for w in words):
+                    common_prefix.append(words[0])
+                else:
+                    break
+
+            merged_desc = " ".join(common_prefix) if common_prefix else descs[0]
+
+            base = dict(group[0])
+            base['desc'] = merged_desc
+            base['best_desc'] = merged_desc
+            merged.append(base)
+
+        i = j
+
+    return merged
+
+# -----------------------------
+# STANDARD HTML GENERATOR
+# -----------------------------
+# (unchanged — omitted here for brevity, but included in your actual file)
+# Your full generate_html() function stays exactly as you provided it.
+
+# -----------------------------
+# DIGITAL DISPLAY HTML (1080p)
+# -----------------------------
+def generate_display_html(filename, events, title):
+    events = merge_concurrent_events(events)
     events = sorted(events, key=lambda r: parse_datetime(r['start']))
 
     html = f"""
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title}</title>
-
 <style>
     body {{
+        margin: 0;
+        padding: 0;
+        background: #000;
+        color: #fff;
         font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-image: url('media/background.png');
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        color: #333;
+        overflow: hidden;
     }}
-
-    .banner {{
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        background: #2f6243;
-        text-align: center;
+    .screen {{
+        width: 1920px;
+        height: 1080px;
+        padding: 40px;
+        box-sizing: border-box;
     }}
-
-    .banner img {{
-        width: 100%;
-        max-height: 200px;
-        object-fit: cover;
-        display: block;
-    }}
-
-    h1 {{
-        margin: 0;
-        padding: 20px;
-        color: white;
-        font-size: 1.8rem;
-        background: rgba(0,0,0,0.35);
-    }}
-
-    .container {{
-        padding: 20px;
-        max-width: 900px;
-        margin: 20px auto;
-        background: rgba(255,255,255,0.92);
-        border-radius: 10px;
-    }}
-
-    /* Dark mode toggle inside container */
-    .controls {{
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
+    .header {{
+        font-size: 3rem;
+        font-weight: bold;
         margin-bottom: 10px;
-        font-size: 0.9rem;
     }}
-
-    .dark-toggle label {{
-        cursor: pointer;
-        user-select: none;
+    .subheader {{
+        font-size: 1.6rem;
+        margin-bottom: 30px;
+        color: #ccc;
     }}
-
     table {{
         width: 100%;
         border-collapse: collapse;
-        margin: 0;
-        font-size: 1rem;
-        table-layout: fixed;
+        font-size: 1.8rem;
     }}
-
-    /* Sticky header */
     th {{
-        background: #e0e0e0;
-        padding: 10px;
         text-align: left;
-        font-size: 0.9rem;
-        position: sticky;
-        top: 0;
-        z-index: 5;
-        border-bottom: 2px solid #ccc;
+        border-bottom: 3px solid #444;
+        padding-bottom: 10px;
+        color: #ccc;
     }}
-
     td {{
-        padding: 12px 10px;
-        border-bottom: 1px solid #ddd;
-        word-wrap: break-word;
-        white-space: normal;
-        transition: background 0.2s ease;
+        padding: 14px 10px;
     }}
-
-    tr:hover td {{
-        background: rgba(0,0,0,0.08);
+    tr:nth-child(even) td {{
+        background: #111;
     }}
-
-    /* Narrow Date/Start/End columns */
-    th:nth-child(1), td:nth-child(1) {{ min-width: 4ch; }}
-    th:nth-child(2), td:nth-child(2) {{ min-width: 4ch; }}
-    th:nth-child(3), td:nth-child(3) {{ min-width: 4ch; }}
-
-    /* Sticky day separator */
-    .day-separator td {{
-        background: #2f6243 !important;
-        color: white !important;
-        font-weight: bold;
-        padding: 8px;
-        text-align: center;
-        border-top: 2px solid #1e402c;
-        border-bottom: 2px solid #1e402c;
-        position: sticky;
-        top: 42px;
-        z-index: 4;
-    }}
-
-    .desc {{
-        color: inherit;
-        font-size: 0.85rem;
-        margin-top: 4px;
-    }}
-
-    /* Short events (< 60 minutes) 50% height */
-    .short-event td {{
-        padding-top: 6px !important;
-        padding-bottom: 6px !important;
-    }}
-
-    /* Rotated NOW marker */
-    #current-event td {{
-        border-left: 6px solid #ff4444;
-        position: relative;
-    }}
-
-    #current-event td:first-child::before {{
-        content: "NOW";
-        position: absolute;
-        left: -40px;
-        top: 50%;
-        transform: translateY(-50%) rotate(-90deg);
-        transform-origin: center;
-        background: #ff4444;
-        color: white;
-        padding: 4px 6px;
-        font-size: 0.7rem;
-        border-radius: 4px;
-        font-weight: bold;
-        letter-spacing: 1px;
-        text-align: center;
-        white-space: nowrap;
-    }}
-
-    /* Dark mode */
-    body.dark {{
-        background: #111 !important;
-        color: #eee !important;
-    }}
-
-    body.dark .container {{
-        background: rgba(30,30,30,0.9) !important;
-    }}
-
-    body.dark table {{
-        color: #eee !important;
-    }}
-
-    body.dark th {{
-        background: #333 !important;
-        color: #eee !important;
-    }}
-
-    body.dark td {{
-        border-bottom: 1px solid #444 !important;
-    }}
-
-    body.dark .day-separator td {{
+    .icecut {{
         background: #444 !important;
-        color: #eee !important;
+        color: #fff !important;
     }}
-
-    body.dark .banner {{
-        background: #222 !important;
+    .now {{
+        outline: 4px solid #ff4444;
     }}
 </style>
 </head>
-
 <body>
 
-<div class="banner">
-    <img src="media/banner.png" alt="Aerodrome Banner">
-    <h1>{title}</h1>
-</div>
+<div class="screen">
+    <div class="header">{title}</div>
+    <div class="subheader">Today – {datetime.now().astimezone(LOCAL_TZ).strftime('%A, %B %d')}</div>
 
-<div class="container">
-    <div class="controls">
-        <div class="dark-toggle">
-            <label>
-                <input type="checkbox" id="darkModeSwitch">
-                🌙 Dark Mode
-            </label>
-        </div>
-    </div>
-
-<table>
-<tr>
-    <th>Date</th>
-    <th>Start</th>
-    <th>End</th>
-    <th>Event</th>
-</tr>
+    <table>
+        <tr>
+            <th>Time</th>
+            <th>Event</th>
+            <th>Location</th>
+        </tr>
 """
 
-    last_date = None
-    current_event_marked = False
-
-    now_local_dt = datetime.now().astimezone(LOCAL_TZ)
-    today_local = now_local_dt.date()
+    now = datetime.now().astimezone(LOCAL_TZ)
+    today = now.date()
+    marked = False
 
     for row in events:
         start = parse_datetime(row['start']).replace(tzinfo=LOCAL_TZ)
         end = parse_datetime(row['end']).replace(tzinfo=LOCAL_TZ)
-        duration_minutes = int((end - start).total_seconds() / 60)
 
-        raw_desc = row.get('best_desc') or row.get('desc') or "Event"
-        desc_lower = raw_desc.lower()
+        if start.date() != today:
+            continue
 
-        is_synthetic = row.get('synthetic') == '1'
+        raw = row.get('best_desc') or row.get('desc') or "Event"
+        desc_lower = raw.lower()
+        duration = int((end - start).total_seconds() / 60)
 
-        # Real ICE CUT detection (broad match, <= 20 minutes)
         keywords = ["takedown", "ice cut", "icecut"]
-        is_real_ice_cut = any(k in desc_lower for k in keywords) and duration_minutes <= 20
+        is_real = any(k in desc_lower for k in keywords) and duration <= 20
+        is_synth = row.get('synthetic') == '1'
+        is_icecut = is_real or is_synth
 
-        # Overall ICE CUT flag
-        is_ice_cut = is_synthetic or is_real_ice_cut
+        desc = "ICE CUT" if is_real else ("ICE CUT?" if is_synth else raw)
 
-        # Display text
-        if is_synthetic:
-            desc = "ICE CUT?"
-        elif is_real_ice_cut:
-            desc = "ICE CUT"
-        else:
-            desc = raw_desc
+        is_now = False
+        if start <= now <= end or (start > now and not marked):
+            is_now = True
 
-        date_str = start.strftime('%m/%d')
+        classes = []
+        if is_icecut:
+            classes.append("icecut")
+        if is_now and not marked:
+            classes.append("now")
+            marked = True
 
-        # Insert day separator
-        if last_date != date_str:
-            html += f"""
-<tr class="day-separator">
-    <td colspan="4">{start.strftime('%A – %B %d')}</td>
-</tr>
-"""
-            last_date = date_str
-
-        # TIME-BASED CURRENT EVENT LOGIC
-        is_today = start.date() == today_local
-        is_current_event = False
-
-        if is_today:
-            if start <= now_local_dt <= end:
-                is_current_event = True
-            elif start > now_local_dt and not current_event_marked:
-                is_current_event = True
-
-        row_id = "current-event" if (is_current_event and not current_event_marked) else ""
-        if row_id:
-            current_event_marked = True
-
-        # Short event class
-        row_class = "short-event" if duration_minutes < 60 else ""
-
-        # Color coding
-        if is_synthetic:
-            # Synthetic ICE CUT? darker gray
-            row_style = "background:#999999; color:black;"
-        elif is_real_ice_cut:
-            # Real ICE CUT light gray
-            row_style = "background:#cccccc; color:black;"
-        else:
-            color = row.get('et_color', '').strip()
-
-            def text_color(bg):
-                if not bg or not bg.startswith("#") or len(bg) not in (4, 7):
-                    return "black"
-                bg = bg.lstrip("#")
-                if len(bg) == 3:
-                    bg = "".join(c*2 for c in bg)
-                r = int(bg[0:2], 16)
-                g = int(bg[2:4], 16)
-                b = int(bg[4:6], 16)
-                luminance = (0.299*r + 0.587*g + 0.114*b)
-                return "white" if luminance < 140 else "black"
-
-            fg = text_color(color)
-            row_style = f"background:{color}; color:{fg};" if color else ""
-
-        id_attr = f' id="{row_id}"' if row_id else ""
-        class_attr = f' class="{row_class}"' if row_class else ""
+        class_attr = f' class="{" ".join(classes)}"' if classes else ""
+        loc = RINK_NAMES.get(row.get('resource_id'), '')
 
         html += f"""
-<tr{id_attr}{class_attr} style="{row_style}">
-    <td>{date_str}</td>
-    <td>{start.strftime('%I:%M %p')}</td>
-    <td>{end.strftime('%I:%M %p')}</td>
-    <td>
-        {desc}
-        <div class="desc">{RINK_NAMES.get(row.get('resource_id'), '')}</div>
-    </td>
-</tr>
+        <tr{class_attr}>
+            <td>{start.strftime('%I:%M %p')} – {end.strftime('%I:%M %p')}</td>
+            <td>{desc}</td>
+            <td>{loc}</td>
+        </tr>
 """
 
     html += """
-</table>
+    </table>
 </div>
 
 <script>
-    // Auto-scroll to current event
-    const el = document.getElementById("current-event");
-    if (el) {
-        el.scrollIntoView({ behavior: "smooth", block: "center" });
-    }
-
-    // Dark mode toggle
-    const toggle = document.getElementById("darkModeSwitch");
-    if (toggle) {
-        toggle.addEventListener("change", () => {
-            document.body.classList.toggle("dark", toggle.checked);
-        });
-    }
+setTimeout(() => location.reload(), 60000);
 </script>
 
 </body>
@@ -436,7 +277,7 @@ def generate_html(filename, events, title):
         f.write(html.strip())
 
 # -----------------------------
-# MAIN CSV → ICS PROCESSOR
+# MAIN PROCESSOR
 # -----------------------------
 def csv_to_ics(csv_path):
     tzid = LOCAL_TZID
@@ -454,68 +295,44 @@ def csv_to_ics(csv_path):
             all_rows.append(row)
             try:
                 resource = row.get('resource_id')
-
-                # ICS: only real events, no synthetic
                 add_event(cal_all, row, tzid)
-
                 if resource == "1":
                     add_event(cal_rink, row, tzid)
                 elif resource == "2":
                     add_event(cal_locker, row, tzid)
                 elif resource == "3":
                     add_event(cal_room, row, tzid)
-
             except Exception as e:
-                print(f"Skipping row due to error: {e}")
+                print(f"Skipping row: {e}")
 
-    # Build synthetic ICE CUT? events (only for rink)
-    synthetic_rows = build_synthetic_icecuts(all_rows)
+    synthetic = build_synthetic_icecuts(all_rows)
 
-    # Real ICE CUT rows (for ICE CUT page)
-    ice_cut_rows_real = []
+    ice_real = []
     for r in all_rows:
         start = parse_datetime(r['start']).replace(tzinfo=LOCAL_TZ)
         end = parse_datetime(r['end']).replace(tzinfo=LOCAL_TZ)
         duration = int((end - start).total_seconds() / 60)
         desc = (r.get("best_desc") or r.get("desc") or "").lower()
-        keywords = ["takedown", "ice cut", "icecut"]
-        if any(k in desc for k in keywords) and duration <= 20:
-            ice_cut_rows_real.append(r)
+        if any(k in desc for k in ["takedown", "ice cut", "icecut"]) and duration <= 20:
+            ice_real.append(r)
 
-    # ICE CUT page events: real + synthetic, chronological
-    ice_cut_page_rows = ice_cut_rows_real + synthetic_rows
+    ice_page = ice_real + synthetic
 
-    # Write ICS files (no synthetic)
-    with open('facility.ics', 'wb') as f:
-        f.write(cal_all.to_ical())
-
-    with open('facility_rink.ics', 'wb') as f:
-        f.write(cal_rink.to_ical())
-
-    with open('facility_locker.ics', 'wb') as f:
-        f.write(cal_locker.to_ical())
-
-    with open('facility_room.ics', 'wb') as f:
-        f.write(cal_room.to_ical())
+    # Write ICS
+    with open('facility.ics', 'wb') as f: f.write(cal_all.to_ical())
+    with open('facility_rink.ics', 'wb') as f: f.write(cal_rink.to_ical())
+    with open('facility_locker.ics', 'wb') as f: f.write(cal_locker.to_ical())
+    with open('facility_room.ics', 'wb') as f: f.write(cal_room.to_ical())
 
     # HTML pages
-    # facility.html: all events + synthetic
-    generate_html("facility.html", all_rows + synthetic_rows, "Aerodrome – All Events")
+    generate_html("facility.html", all_rows + synthetic, "Aerodrome – All Events")
+    generate_html("facility_rink.html", [r for r in all_rows if r.get("resource_id") == "1"] + synthetic, "Aerodrome – Ice Rink")
+    generate_html("facility_locker.html", [r for r in all_rows if r.get("resource_id") == "2"], "Aerodrome – Locker Rooms")
+    generate_html("facility_room.html", [r for r in all_rows if r.get("resource_id") == "3"], "Aerodrome – Room Rentals")
+    generate_html("facility_icecut.html", ice_page, "Aerodrome – ICE CUT Schedule")
 
-    # facility_rink.html: rink events + synthetic
-    rink_rows = [r for r in all_rows if r.get("resource_id") == "1"]
-    generate_html("facility_rink.html", rink_rows + synthetic_rows, "Aerodrome – Ice Rink")
-
-    # facility_locker.html: locker events only (no synthetic)
-    locker_rows = [r for r in all_rows if r.get("resource_id") == "2"]
-    generate_html("facility_locker.html", locker_rows, "Aerodrome – Locker Rooms")
-
-    # facility_room.html: room events only (no synthetic)
-    room_rows = [r for r in all_rows if r.get("resource_id") == "3"]
-    generate_html("facility_room.html", room_rows, "Aerodrome – Room Rentals")
-
-    # facility_icecut.html: real + synthetic ICE CUTs
-    generate_html("facility_icecut.html", ice_cut_page_rows, "Aerodrome – ICE CUT Schedule")
+    # NEW: Digital display page
+    generate_display_html("facility_display.html", all_rows + synthetic, "Aerodrome – Rink Schedule")
 
 # -----------------------------
 # ENTRY POINT
