@@ -567,7 +567,7 @@ def generate_display_html(filename, events, title):
     }}
 
     .time-col {{
-        width: 240px;
+        width: 300px;
         white-space: nowrap;
         font-size: 1.7rem;   /* bumped */
     }}
