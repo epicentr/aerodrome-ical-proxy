@@ -54,32 +54,32 @@ def add_event(cal, row, tzid):
 # -----------------------------
 # WEEKLY PDF EXPORT
 # -----------------------------
-def generate_weekly_pdf(rows, tzid):
-    today = datetime.now()
-    monday = today - timedelta(days=today.weekday())
-    sunday = monday + timedelta(days=6)
-
-    filename = f"week_{monday.strftime('%Y-%m-%d')}.pdf"
-    c = canvas.Canvas(filename, pagesize=letter)
-
-    c.setFont("Helvetica-Bold", 16)
-    c.drawString(50, 750, f"Aerodrome Weekly Schedule ({monday.strftime('%b %d')} - {sunday.strftime('%b %d')})")
-
-    y = 720
-    c.setFont("Helvetica", 10)
-
-    for row in rows:
-        start = parse_datetime(row['start'])
-        if monday <= start <= sunday:
-            line = f"{start.strftime('%a %m/%d %I:%M %p')} — {row['desc']} ({RINK_NAMES.get(row['resource_id'], 'Unknown')})"
-            c.drawString(50, y, line)
-            y -= 14
-            if y < 50:
-                c.showPage()
-                y = 750
-
-    c.save()
-    return filename
+# def generate_weekly_pdf(rows, tzid):
+#    today = datetime.now()
+#    monday = today - timedelta(days=today.weekday())
+#    sunday = monday + timedelta(days=6)
+#
+#    filename = f"week_{monday.strftime('%Y-%m-%d')}.pdf"
+#    c = canvas.Canvas(filename, pagesize=letter)
+#
+#    c.setFont("Helvetica-Bold", 16)
+#    c.drawString(50, 750, f"Aerodrome Weekly Schedule ({monday.strftime('%b %d')} - {sunday.strftime('%b %d')})")
+#
+#    y = 720
+#    c.setFont("Helvetica", 10)
+#
+#    for row in rows:
+#        start = parse_datetime(row['start'])
+#        if monday <= start <= sunday:
+#            line = f"{start.strftime('%a %m/%d %I:%M %p')} — {row['desc']} ({RINK_NAMES.get(row['resource_id'], 'Unknown')})"
+#            c.drawString(50, y, line)
+#            y -= 14
+#            if y < 50:
+#                c.showPage()
+#                y = 750
+#
+#    c.save()
+#    return filename
 
 # -----------------------------
 # SYNTHETIC ICE CUT GENERATION
@@ -550,8 +550,8 @@ def csv_to_ics(csv_path):
     generate_html("facility_icecut.html", ice_cut_page_rows, "Aerodrome – ICE CUT Schedule")
 
     # Weekly PDF (real events only)
-    pdf_file = generate_weekly_pdf(all_rows, tzid)
-    print(f"Generated weekly PDF: {pdf_file}")
+    # pdf_file = generate_weekly_pdf(all_rows, tzid)
+    # print(f"Generated weekly PDF: {pdf_file}")
 
 # -----------------------------
 # ENTRY POINT
