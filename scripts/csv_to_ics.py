@@ -481,7 +481,6 @@ def generate_html(filename, events, title):
 def generate_display_html(filename, events, title):
     # Merge concurrent events first
     events = merge_concurrent_events(events)
-    # Sort by start time
     events = sorted(events, key=lambda r: parse_datetime(r['start']))
 
     html = f"""
@@ -493,24 +492,19 @@ def generate_display_html(filename, events, title):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-    html, body {{
+    body {{
         margin: 0;
         padding: 0;
-        width: 100%;
-        height: 100%;
         background-image: url('media/background.png');
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
-        color: #fff;
         font-family: Arial, sans-serif;
-        overflow: hidden;
+        color: #fff;
     }}
 
     .banner {{
         width: 100%;
-        margin: 0;
-        padding: 0;
         background: #2f6243;
         text-align: center;
     }}
@@ -524,25 +518,24 @@ def generate_display_html(filename, events, title):
 
     .banner-title {{
         margin: 0;
-        padding: 16px;
+        padding: 20px;
         color: white;
-        font-size: 2.2rem;
+        font-size: 2.4rem;   /* bumped */
         background: rgba(0,0,0,0.35);
     }}
 
     .screen {{
-        box-sizing: border-box;
-        padding: 24px 40px 40px 40px;
         max-width: 1920px;
         margin: 0 auto;
+        padding: 30px 40px;
         background: rgba(0,0,0,0.65);
+        box-sizing: border-box;
         height: calc(100vh - 200px);
-        display: flex;
-        flex-direction: column;
+        overflow-y: auto;
     }}
 
     .subheader {{
-        font-size: 1.4rem;
+        font-size: 1.6rem;   /* bumped */
         margin-bottom: 20px;
         color: #ddd;
     }}
@@ -550,19 +543,23 @@ def generate_display_html(filename, events, title):
     table {{
         width: 100%;
         border-collapse: collapse;
-        font-size: 1.5rem;
+        font-size: 1.8rem;   /* bumped */
+        table-layout: fixed;
     }}
 
     th {{
         text-align: left;
         border-bottom: 3px solid #555;
-        padding: 10px 8px;
+        padding: 12px 8px;
         color: #eee;
+        font-size: 1.6rem;   /* bumped */
     }}
 
     td {{
-        padding: 12px 8px;
+        padding: 16px 10px;  /* slightly larger */
         vertical-align: middle;
+        word-wrap: break-word;
+        white-space: normal;
     }}
 
     tr:nth-child(even) td {{
@@ -570,20 +567,22 @@ def generate_display_html(filename, events, title):
     }}
 
     .time-col {{
-        width: 220px;
+        width: 240px;
         white-space: nowrap;
+        font-size: 1.7rem;   /* bumped */
     }}
 
     .event-col {{
         width: auto;
+        font-size: 1.8rem;   /* bumped */
     }}
 
     .loc-col {{
         width: 260px;
         text-align: right;
         color: #ddd;
-        font-size: 1.3rem;
         white-space: nowrap;
+        font-size: 1.6rem;   /* bumped */
     }}
 
     .icecut {{
@@ -627,12 +626,16 @@ def generate_display_html(filename, events, title):
         r = int(bg[0:2], 16)
         g = int(bg[2:4], 16)
         b = int(bg[4:6], 16)
-        luminance = (0.299 * r + 0.587 * g + 0.114 * b)
+        luminance = (0.299*r + 0.587*g + 0.114*b)
         return "white" if luminance < 140 else "black"
 
     for row in events:
         start = parse_datetime(row['start']).replace(tzinfo=LOCAL_TZ)
         end = parse_datetime(row['end']).replace(tzinfo=LOCAL_TZ)
+
+        # 🚫 DO NOT SHOW PAST EVENTS
+        if end < now:
+            continue
 
         if start.date() != today:
             continue
@@ -653,7 +656,7 @@ def generate_display_html(filename, events, title):
         else:
             desc = raw
 
-        # NOW marker: current or next upcoming
+        # NOW marker
         is_now = False
         if start <= now <= end or (start > now and not marked):
             is_now = True
@@ -667,7 +670,7 @@ def generate_display_html(filename, events, title):
 
         class_attr = f' class="{" ".join(classes)}"' if classes else ""
 
-        # Color coding (same logic as main HTML)
+        # Color coding
         if is_synth:
             row_style = "background:#999999; color:black;"
         elif is_real:
@@ -695,7 +698,6 @@ def generate_display_html(filename, events, title):
 </div>
 
 <script>
-    // Auto-refresh every 60 seconds
     setTimeout(() => location.reload(), 60000);
 </script>
 
