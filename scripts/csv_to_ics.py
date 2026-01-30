@@ -520,7 +520,7 @@ def generate_display_html(filename, events, title):
         margin: 0;
         padding: 20px;
         color: white;
-        font-size: 2.4rem;   /* bumped */
+        font-size: 2.4rem;
         background: rgba(0,0,0,0.35);
     }}
 
@@ -535,7 +535,7 @@ def generate_display_html(filename, events, title):
     }}
 
     .subheader {{
-        font-size: 1.6rem;   /* bumped */
+        font-size: 1.6rem;
         margin-bottom: 20px;
         color: #ddd;
     }}
@@ -543,7 +543,7 @@ def generate_display_html(filename, events, title):
     table {{
         width: 100%;
         border-collapse: collapse;
-        font-size: 1.8rem;   /* bumped */
+        font-size: 1.8rem;
         table-layout: fixed;
     }}
 
@@ -552,11 +552,11 @@ def generate_display_html(filename, events, title):
         border-bottom: 3px solid #555;
         padding: 12px 8px;
         color: #eee;
-        font-size: 1.6rem;   /* bumped */
+        font-size: 1.6rem;
     }}
 
     td {{
-        padding: 16px 10px;  /* slightly larger */
+        padding: 16px 10px;
         vertical-align: middle;
         word-wrap: break-word;
         white-space: normal;
@@ -567,14 +567,14 @@ def generate_display_html(filename, events, title):
     }}
 
     .time-col {{
-        width: 300px;
+        width: 300px; /* widened */
         white-space: nowrap;
-        font-size: 1.7rem;   /* bumped */
+        font-size: 1.7rem;
     }}
 
     .event-col {{
-        width: auto;
-        font-size: 1.8rem;   /* bumped */
+        width: auto; /* expanded */
+        font-size: 1.8rem;
     }}
 
     .loc-col {{
@@ -582,7 +582,7 @@ def generate_display_html(filename, events, title):
         text-align: right;
         color: #ddd;
         white-space: nowrap;
-        font-size: 1.6rem;   /* bumped */
+        font-size: 1.6rem;
     }}
 
     .icecut {{
@@ -590,8 +590,24 @@ def generate_display_html(filename, events, title):
         color: #fff !important;
     }}
 
-    .now {{
-        outline: 4px solid #ff4444;
+    /* Rotated NOW badge */
+    .now td:first-child {{
+        position: relative;
+    }}
+
+    .now-badge {{
+        position: absolute;
+        left: -55px;
+        top: 50%;
+        transform: translateY(-50%) rotate(-90deg);
+        background: #ff4444;
+        color: white;
+        padding: 6px 10px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        border-radius: 4px;
+        letter-spacing: 1px;
+        white-space: nowrap;
     }}
 </style>
 </head>
@@ -633,7 +649,7 @@ def generate_display_html(filename, events, title):
         start = parse_datetime(row['start']).replace(tzinfo=LOCAL_TZ)
         end = parse_datetime(row['end']).replace(tzinfo=LOCAL_TZ)
 
-        # 🚫 DO NOT SHOW PAST EVENTS
+        # Hide past events
         if end < now:
             continue
 
@@ -685,9 +701,11 @@ def generate_display_html(filename, events, title):
 
         loc = RINK_NAMES.get(row.get('resource_id'), '')
 
+        badge_html = '<div class="now-badge">NOW</div>' if is_now else ""
+
         html += f"""
         <tr{class_attr} style="{row_style}">
-            <td class="time-col">{start.strftime('%I:%M %p')} – {end.strftime('%I:%M %p')}</td>
+            <td class="time-col">{badge_html}{start.strftime('%I:%M %p')} – {end.strftime('%I:%M %p')}</td>
             <td class="event-col">{desc}</td>
             <td class="loc-col">{loc}</td>
         </tr>
@@ -698,7 +716,19 @@ def generate_display_html(filename, events, title):
 </div>
 
 <script>
+    // Auto-refresh every 60 seconds
     setTimeout(() => location.reload(), 60000);
+
+    // Auto-scroll to NOW event
+    window.addEventListener("load", () => {
+        const current = document.querySelector(".now");
+        if (current) {
+            current.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+        }
+    });
 </script>
 
 </body>
