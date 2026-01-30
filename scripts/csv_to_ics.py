@@ -479,61 +479,118 @@ def generate_html(filename, events, title):
         f.write(html.strip())
 
 def generate_display_html(filename, events, title):
+    # Merge concurrent events first
     events = merge_concurrent_events(events)
+    # Sort by start time
     events = sorted(events, key=lambda r: parse_datetime(r['start']))
 
     html = f"""
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <title>{title}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
-    body {{
+    html, body {{
         margin: 0;
         padding: 0;
-        background: #000;
+        width: 100%;
+        height: 100%;
+        background-image: url('media/background.png');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
         color: #fff;
         font-family: Arial, sans-serif;
         overflow: hidden;
     }}
+
+    .banner {{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background: #2f6243;
+        text-align: center;
+    }}
+
+    .banner img {{
+        width: 100%;
+        max-height: 200px;
+        object-fit: cover;
+        display: block;
+    }}
+
+    .banner-title {{
+        margin: 0;
+        padding: 16px;
+        color: white;
+        font-size: 2.2rem;
+        background: rgba(0,0,0,0.35);
+    }}
+
     .screen {{
-        width: 1920px;
-        height: 1080px;
-        padding: 40px;
         box-sizing: border-box;
+        padding: 24px 40px 40px 40px;
+        max-width: 1920px;
+        margin: 0 auto;
+        background: rgba(0,0,0,0.65);
+        height: calc(100vh - 200px);
+        display: flex;
+        flex-direction: column;
     }}
-    .header {{
-        font-size: 3rem;
-        font-weight: bold;
-        margin-bottom: 10px;
-    }}
+
     .subheader {{
-        font-size: 1.6rem;
-        margin-bottom: 30px;
-        color: #ccc;
+        font-size: 1.4rem;
+        margin-bottom: 20px;
+        color: #ddd;
     }}
+
     table {{
         width: 100%;
         border-collapse: collapse;
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }}
+
     th {{
         text-align: left;
-        border-bottom: 3px solid #444;
-        padding-bottom: 10px;
-        color: #ccc;
+        border-bottom: 3px solid #555;
+        padding: 10px 8px;
+        color: #eee;
     }}
+
     td {{
-        padding: 14px 10px;
+        padding: 12px 8px;
+        vertical-align: middle;
     }}
+
     tr:nth-child(even) td {{
-        background: #111;
+        background: rgba(0,0,0,0.35);
     }}
+
+    .time-col {{
+        width: 220px;
+        white-space: nowrap;
+    }}
+
+    .event-col {{
+        width: auto;
+    }}
+
+    .loc-col {{
+        width: 260px;
+        text-align: right;
+        color: #ddd;
+        font-size: 1.3rem;
+        white-space: nowrap;
+    }}
+
     .icecut {{
         background: #444 !important;
         color: #fff !important;
     }}
+
     .now {{
         outline: 4px solid #ff4444;
     }}
@@ -541,21 +598,37 @@ def generate_display_html(filename, events, title):
 </head>
 <body>
 
+<div class="banner">
+    <img src="media/banner.png" alt="Aerodrome Banner">
+    <div class="banner-title">{title}</div>
+</div>
+
 <div class="screen">
-    <div class="header">{title}</div>
     <div class="subheader">Today – {datetime.now().astimezone(LOCAL_TZ).strftime('%A, %B %d')}</div>
 
     <table>
         <tr>
-            <th>Time</th>
-            <th>Event</th>
-            <th>Location</th>
+            <th class="time-col">Time</th>
+            <th class="event-col">Event</th>
+            <th class="loc-col">Location</th>
         </tr>
 """
 
     now = datetime.now().astimezone(LOCAL_TZ)
     today = now.date()
     marked = False
+
+    def text_color(bg):
+        if not bg or not bg.startswith("#") or len(bg) not in (4, 7):
+            return "black"
+        bg = bg.lstrip("#")
+        if len(bg) == 3:
+            bg = "".join(c * 2 for c in bg)
+        r = int(bg[0:2], 16)
+        g = int(bg[2:4], 16)
+        b = int(bg[4:6], 16)
+        luminance = (0.299 * r + 0.587 * g + 0.114 * b)
+        return "white" if luminance < 140 else "black"
 
     for row in events:
         start = parse_datetime(row['start']).replace(tzinfo=LOCAL_TZ)
@@ -573,8 +646,14 @@ def generate_display_html(filename, events, title):
         is_synth = row.get('synthetic') == '1'
         is_icecut = is_real or is_synth
 
-        desc = "ICE CUT" if is_real else ("ICE CUT?" if is_synth else raw)
+        if is_synth:
+            desc = "ICE CUT?"
+        elif is_real:
+            desc = "ICE CUT"
+        else:
+            desc = raw
 
+        # NOW marker: current or next upcoming
         is_now = False
         if start <= now <= end or (start > now and not marked):
             is_now = True
@@ -587,13 +666,27 @@ def generate_display_html(filename, events, title):
             marked = True
 
         class_attr = f' class="{" ".join(classes)}"' if classes else ""
+
+        # Color coding (same logic as main HTML)
+        if is_synth:
+            row_style = "background:#999999; color:black;"
+        elif is_real:
+            row_style = "background:#cccccc; color:black;"
+        else:
+            color = (row.get('et_color') or '').strip()
+            if color:
+                fg = text_color(color)
+                row_style = f"background:{color}; color:{fg};"
+            else:
+                row_style = ""
+
         loc = RINK_NAMES.get(row.get('resource_id'), '')
 
         html += f"""
-        <tr{class_attr}>
-            <td>{start.strftime('%I:%M %p')} – {end.strftime('%I:%M %p')}</td>
-            <td>{desc}</td>
-            <td>{loc}</td>
+        <tr{class_attr} style="{row_style}">
+            <td class="time-col">{start.strftime('%I:%M %p')} – {end.strftime('%I:%M %p')}</td>
+            <td class="event-col">{desc}</td>
+            <td class="loc-col">{loc}</td>
         </tr>
 """
 
@@ -602,7 +695,8 @@ def generate_display_html(filename, events, title):
 </div>
 
 <script>
-setTimeout(() => location.reload(), 60000);
+    // Auto-refresh every 60 seconds
+    setTimeout(() => location.reload(), 60000);
 </script>
 
 </body>
@@ -611,6 +705,7 @@ setTimeout(() => location.reload(), 60000);
 
     with open(filename, "w", encoding="utf-8") as f:
         f.write(html.strip())
+
 
 # -----------------------------
 # MAIN PROCESSOR
