@@ -567,13 +567,13 @@ def generate_display_html(filename, events, title):
     }}
 
     .time-col {{
-        width: 300px; /* widened */
+        width: 300px;
         white-space: nowrap;
         font-size: 1.7rem;
     }}
 
     .event-col {{
-        width: auto; /* expanded */
+        width: auto;
         font-size: 1.8rem;
     }}
 
@@ -649,7 +649,7 @@ def generate_display_html(filename, events, title):
         start = parse_datetime(row['start']).replace(tzinfo=LOCAL_TZ)
         end = parse_datetime(row['end']).replace(tzinfo=LOCAL_TZ)
 
-        # Hide past events
+        # Skip past events
         if end < now:
             continue
 
@@ -672,10 +672,13 @@ def generate_display_html(filename, events, title):
         else:
             desc = raw
 
-        # NOW marker
+        # NOW logic (ICE CUTs skipped)
         is_now = False
-        if start <= now <= end or (start > now and not marked):
-            is_now = True
+        if not is_icecut:
+            if start <= now <= end:
+                is_now = True
+            elif start > now and not marked:
+                is_now = True
 
         classes = []
         if is_icecut:
@@ -737,6 +740,7 @@ def generate_display_html(filename, events, title):
 
     with open(filename, "w", encoding="utf-8") as f:
         f.write(html.strip())
+
 
 
 # -----------------------------
