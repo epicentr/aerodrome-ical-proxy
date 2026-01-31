@@ -137,7 +137,6 @@ def merge_concurrent_events(events):
 # HTML GENERATION
 # -----------------------------
 def generate_html(filename, events, title):
-    # Sort events by start time so day separators appear correctly
     events = sorted(events, key=lambda r: parse_datetime(r['start']))
 
     html = f"""
@@ -162,8 +161,6 @@ def generate_html(filename, events, title):
 
     .banner {{
         width: 100%;
-        margin: 0;
-        padding: 0;
         background: #2f6243;
         text-align: center;
     }}
@@ -191,18 +188,9 @@ def generate_html(filename, events, title):
         border-radius: 10px;
     }}
 
-    .controls {{
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        margin-bottom: 10px;
-        font-size: 0.9rem;
-    }}
-
     table {{
         width: 100%;
         border-collapse: collapse;
-        margin: 0;
         font-size: 1rem;
         table-layout: fixed;
     }}
@@ -223,11 +211,6 @@ def generate_html(filename, events, title):
         border-bottom: 1px solid #ddd;
         word-wrap: break-word;
         white-space: normal;
-        transition: background 0.2s ease;
-    }}
-
-    tr:hover td {{
-        background: rgba(0,0,0,0.08);
     }}
 
     .day-separator td {{
@@ -280,9 +263,6 @@ def generate_html(filename, events, title):
 </div>
 
 <div class="container">
-    <div class="controls">
-        <label><input type="checkbox" id="darkModeSwitch"> 🌙 Dark Mode</label>
-    </div>
 
 <table>
 <tr>
@@ -294,8 +274,7 @@ def generate_html(filename, events, title):
 """
 
     last_date = None
-    current_event_marked = False
-
+    future_now_marked = False
     now_local_dt = datetime.now().astimezone(LOCAL_TZ)
     today_local = now_local_dt.date()
 
@@ -307,26 +286,20 @@ def generate_html(filename, events, title):
         raw_desc = row.get('best_desc') or row.get('desc') or "Event"
         desc_lower = raw_desc.lower()
 
-        is_synthetic = row.get('synthetic') == '1'
+        is_synth = row.get('synthetic') == '1'
         keywords = ["takedown", "ice cut", "icecut"]
         is_real_ice_cut = any(k in desc_lower for k in keywords) and duration_minutes <= 20
-        is_ice_cut = is_synthetic or is_real_ice_cut
+        is_ice_cut = is_synth or is_real_ice_cut
 
         # Skip past events BEFORE NOW logic
         if end < now_local_dt:
             continue
 
-        # Display text
-        if is_synthetic:
-            desc = "ICE CUT?"
-        elif is_real_ice_cut:
-            desc = "ICE CUT"
-        else:
-            desc = raw_desc
+        desc = "ICE CUT?" if is_synth else ("ICE CUT" if is_real_ice_cut else raw_desc)
 
         date_str = start.strftime('%m/%d')
 
-        # Insert day separator
+        # Day separator
         if last_date != date_str:
             html += f"""
 <tr class="day-separator">
@@ -335,27 +308,25 @@ def generate_html(filename, events, title):
 """
             last_date = date_str
 
-        # NEW NOW LOGIC — supports multiple concurrent events
+        # NEW NOW LOGIC — concurrency + ICE CUT skip + future lockout
         is_current_event = False
 
         if start.date() == today_local:
-            # Mark ALL events happening right now
+            # All current events (except ICE CUTs)
             if start <= now_local_dt <= end and not is_ice_cut:
                 is_current_event = True
+                future_now_marked = True
 
-            # Mark the FIRST future non–ICE CUT event
-            elif start > now_local_dt and not current_event_marked and not is_ice_cut:
+            # First future non–ICE CUT event
+            elif start > now_local_dt and not future_now_marked and not is_ice_cut:
                 is_current_event = True
-
-        # Only future events lock the marker
-        if is_current_event and start > now_local_dt:
-            current_event_marked = True
+                future_now_marked = True
 
         row_id = "current-event" if is_current_event else ""
         row_class = "short-event" if duration_minutes < 60 else ""
 
         # Color coding
-        if is_synthetic:
+        if is_synth:
             row_style = "background:#999999; color:black;"
         elif is_real_ice_cut:
             row_style = "background:#cccccc; color:black;"
@@ -402,14 +373,6 @@ def generate_html(filename, events, title):
     if (el) {
         el.scrollIntoView({ behavior: "smooth", block: "center" });
     }
-
-    // Dark mode toggle
-    const toggle = document.getElementById("darkModeSwitch");
-    if (toggle) {
-        toggle.addEventListener("change", () => {
-            document.body.classList.toggle("dark", toggle.checked);
-        });
-    }
 </script>
 
 </body>
@@ -418,6 +381,7 @@ def generate_html(filename, events, title):
 
     with open(filename, "w", encoding="utf-8") as f:
         f.write(html.strip())
+
 
 
 
@@ -593,7 +557,7 @@ def generate_display_html(filename, events, title):
         start = parse_datetime(row['start']).replace(tzinfo=LOCAL_TZ)
         end = parse_datetime(row['end']).replace(tzinfo=LOCAL_TZ)
 
-        # Skip past events
+        # Skip past events BEFORE NOW logic
         if end < now:
             continue
 
@@ -609,19 +573,15 @@ def generate_display_html(filename, events, title):
         is_synth = row.get('synthetic') == '1'
         is_icecut = is_real or is_synth
 
-        if is_synth:
-            desc = "ICE CUT?"
-        elif is_real:
-            desc = "ICE CUT"
-        else:
-            desc = raw
+        desc = "ICE CUT?" if is_synth else ("ICE CUT" if is_real else raw)
 
-        # NEW NOW LOGIC — supports multiple concurrent events
+        # NEW NOW LOGIC — correct, stable, supports concurrency
         is_now = False
 
-        # Mark ALL events happening right now (except ICE CUTs)
+        # Mark ALL current events (except ICE CUTs)
         if start <= now <= end and not is_icecut:
             is_now = True
+            future_now_marked = True  # Lock out future events
 
         # Mark FIRST future non–ICE CUT event
         elif start > now and not future_now_marked and not is_icecut:
@@ -682,7 +642,6 @@ def generate_display_html(filename, events, title):
 
     with open(filename, "w", encoding="utf-8") as f:
         f.write(html.strip())
-
 
 # -----------------------------
 # MAIN PROCESSOR
