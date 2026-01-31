@@ -536,6 +536,7 @@ def generate_display_html(filename, events, title):
     /* Rotated NOW badge */
     .now td:first-child {{
         position: relative;
+        border-left: 6px solid #ff4444;
     }}
 
     .now-badge {{
@@ -574,7 +575,7 @@ def generate_display_html(filename, events, title):
 
     now = datetime.now().astimezone(LOCAL_TZ)
     today = now.date()
-    marked = False
+    future_now_marked = False  # Only future events lock the NOW marker
 
     def text_color(bg):
         if not bg or not bg.startswith("#") or len(bg) not in (4, 7):
@@ -615,21 +616,19 @@ def generate_display_html(filename, events, title):
         else:
             desc = raw
 
-        # NOW logic (ICE CUTs skipped)
+        # NEW NOW LOGIC — supports multiple concurrent events
         is_now = False
-        if not is_icecut:
-            if start <= now <= end:
-                is_now = True
-            elif start > now and not marked:
-                is_now = True
 
-        classes = []
-        if is_icecut:
-            classes.append("icecut")
-        if is_now and not marked:
-            classes.append("now")
-            marked = True
+        # Mark ALL events happening right now (except ICE CUTs)
+        if start <= now <= end and not is_icecut:
+            is_now = True
 
+        # Mark FIRST future non–ICE CUT event
+        elif start > now and not future_now_marked and not is_icecut:
+            is_now = True
+            future_now_marked = True
+
+        classes = ["now"] if is_now else []
         class_attr = f' class="{" ".join(classes)}"' if classes else ""
 
         # Color coding
@@ -662,10 +661,7 @@ def generate_display_html(filename, events, title):
 </div>
 
 <script>
-    // Auto-refresh every 60 seconds
-    setTimeout(() => location.reload(), 60000);
-
-    // Auto-scroll to NOW event
+    // Auto-scroll to first NOW event
     window.addEventListener("load", () => {
         const current = document.querySelector(".now");
         if (current) {
@@ -675,6 +671,9 @@ def generate_display_html(filename, events, title):
             });
         }
     });
+
+    // Auto-refresh every 60 seconds
+    setTimeout(() => location.reload(), 60000);
 </script>
 
 </body>
@@ -683,7 +682,6 @@ def generate_display_html(filename, events, title):
 
     with open(filename, "w", encoding="utf-8") as f:
         f.write(html.strip())
-
 
 
 # -----------------------------
