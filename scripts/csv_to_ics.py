@@ -640,6 +640,8 @@ def generate_display_html(filename, events, title):
         f.write(html.strip())
 
 def generate_display_multi_html(filename, events):
+    import json
+
     # Merge concurrent events
     events = merge_concurrent_events(events)
     events = sorted(events, key=lambda r: parse_datetime(r['start']))
@@ -685,24 +687,29 @@ def generate_display_multi_html(filename, events):
         background: rgba(0,0,0,0.35);
     }
 
-    .day-selector {
-        text-align: center;
+    /* NEW DAY NAVIGATION */
+    .day-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
         margin: 20px 0;
     }
 
-    .day-selector button {
+    .nav-btn {
         background: #2f6243;
         color: white;
         border: none;
         padding: 10px 18px;
-        margin: 0 6px;
         border-radius: 6px;
         font-size: 1.2rem;
         cursor: pointer;
     }
 
-    .day-selector button.active {
-        background: #4fa86b;
+    .day-label {
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: white;
     }
 
     .screen {
@@ -778,12 +785,11 @@ def generate_display_multi_html(filename, events):
     <div class="banner-title">Schedule Display</div>
 </div>
 
-<div class="day-selector">
-    <button onclick="setDay(0)" id="btn0">Today</button>
-    <button onclick="setDay(1)" id="btn1">Tomorrow</button>
-    <button onclick="setDay(2)" id="btn2">+2 Days</button>
-    <button onclick="setDay(3)" id="btn3">+3 Days</button>
-    <button onclick="setDay(4)" id="btn4">+4 Days</button>
+<!-- NEW DAY NAVIGATION -->
+<div class="day-nav">
+    <button class="nav-btn" onclick="changeDay(-1)">Previous Day</button>
+    <span id="day-label" class="day-label"></span>
+    <button class="nav-btn" onclick="changeDay(1)">Next Day</button>
 </div>
 
 <div class="screen">
@@ -793,12 +799,7 @@ def generate_display_multi_html(filename, events):
     <th class="event-col">Event</th>
     <th class="loc-col">Location</th>
 </tr>
-"""
-
-    # Insert placeholder for JS to fill
-    html += "<tbody id='event-body'></tbody>"
-
-    html += """
+<tbody id="event-body"></tbody>
 </table>
 </div>
 
@@ -814,8 +815,29 @@ function setDay(n) {
     window.location.href = url.toString();
 }
 
+function changeDay(delta) {
+    const current = getDayParam();
+    setDay(current + delta);
+}
+
+function formatDate(d) {
+    return d.toLocaleDateString("en-US", {
+        weekday: "long",
+        month: "short",
+        day: "numeric"
+    });
+}
+
 const selectedDay = getDayParam();
-document.getElementById("btn" + selectedDay).classList.add("active");
+
+// Compute the target date
+const now = new Date();
+const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+const target = new Date(today);
+target.setDate(today.getDate() + selectedDay);
+
+// Update the label
+document.getElementById("day-label").textContent = formatDate(target);
 
 // Inject event rows from Python
 const events = JSON.parse(`REPLACE_EVENTS_JSON`);
@@ -823,11 +845,6 @@ const events = JSON.parse(`REPLACE_EVENTS_JSON`);
 function render() {
     const body = document.getElementById("event-body");
     body.innerHTML = "";
-
-    const now = new Date();
-    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-    const target = new Date(today);
-    target.setDate(today.getDate() + selectedDay);
 
     let futureNowMarked = false;
 
@@ -907,7 +924,15 @@ render();
         else:
             color = (row.get('et_color') or '').strip()
             if color:
-                fg = "white" if sum(int(color[i:i+2], 16) * w for i, w in zip((1,3,5),(0.299,0.587,0.114))) < 140 else "black"
+                # luminance calc
+                bg = color.lstrip("#")
+                if len(bg) == 3:
+                    bg = "".join(c*2 for c in bg)
+                r = int(bg[0:2], 16)
+                g = int(bg[2:4], 16)
+                b = int(bg[4:6], 16)
+                lum = (0.299*r + 0.587*g + 0.114*b)
+                fg = "white" if lum < 140 else "black"
                 row_style = f"background:{color}; color:{fg};"
             else:
                 row_style = ""
