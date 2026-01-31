@@ -980,6 +980,7 @@ def csv_to_ics(csv_path):
     generate_html("facility_locker.html", [r for r in all_rows if r.get("resource_id") == "2"], "Aerodrome – Locker Rooms")
     generate_html("facility_room.html", [r for r in all_rows if r.get("resource_id") == "3"], "Aerodrome – Room Rentals")
     generate_html("facility_icecut.html", ice_page, "Aerodrome – ICE CUT Schedule")
+    generate_display_multi_html("display_multi.html", events)
 
     # NEW: Digital display page
     generate_display_html("facility_display.html", all_rows + synthetic, "Aerodrome – Rink Schedule")
