@@ -191,18 +191,12 @@ def generate_html(filename, events, title):
         border-radius: 10px;
     }}
 
-    /* Dark mode toggle inside container */
     .controls {{
         display: flex;
         justify-content: flex-end;
         align-items: center;
         margin-bottom: 10px;
         font-size: 0.9rem;
-    }}
-
-    .dark-toggle label {{
-        cursor: pointer;
-        user-select: none;
     }}
 
     table {{
@@ -213,7 +207,6 @@ def generate_html(filename, events, title):
         table-layout: fixed;
     }}
 
-    /* Sticky header */
     th {{
         background: #e0e0e0;
         padding: 10px;
@@ -237,12 +230,6 @@ def generate_html(filename, events, title):
         background: rgba(0,0,0,0.08);
     }}
 
-    /* Narrow Date/Start/End columns */
-    th:nth-child(1), td:nth-child(1) {{ min-width: 4ch; }}
-    th:nth-child(2), td:nth-child(2) {{ min-width: 4ch; }}
-    th:nth-child(3), td:nth-child(3) {{ min-width: 4ch; }}
-
-    /* Sticky day separator */
     .day-separator td {{
         background: #2f6243 !important;
         color: white !important;
@@ -256,13 +243,6 @@ def generate_html(filename, events, title):
         z-index: 4;
     }}
 
-    .desc {{
-        color: inherit;
-        font-size: 0.85rem;
-        margin-top: 4px;
-    }}
-
-    /* Short events (< 60 minutes) 50% height */
     .short-event td {{
         padding-top: 6px !important;
         padding-bottom: 6px !important;
@@ -280,7 +260,6 @@ def generate_html(filename, events, title):
         left: -40px;
         top: 50%;
         transform: translateY(-50%) rotate(-90deg);
-        transform-origin: center;
         background: #ff4444;
         color: white;
         padding: 4px 6px;
@@ -288,40 +267,7 @@ def generate_html(filename, events, title):
         border-radius: 4px;
         font-weight: bold;
         letter-spacing: 1px;
-        text-align: center;
         white-space: nowrap;
-    }}
-
-    /* Dark mode */
-    body.dark {{
-        background: #111 !important;
-        color: #eee !important;
-    }}
-
-    body.dark .container {{
-        background: rgba(30,30,30,0.9) !important;
-    }}
-
-    body.dark table {{
-        color: #eee !important;
-    }}
-
-    body.dark th {{
-        background: #333 !important;
-        color: #eee !important;
-    }}
-
-    body.dark td {{
-        border-bottom: 1px solid #444 !important;
-    }}
-
-    body.dark .day-separator td {{
-        background: #444 !important;
-        color: #eee !important;
-    }}
-
-    body.dark .banner {{
-        background: #222 !important;
     }}
 </style>
 </head>
@@ -335,12 +281,7 @@ def generate_html(filename, events, title):
 
 <div class="container">
     <div class="controls">
-        <div class="dark-toggle">
-            <label>
-                <input type="checkbox" id="darkModeSwitch">
-                🌙 Dark Mode
-            </label>
-        </div>
+        <label><input type="checkbox" id="darkModeSwitch"> 🌙 Dark Mode</label>
     </div>
 
 <table>
@@ -367,13 +308,16 @@ def generate_html(filename, events, title):
         desc_lower = raw_desc.lower()
 
         is_synthetic = row.get('synthetic') == '1'
-
-        # Real ICE CUT detection (broad match, <= 20 minutes)
         keywords = ["takedown", "ice cut", "icecut"]
         is_real_ice_cut = any(k in desc_lower for k in keywords) and duration_minutes <= 20
-
-        # Overall ICE CUT flag
         is_ice_cut = is_synthetic or is_real_ice_cut
+
+        # Skip past events BEFORE NOW logic
+        if end < now_local_dt:
+            continue
+
+        # Skip ICE CUTs for NOW marker
+        skip_for_now = is_ice_cut
 
         # Display text
         if is_synthetic:
@@ -385,7 +329,6 @@ def generate_html(filename, events, title):
 
         date_str = start.strftime('%m/%d')
 
-        # Insert day separator
         if last_date != date_str:
             html += f"""
 <tr class="day-separator">
@@ -394,11 +337,9 @@ def generate_html(filename, events, title):
 """
             last_date = date_str
 
-        # TIME-BASED CURRENT EVENT LOGIC
-        is_today = start.date() == today_local
+        # FIXED NOW LOGIC
         is_current_event = False
-
-        if is_today:
+        if start.date() == today_local and not skip_for_now:
             if start <= now_local_dt <= end:
                 is_current_event = True
             elif start > now_local_dt and not current_event_marked:
@@ -408,15 +349,12 @@ def generate_html(filename, events, title):
         if row_id:
             current_event_marked = True
 
-        # Short event class
         row_class = "short-event" if duration_minutes < 60 else ""
 
         # Color coding
         if is_synthetic:
-            # Synthetic ICE CUT? darker gray
             row_style = "background:#999999; color:black;"
         elif is_real_ice_cut:
-            # Real ICE CUT light gray
             row_style = "background:#cccccc; color:black;"
         else:
             color = row.get('et_color', '').strip()
@@ -477,6 +415,7 @@ def generate_html(filename, events, title):
 
     with open(filename, "w", encoding="utf-8") as f:
         f.write(html.strip())
+
 
 def generate_display_html(filename, events, title):
     # Merge concurrent events first
