@@ -291,9 +291,8 @@ def generate_html(filename, events, title):
         is_real_ice_cut = any(k in desc_lower for k in keywords) and duration_minutes <= 20
         is_ice_cut = is_synth or is_real_ice_cut
 
-        # Skip past events BEFORE NOW logic
-        if end < now_local_dt:
-            continue
+        # MAIN PAGES DO NOT HIDE PAST EVENTS
+        # (so no "if end < now: continue")
 
         desc = "ICE CUT?" if is_synth else ("ICE CUT" if is_real_ice_cut else raw_desc)
 
@@ -308,16 +307,14 @@ def generate_html(filename, events, title):
 """
             last_date = date_str
 
-        # NEW NOW LOGIC — concurrency + ICE CUT skip + future lockout
+        # NOW LOGIC — correct for main pages
         is_current_event = False
 
         if start.date() == today_local:
-            # All current events (except ICE CUTs)
             if start <= now_local_dt <= end and not is_ice_cut:
                 is_current_event = True
                 future_now_marked = True
 
-            # First future non–ICE CUT event
             elif start > now_local_dt and not future_now_marked and not is_ice_cut:
                 is_current_event = True
                 future_now_marked = True
@@ -381,6 +378,7 @@ def generate_html(filename, events, title):
 
     with open(filename, "w", encoding="utf-8") as f:
         f.write(html.strip())
+
 
 
 
@@ -539,7 +537,7 @@ def generate_display_html(filename, events, title):
 
     now = datetime.now().astimezone(LOCAL_TZ)
     today = now.date()
-    future_now_marked = False  # Only future events lock the NOW marker
+    future_now_marked = False
 
     def text_color(bg):
         if not bg or not bg.startswith("#") or len(bg) not in (4, 7):
@@ -557,7 +555,7 @@ def generate_display_html(filename, events, title):
         start = parse_datetime(row['start']).replace(tzinfo=LOCAL_TZ)
         end = parse_datetime(row['end']).replace(tzinfo=LOCAL_TZ)
 
-        # Skip past events BEFORE NOW logic
+        # DISPLAY PAGE hides past events
         if end < now:
             continue
 
@@ -575,15 +573,13 @@ def generate_display_html(filename, events, title):
 
         desc = "ICE CUT?" if is_synth else ("ICE CUT" if is_real else raw)
 
-        # NEW NOW LOGIC — correct, stable, supports concurrency
+        # NOW LOGIC — correct for display page
         is_now = False
 
-        # Mark ALL current events (except ICE CUTs)
         if start <= now <= end and not is_icecut:
             is_now = True
-            future_now_marked = True  # Lock out future events
+            future_now_marked = True
 
-        # Mark FIRST future non–ICE CUT event
         elif start > now and not future_now_marked and not is_icecut:
             is_now = True
             future_now_marked = True
@@ -632,7 +628,6 @@ def generate_display_html(filename, events, title):
         }
     });
 
-    // Auto-refresh every 60 seconds
     setTimeout(() => location.reload(), 60000);
 </script>
 
@@ -642,6 +637,7 @@ def generate_display_html(filename, events, title):
 
     with open(filename, "w", encoding="utf-8") as f:
         f.write(html.strip())
+
 
 # -----------------------------
 # MAIN PROCESSOR
