@@ -87,18 +87,18 @@ jobs:
           pip install icalendar
 
       # ---------------------------------------------------------
-      # 5. Update timestamp in index.html
+      # 5. Run CSV → ICS/HTML generator
+      # ---------------------------------------------------------
+      - name: Convert CSV to ICS/HTML
+        run: python scripts/csv_to_ics.py
+
+      # ---------------------------------------------------------
+      # 6. Update timestamp in index.html
       # ---------------------------------------------------------
       - name: Update timestamp in index.html
         run: |
           ts="$(TZ='America/Chicago' date +"%Y-%m-%d %I:%M %p CST")"
-          sed -i "s|{{LAST_UPDATED}}|$ts|" index.html
-
-      # ---------------------------------------------------------
-      # 6. Run CSV → ICS/HTML generator
-      # ---------------------------------------------------------
-      - name: Convert CSV to ICS/HTML
-        run: python scripts/csv_to_ics.py
+          sed -i "s|{{LAST_UPDATED}}|$ts|" index.html   
 
       # ---------------------------------------------------------
       # 7. Multiline-safe diff summary
