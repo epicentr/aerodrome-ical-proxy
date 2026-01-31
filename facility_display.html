@@ -107,6 +107,7 @@
     /* Rotated NOW badge */
     .now td:first-child {
         position: relative;
+        border-left: 6px solid #ff4444;
     }
 
     .now-badge {
@@ -148,25 +149,25 @@
             <td class="loc-col">Room Rental</td>
         </tr>
 
-        <tr style="background:#6e8bf7; color:black;">
+        <tr class="now" style="background:#6e8bf7; color:black;">
             <td class="time-col"><div class="now-badge">NOW</div>07:05 PM – 08:35 PM</td>
             <td class="event-col">ISHL Game</td>
             <td class="loc-col">Ice Rink</td>
         </tr>
 
-        <tr class="icecut" style="background:#cccccc; color:black;">
+        <tr style="background:#cccccc; color:black;">
             <td class="time-col">08:35 PM – 08:45 PM</td>
             <td class="event-col">ICE CUT</td>
             <td class="loc-col">Ice Rink</td>
         </tr>
 
-        <tr style="background:#6e8bf7; color:black;">
-            <td class="time-col">08:45 PM – 10:15 PM</td>
+        <tr class="now" style="background:#6e8bf7; color:black;">
+            <td class="time-col"><div class="now-badge">NOW</div>08:45 PM – 10:15 PM</td>
             <td class="event-col">Game</td>
             <td class="loc-col">Ice Rink</td>
         </tr>
 
-        <tr class="icecut" style="background:#999999; color:black;">
+        <tr style="background:#999999; color:black;">
             <td class="time-col">10:15 PM – 10:25 PM</td>
             <td class="event-col">ICE CUT?</td>
             <td class="loc-col">Ice Rink</td>
@@ -188,10 +189,7 @@
 </div>
 
 <script>
-    // Auto-refresh every 60 seconds
-    setTimeout(() => location.reload(), 60000);
-
-    // Auto-scroll to NOW event
+    // Auto-scroll to first NOW event
     window.addEventListener("load", () => {
         const current = document.querySelector(".now");
         if (current) {
@@ -201,6 +199,9 @@
             });
         }
     });
+
+    // Auto-refresh every 60 seconds
+    setTimeout(() => location.reload(), 60000);
 </script>
 
 </body>
