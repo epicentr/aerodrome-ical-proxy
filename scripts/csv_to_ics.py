@@ -638,6 +638,293 @@ def generate_display_html(filename, events, title):
     with open(filename, "w", encoding="utf-8") as f:
         f.write(html.strip())
 
+def generate_display_multi_html(filename, events):
+    # Merge concurrent events
+    events = merge_concurrent_events(events)
+    events = sorted(events, key=lambda r: parse_datetime(r['start']))
+
+    html = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Schedule Display</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-image: url('media/background.png');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        font-family: Arial, sans-serif;
+        color: #fff;
+    }
+
+    .banner {
+        width: 100%;
+        background: #2f6243;
+        text-align: center;
+    }
+
+    .banner img {
+        width: 100%;
+        max-height: 200px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .banner-title {
+        margin: 0;
+        padding: 20px;
+        color: white;
+        font-size: 2.4rem;
+        background: rgba(0,0,0,0.35);
+    }
+
+    .day-selector {
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .day-selector button {
+        background: #2f6243;
+        color: white;
+        border: none;
+        padding: 10px 18px;
+        margin: 0 6px;
+        border-radius: 6px;
+        font-size: 1.2rem;
+        cursor: pointer;
+    }
+
+    .day-selector button.active {
+        background: #4fa86b;
+    }
+
+    .screen {
+        max-width: 1920px;
+        margin: 0 auto;
+        padding: 30px 40px;
+        background: rgba(0,0,0,0.65);
+        box-sizing: border-box;
+        height: calc(100vh - 260px);
+        overflow-y: auto;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 1.8rem;
+        table-layout: fixed;
+    }
+
+    th {
+        text-align: left;
+        border-bottom: 3px solid #555;
+        padding: 12px 8px;
+        color: #eee;
+        font-size: 1.6rem;
+    }
+
+    td {
+        padding: 16px 10px;
+        vertical-align: middle;
+        word-wrap: break-word;
+        white-space: normal;
+    }
+
+    tr:nth-child(even) td {
+        background: rgba(0,0,0,0.35);
+    }
+
+    .time-col { width: 300px; }
+    .event-col { width: auto; }
+    .loc-col { width: 260px; text-align: right; }
+
+    .icecut {
+        background: #444 !important;
+        color: #fff !important;
+    }
+
+    .now td:first-child {
+        position: relative;
+        border-left: 6px solid #ff4444;
+    }
+
+    .now-badge {
+        position: absolute;
+        left: -55px;
+        top: 50%;
+        transform: translateY(-50%) rotate(-90deg);
+        background: #ff4444;
+        color: white;
+        padding: 6px 10px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        border-radius: 4px;
+        letter-spacing: 1px;
+        white-space: nowrap;
+    }
+</style>
+</head>
+<body>
+
+<div class="banner">
+    <img src="media/banner.png">
+    <div class="banner-title">Schedule Display</div>
+</div>
+
+<div class="day-selector">
+    <button onclick="setDay(0)" id="btn0">Today</button>
+    <button onclick="setDay(1)" id="btn1">Tomorrow</button>
+    <button onclick="setDay(2)" id="btn2">+2 Days</button>
+    <button onclick="setDay(3)" id="btn3">+3 Days</button>
+    <button onclick="setDay(4)" id="btn4">+4 Days</button>
+</div>
+
+<div class="screen">
+<table>
+<tr>
+    <th class="time-col">Time</th>
+    <th class="event-col">Event</th>
+    <th class="loc-col">Location</th>
+</tr>
+"""
+
+    # Insert placeholder for JS to fill
+    html += "<tbody id='event-body'></tbody>"
+
+    html += """
+</table>
+</div>
+
+<script>
+function getDayParam() {
+    const url = new URL(window.location.href);
+    return parseInt(url.searchParams.get("day") || "0");
+}
+
+function setDay(n) {
+    const url = new URL(window.location.href);
+    url.searchParams.set("day", n);
+    window.location.href = url.toString();
+}
+
+const selectedDay = getDayParam();
+document.getElementById("btn" + selectedDay).classList.add("active");
+
+// Inject event rows from Python
+const events = JSON.parse(`REPLACE_EVENTS_JSON`);
+
+function render() {
+    const body = document.getElementById("event-body");
+    body.innerHTML = "";
+
+    const now = new Date();
+    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    const target = new Date(today);
+    target.setDate(today.getDate() + selectedDay);
+
+    let futureNowMarked = false;
+
+    for (const ev of events) {
+        const start = new Date(ev.start);
+        const end = new Date(ev.end);
+
+        // Filter by selected day
+        if (start.toDateString() !== target.toDateString()) continue;
+
+        // Hide past events ONLY on Today
+        if (selectedDay === 0 && end < now) continue;
+
+        const isIceCut = ev.is_icecut;
+
+        let isNow = false;
+
+        if (selectedDay === 0) {
+            if (start <= now && now <= end && !isIceCut) {
+                isNow = true;
+                futureNowMarked = true;
+            } else if (start > now && !futureNowMarked && !isIceCut) {
+                isNow = true;
+                futureNowMarked = true;
+            }
+        }
+
+        const tr = document.createElement("tr");
+        if (isNow) tr.classList.add("now");
+        if (ev.row_style) tr.setAttribute("style", ev.row_style);
+
+        tr.innerHTML = `
+            <td class="time-col">${isNow ? '<div class="now-badge">NOW</div>' : ''}${ev.time}</td>
+            <td class="event-col">${ev.desc}</td>
+            <td class="loc-col">${ev.loc}</td>
+        `;
+
+        body.appendChild(tr);
+    }
+
+    // Auto-scroll only on Today
+    if (selectedDay === 0) {
+        const nowRow = document.querySelector(".now");
+        if (nowRow) nowRow.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+}
+
+render();
+</script>
+
+</body>
+</html>
+"""
+
+    # Build JSON for JS
+    out = []
+    for row in events:
+        start = parse_datetime(row['start']).replace(tzinfo=LOCAL_TZ)
+        end = parse_datetime(row['end']).replace(tzinfo=LOCAL_TZ)
+
+        raw = row.get('best_desc') or row.get('desc') or "Event"
+        desc_lower = raw.lower()
+        duration = int((end - start).total_seconds() / 60)
+
+        keywords = ["takedown", "ice cut", "icecut"]
+        is_real = any(k in desc_lower for k in keywords) and duration <= 20
+        is_synth = row.get('synthetic') == '1'
+        is_icecut = is_real or is_synth
+
+        desc = "ICE CUT?" if is_synth else ("ICE CUT" if is_real else raw)
+
+        # Color coding
+        if is_synth:
+            row_style = "background:#999999; color:black;"
+        elif is_real:
+            row_style = "background:#cccccc; color:black;"
+        else:
+            color = (row.get('et_color') or '').strip()
+            if color:
+                fg = "white" if sum(int(color[i:i+2], 16) * w for i, w in zip((1,3,5),(0.299,0.587,0.114))) < 140 else "black"
+                row_style = f"background:{color}; color:{fg};"
+            else:
+                row_style = ""
+
+        out.append({
+            "start": start.isoformat(),
+            "end": end.isoformat(),
+            "desc": desc,
+            "loc": RINK_NAMES.get(row.get('resource_id'), ''),
+            "time": f"{start.strftime('%I:%M %p')} – {end.strftime('%I:%M %p')}",
+            "is_icecut": is_icecut,
+            "row_style": row_style
+        })
+
+    html = html.replace("REPLACE_EVENTS_JSON", json.dumps(out))
+
+    with open(filename, "w", encoding="utf-8") as f:
+        f.write(html)
 
 # -----------------------------
 # MAIN PROCESSOR
