@@ -126,6 +126,7 @@ jobs:
           git add facility*.ics
           git add facility*.html
           git add index.html
+          git add display_multi.html
 
           git commit -m "Update calendar data" \
             -m "$(printf "Diff summary:\n%s" "${{ steps.diffsum.outputs.summary }}")" \
