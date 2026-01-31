@@ -48,18 +48,12 @@
         border-radius: 10px;
     }
 
-    /* Dark mode toggle inside container */
     .controls {
         display: flex;
         justify-content: flex-end;
         align-items: center;
         margin-bottom: 10px;
         font-size: 0.9rem;
-    }
-
-    .dark-toggle label {
-        cursor: pointer;
-        user-select: none;
     }
 
     table {
@@ -70,7 +64,6 @@
         table-layout: fixed;
     }
 
-    /* Sticky header */
     th {
         background: #e0e0e0;
         padding: 10px;
@@ -94,12 +87,6 @@
         background: rgba(0,0,0,0.08);
     }
 
-    /* Narrow Date/Start/End columns */
-    th:nth-child(1), td:nth-child(1) { min-width: 4ch; }
-    th:nth-child(2), td:nth-child(2) { min-width: 4ch; }
-    th:nth-child(3), td:nth-child(3) { min-width: 4ch; }
-
-    /* Sticky day separator */
     .day-separator td {
         background: #2f6243 !important;
         color: white !important;
@@ -113,13 +100,6 @@
         z-index: 4;
     }
 
-    .desc {
-        color: inherit;
-        font-size: 0.85rem;
-        margin-top: 4px;
-    }
-
-    /* Short events (< 60 minutes) 50% height */
     .short-event td {
         padding-top: 6px !important;
         padding-bottom: 6px !important;
@@ -137,7 +117,6 @@
         left: -40px;
         top: 50%;
         transform: translateY(-50%) rotate(-90deg);
-        transform-origin: center;
         background: #ff4444;
         color: white;
         padding: 4px 6px;
@@ -145,40 +124,7 @@
         border-radius: 4px;
         font-weight: bold;
         letter-spacing: 1px;
-        text-align: center;
         white-space: nowrap;
-    }
-
-    /* Dark mode */
-    body.dark {
-        background: #111 !important;
-        color: #eee !important;
-    }
-
-    body.dark .container {
-        background: rgba(30,30,30,0.9) !important;
-    }
-
-    body.dark table {
-        color: #eee !important;
-    }
-
-    body.dark th {
-        background: #333 !important;
-        color: #eee !important;
-    }
-
-    body.dark td {
-        border-bottom: 1px solid #444 !important;
-    }
-
-    body.dark .day-separator td {
-        background: #444 !important;
-        color: #eee !important;
-    }
-
-    body.dark .banner {
-        background: #222 !important;
     }
 </style>
 </head>
@@ -192,12 +138,7 @@
 
 <div class="container">
     <div class="controls">
-        <div class="dark-toggle">
-            <label>
-                <input type="checkbox" id="darkModeSwitch">
-                🌙 Dark Mode
-            </label>
-        </div>
+        <label><input type="checkbox" id="darkModeSwitch"> 🌙 Dark Mode</label>
     </div>
 
 <table>

@@ -48,18 +48,12 @@
         border-radius: 10px;
     }
 
-    /* Dark mode toggle inside container */
     .controls {
         display: flex;
         justify-content: flex-end;
         align-items: center;
         margin-bottom: 10px;
         font-size: 0.9rem;
-    }
-
-    .dark-toggle label {
-        cursor: pointer;
-        user-select: none;
     }
 
     table {
@@ -70,7 +64,6 @@
         table-layout: fixed;
     }
 
-    /* Sticky header */
     th {
         background: #e0e0e0;
         padding: 10px;
@@ -94,12 +87,6 @@
         background: rgba(0,0,0,0.08);
     }
 
-    /* Narrow Date/Start/End columns */
-    th:nth-child(1), td:nth-child(1) { min-width: 4ch; }
-    th:nth-child(2), td:nth-child(2) { min-width: 4ch; }
-    th:nth-child(3), td:nth-child(3) { min-width: 4ch; }
-
-    /* Sticky day separator */
     .day-separator td {
         background: #2f6243 !important;
         color: white !important;
@@ -113,13 +100,6 @@
         z-index: 4;
     }
 
-    .desc {
-        color: inherit;
-        font-size: 0.85rem;
-        margin-top: 4px;
-    }
-
-    /* Short events (< 60 minutes) 50% height */
     .short-event td {
         padding-top: 6px !important;
         padding-bottom: 6px !important;
@@ -137,7 +117,6 @@
         left: -40px;
         top: 50%;
         transform: translateY(-50%) rotate(-90deg);
-        transform-origin: center;
         background: #ff4444;
         color: white;
         padding: 4px 6px;
@@ -145,40 +124,7 @@
         border-radius: 4px;
         font-weight: bold;
         letter-spacing: 1px;
-        text-align: center;
         white-space: nowrap;
-    }
-
-    /* Dark mode */
-    body.dark {
-        background: #111 !important;
-        color: #eee !important;
-    }
-
-    body.dark .container {
-        background: rgba(30,30,30,0.9) !important;
-    }
-
-    body.dark table {
-        color: #eee !important;
-    }
-
-    body.dark th {
-        background: #333 !important;
-        color: #eee !important;
-    }
-
-    body.dark td {
-        border-bottom: 1px solid #444 !important;
-    }
-
-    body.dark .day-separator td {
-        background: #444 !important;
-        color: #eee !important;
-    }
-
-    body.dark .banner {
-        background: #222 !important;
     }
 </style>
 </head>
@@ -192,12 +138,7 @@
 
 <div class="container">
     <div class="controls">
-        <div class="dark-toggle">
-            <label>
-                <input type="checkbox" id="darkModeSwitch">
-                🌙 Dark Mode
-            </label>
-        </div>
+        <label><input type="checkbox" id="darkModeSwitch"> 🌙 Dark Mode</label>
     </div>
 
 <table>
@@ -212,227 +153,7 @@
     <td colspan="4">Friday – January 30</td>
 </tr>
 
-<tr class="short-event" style="background:#0ae8ea; color:black;">
-    <td>01/30</td>
-    <td>05:00 AM</td>
-    <td>05:30 AM</td>
-    <td>
-        Freestyle
-        <div class="desc">Ice Rink</div>
-    </td>
-</tr>
-
-<tr class="short-event" style="background:#0ae8ea; color:black;">
-    <td>01/30</td>
-    <td>05:30 AM</td>
-    <td>06:00 AM</td>
-    <td>
-        Freestyle
-        <div class="desc">Ice Rink</div>
-    </td>
-</tr>
-
-<tr class="short-event" style="background:#0ae8ea; color:black;">
-    <td>01/30</td>
-    <td>06:00 AM</td>
-    <td>06:30 AM</td>
-    <td>
-        Freestyle
-        <div class="desc">Ice Rink</div>
-    </td>
-</tr>
-
-<tr class="short-event" style="background:#0ae8ea; color:black;">
-    <td>01/30</td>
-    <td>06:30 AM</td>
-    <td>07:00 AM</td>
-    <td>
-        Freestyle
-        <div class="desc">Ice Rink</div>
-    </td>
-</tr>
-
-<tr class="short-event" style="background:#0ae8ea; color:black;">
-    <td>01/30</td>
-    <td>07:00 AM</td>
-    <td>07:30 AM</td>
-    <td>
-        Freestyle
-        <div class="desc">Ice Rink</div>
-    </td>
-</tr>
-
-<tr class="short-event" style="background:#0ae8ea; color:black;">
-    <td>01/30</td>
-    <td>07:30 AM</td>
-    <td>08:00 AM</td>
-    <td>
-        Freestyle
-        <div class="desc">Ice Rink</div>
-    </td>
-</tr>
-
-<tr class="short-event" style="background:#0ae8ea; color:black;">
-    <td>01/30</td>
-    <td>08:00 AM</td>
-    <td>08:30 AM</td>
-    <td>
-        Freestyle
-        <div class="desc">Ice Rink</div>
-    </td>
-</tr>
-
-<tr class="short-event" style="background:#0ae8ea; color:black;">
-    <td>01/30</td>
-    <td>08:30 AM</td>
-    <td>09:00 AM</td>
-    <td>
-        Freestyle
-        <div class="desc">Ice Rink</div>
-    </td>
-</tr>
-
-<tr style="background:#d1c9c9; color:black;">
-    <td>01/30</td>
-    <td>09:00 AM</td>
-    <td>11:00 AM</td>
-    <td>
-        ICE MAINTENANCE
-        <div class="desc">Ice Rink</div>
-    </td>
-</tr>
-
-<tr style="background:#f0f509; color:black;">
-    <td>01/30</td>
-    <td>11:00 AM</td>
-    <td>12:45 PM</td>
-    <td>
-        Public Skating
-        <div class="desc">Ice Rink</div>
-    </td>
-</tr>
-
-<tr class="short-event" style="background:#cccccc; color:black;">
-    <td>01/30</td>
-    <td>12:45 PM</td>
-    <td>01:00 PM</td>
-    <td>
-        ICE CUT
-        <div class="desc">Ice Rink</div>
-    </td>
-</tr>
-
-<tr style="background:#a09999; color:black;">
-    <td>01/30</td>
-    <td>01:00 PM</td>
-    <td>02:00 PM</td>
-    <td>
-        Hack N Whack Oil Field
-        <div class="desc">Ice Rink</div>
-    </td>
-</tr>
-
-<tr class="short-event" style="background:#cccccc; color:black;">
-    <td>01/30</td>
-    <td>02:00 PM</td>
-    <td>02:10 PM</td>
-    <td>
-        ICE CUT
-        <div class="desc">Ice Rink</div>
-    </td>
-</tr>
-
-<tr style="background:#59f005; color:black;">
-    <td>01/30</td>
-    <td>02:10 PM</td>
-    <td>03:20 PM</td>
-    <td>
-        Drop-In Goalie
-        <div class="desc">Ice Rink</div>
-    </td>
-</tr>
-
-<tr style="background:#59f005; color:black;">
-    <td>01/30</td>
-    <td>02:10 PM</td>
-    <td>03:20 PM</td>
-    <td>
-        Drop-In Player
-        <div class="desc">Ice Rink</div>
-    </td>
-</tr>
-
-<tr class="short-event" style="background:#cccccc; color:black;">
-    <td>01/30</td>
-    <td>03:20 PM</td>
-    <td>03:30 PM</td>
-    <td>
-        ICE CUT
-        <div class="desc">Ice Rink</div>
-    </td>
-</tr>
-
-<tr class="short-event" style="background:#0ae8ea; color:black;">
-    <td>01/30</td>
-    <td>03:30 PM</td>
-    <td>04:00 PM</td>
-    <td>
-        Freestyle
-        <div class="desc">Ice Rink</div>
-    </td>
-</tr>
-
-<tr class="short-event" style="background:#0ae8ea; color:black;">
-    <td>01/30</td>
-    <td>04:00 PM</td>
-    <td>04:30 PM</td>
-    <td>
-        Freestyle
-        <div class="desc">Ice Rink</div>
-    </td>
-</tr>
-
-<tr style="background:#e8be55; color:black;">
-    <td>01/30</td>
-    <td>04:30 PM</td>
-    <td>05:30 PM</td>
-    <td>
-        Junior Blades Practice S
-        <div class="desc">Ice Rink</div>
-    </td>
-</tr>
-
-<tr id="current-event" class="short-event" style="background:#999999; color:black;">
-    <td>01/30</td>
-    <td>05:30 PM</td>
-    <td>05:40 PM</td>
-    <td>
-        ICE CUT?
-        <div class="desc">Ice Rink</div>
-    </td>
-</tr>
-
-<tr style="background:#6e8bf7; color:black;">
-    <td>01/30</td>
-    <td>05:40 PM</td>
-    <td>06:55 PM</td>
-    <td>
-        Game
-        <div class="desc">Ice Rink</div>
-    </td>
-</tr>
-
-<tr class="short-event" style="background:#999999; color:black;">
-    <td>01/30</td>
-    <td>06:55 PM</td>
-    <td>07:05 PM</td>
-    <td>
-        ICE CUT?
-        <div class="desc">Ice Rink</div>
-    </td>
-</tr>
-
-<tr style="background:#6e8bf7; color:black;">
+<tr id="current-event" style="background:#6e8bf7; color:black;">
     <td>01/30</td>
     <td>07:05 PM</td>
     <td>08:35 PM</td>
