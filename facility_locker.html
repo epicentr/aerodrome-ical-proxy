@@ -19,8 +19,6 @@
 
     .banner {
         width: 100%;
-        margin: 0;
-        padding: 0;
         background: #2f6243;
         text-align: center;
     }
@@ -48,18 +46,9 @@
         border-radius: 10px;
     }
 
-    .controls {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        margin-bottom: 10px;
-        font-size: 0.9rem;
-    }
-
     table {
         width: 100%;
         border-collapse: collapse;
-        margin: 0;
         font-size: 1rem;
         table-layout: fixed;
     }
@@ -80,11 +69,6 @@
         border-bottom: 1px solid #ddd;
         word-wrap: break-word;
         white-space: normal;
-        transition: background 0.2s ease;
-    }
-
-    tr:hover td {
-        background: rgba(0,0,0,0.08);
     }
 
     .day-separator td {
@@ -137,9 +121,6 @@
 </div>
 
 <div class="container">
-    <div class="controls">
-        <label><input type="checkbox" id="darkModeSwitch"> 🌙 Dark Mode</label>
-    </div>
 
 <table>
 <tr>
@@ -171,14 +152,6 @@
     const el = document.getElementById("current-event");
     if (el) {
         el.scrollIntoView({ behavior: "smooth", block: "center" });
-    }
-
-    // Dark mode toggle
-    const toggle = document.getElementById("darkModeSwitch");
-    if (toggle) {
-        toggle.addEventListener("change", () => {
-            document.body.classList.toggle("dark", toggle.checked);
-        });
     }
 </script>
 
