@@ -316,9 +316,6 @@ def generate_html(filename, events, title):
         if end < now_local_dt:
             continue
 
-        # Skip ICE CUTs for NOW marker
-        skip_for_now = is_ice_cut
-
         # Display text
         if is_synthetic:
             desc = "ICE CUT?"
@@ -329,6 +326,7 @@ def generate_html(filename, events, title):
 
         date_str = start.strftime('%m/%d')
 
+        # Insert day separator
         if last_date != date_str:
             html += f"""
 <tr class="day-separator">
@@ -337,18 +335,23 @@ def generate_html(filename, events, title):
 """
             last_date = date_str
 
-        # FIXED NOW LOGIC
+        # NEW NOW LOGIC — supports multiple concurrent events
         is_current_event = False
-        if start.date() == today_local and not skip_for_now:
-            if start <= now_local_dt <= end:
-                is_current_event = True
-            elif start > now_local_dt and not current_event_marked:
+
+        if start.date() == today_local:
+            # Mark ALL events happening right now
+            if start <= now_local_dt <= end and not is_ice_cut:
                 is_current_event = True
 
-        row_id = "current-event" if (is_current_event and not current_event_marked) else ""
-        if row_id:
+            # Mark the FIRST future non–ICE CUT event
+            elif start > now_local_dt and not current_event_marked and not is_ice_cut:
+                is_current_event = True
+
+        # Only future events lock the marker
+        if is_current_event and start > now_local_dt:
             current_event_marked = True
 
+        row_id = "current-event" if is_current_event else ""
         row_class = "short-event" if duration_minutes < 60 else ""
 
         # Color coding
@@ -415,6 +418,7 @@ def generate_html(filename, events, title):
 
     with open(filename, "w", encoding="utf-8") as f:
         f.write(html.strip())
+
 
 
 def generate_display_html(filename, events, title):
