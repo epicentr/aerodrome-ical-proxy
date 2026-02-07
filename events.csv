@@ -1,32 +1,4 @@
 start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id,isDupeStartTime,best_description,et_color
-2/6/2026 12:00:00 AM,2/6/2026 5:00:00 AM,2/6/2026 5:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
-2/6/2026 12:00:00 AM,2/6/2026 5:30:00 AM,2/6/2026 6:00:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
-2/6/2026 12:00:00 AM,2/6/2026 6:00:00 AM,2/6/2026 6:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
-2/6/2026 12:00:00 AM,2/6/2026 6:30:00 AM,2/6/2026 7:00:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
-2/6/2026 12:00:00 AM,2/6/2026 7:00:00 AM,2/6/2026 7:30:00 AM,Figure Skating Academy ,,10,1,0,False,,#0ae8ea
-2/6/2026 12:00:00 AM,2/6/2026 7:30:00 AM,2/6/2026 8:00:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
-2/6/2026 12:00:00 AM,2/6/2026 8:00:00 AM,2/6/2026 8:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
-2/6/2026 12:00:00 AM,2/6/2026 8:30:00 AM,2/6/2026 9:00:00 AM,Figure Skating Academy ,,10,1,0,False,,#0ae8ea
-2/6/2026 12:00:00 AM,2/6/2026 9:00:00 AM,2/6/2026 11:00:00 AM,ICE MAINTENANCE,,b,1,0,False,,#d1c9c9
-2/6/2026 12:00:00 AM,2/6/2026 10:30:00 AM,2/6/2026 1:00:00 PM,Party room - Faith NW Ho,,13,3,0,False,,#fb42d3
-2/6/2026 12:00:00 AM,2/6/2026 11:00:00 AM,2/6/2026 12:45:00 PM,Public Skating,,11,1,0,False,,#f0f509
-2/6/2026 12:00:00 AM,2/6/2026 12:45:00 PM,2/6/2026 1:00:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
-2/6/2026 12:00:00 AM,2/6/2026 1:00:00 PM,2/6/2026 2:00:00 PM,Hack N Whack Oil Field,,15,1,0,False,,#a09999
-2/6/2026 12:00:00 AM,2/6/2026 2:00:00 PM,2/6/2026 2:10:00 PM,Takedown - Hack N Whack ,,b,1,0,False,,#d1c9c9
-2/6/2026 12:00:00 AM,2/6/2026 2:10:00 PM,2/6/2026 3:20:00 PM,Drop-In Goalie,,7,1,2,False,,#59f005
-2/6/2026 12:00:00 AM,2/6/2026 2:10:00 PM,2/6/2026 3:20:00 PM,Drop-In Player,,7,1,1,True,,#59f005
-2/6/2026 12:00:00 AM,2/6/2026 3:20:00 PM,2/6/2026 3:30:00 PM,Takedown - Drop-In Playe,,b,1,1,False,,#d1c9c9
-2/6/2026 12:00:00 AM,2/6/2026 3:30:00 PM,2/6/2026 4:00:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
-2/6/2026 12:00:00 AM,2/6/2026 4:00:00 PM,2/6/2026 4:30:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
-2/6/2026 12:00:00 AM,2/6/2026 4:30:00 PM,2/6/2026 5:30:00 PM,Junior Blades,,12,1,0,False,,#e8be55
-2/6/2026 12:00:00 AM,2/6/2026 5:30:00 PM,2/6/2026 5:40:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
-2/6/2026 12:00:00 AM,2/6/2026 5:40:00 PM,2/6/2026 6:55:00 PM,Game,,g,1,0,False,,#6e8bf7
-2/6/2026 12:00:00 AM,2/6/2026 6:00:00 PM,2/6/2026 10:00:00 PM,Party room - Woodlands h,,13,3,0,False,,#fb42d3
-2/6/2026 12:00:00 AM,2/6/2026 7:05:00 PM,2/6/2026 8:35:00 PM,ISHL Game,,8,1,0,False,,#6e8bf7
-2/6/2026 12:00:00 AM,2/6/2026 8:35:00 PM,2/6/2026 8:45:00 PM,Takedown - ISHL Game,,b,1,0,False,,#d1c9c9
-2/6/2026 12:00:00 AM,2/6/2026 8:45:00 PM,2/6/2026 10:15:00 PM,Game,,g,1,0,False,Winter Novice League 2026 GOALIE vs Winter Novice 2026 PLAYER,#6e8bf7
-2/6/2026 12:00:00 AM,2/6/2026 10:25:00 PM,2/6/2026 11:40:00 PM,Adult C/D League,,g,1,0,False,Pylons vs Gang Green,#6e8bf7
-2/6/2026 12:00:00 AM,2/6/2026 11:55:00 PM,2/7/2026 12:55:00 AM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
 2/7/2026 12:00:00 AM,2/7/2026 5:30:00 AM,2/7/2026 6:00:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 2/7/2026 12:00:00 AM,2/7/2026 6:00:00 AM,2/7/2026 6:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 2/7/2026 12:00:00 AM,2/7/2026 6:30:00 AM,2/7/2026 7:00:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
@@ -484,3 +456,32 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 2/20/2026 12:00:00 AM,2/20/2026 8:35:00 PM,2/20/2026 8:45:00 PM,Takedown - ISHL Game,,b,1,0,False,,#d1c9c9
 2/20/2026 12:00:00 AM,2/20/2026 8:45:00 PM,2/20/2026 10:15:00 PM,Game,,g,1,0,False,Winter Novice League 2026 GOALIE vs Winter Novice 2026 PLAYER,#6e8bf7
 2/20/2026 12:00:00 AM,2/20/2026 10:25:00 PM,2/20/2026 11:40:00 PM,Game,,g,1,0,False,Bandits vs Hawks,#6e8bf7
+2/20/2026 12:00:00 AM,2/20/2026 11:55:00 PM,2/21/2026 12:55:00 AM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
+2/21/2026 12:00:00 AM,2/21/2026 5:30:00 AM,2/21/2026 6:00:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
+2/21/2026 12:00:00 AM,2/21/2026 6:00:00 AM,2/21/2026 6:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
+2/21/2026 12:00:00 AM,2/21/2026 6:30:00 AM,2/21/2026 7:00:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
+2/21/2026 12:00:00 AM,2/21/2026 7:00:00 AM,2/21/2026 7:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
+2/21/2026 12:00:00 AM,2/21/2026 7:30:00 AM,2/21/2026 8:00:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
+2/21/2026 12:00:00 AM,2/21/2026 8:00:00 AM,2/21/2026 8:30:00 AM,Freeskate Classes,,c,1,1,False,,#04ba00
+2/21/2026 12:00:00 AM,2/21/2026 9:00:00 AM,2/21/2026 9:10:00 AM,ICE CUT,,b,1,0,False,,#d1c9c9
+2/21/2026 12:00:00 AM,2/21/2026 9:10:00 AM,2/21/2026 10:10:00 AM,Junior Blades Practice Session,,12,1,0,False,,#e8be55
+2/21/2026 12:00:00 AM,2/21/2026 10:10:00 AM,2/21/2026 10:20:00 AM,LTS Preparation,,b,1,0,False,,#d1c9c9
+2/21/2026 12:00:00 AM,2/21/2026 10:20:00 AM,2/21/2026 10:50:00 AM,Learn to Skate Sat 10:20,,c,1,1,False,,#04ba00
+2/21/2026 12:00:00 AM,2/21/2026 10:50:00 AM,2/21/2026 11:00:00 AM,ICE CUT,,b,1,0,False,,#d1c9c9
+2/21/2026 12:00:00 AM,2/21/2026 11:00:00 AM,2/21/2026 12:00:00 PM,Junior Blades Practice Session,,12,1,0,False,,#e8be55
+2/21/2026 12:00:00 AM,2/21/2026 12:00:00 PM,2/21/2026 12:15:00 PM,LTS Preparation,,b,1,0,False,,#d1c9c9
+2/21/2026 12:00:00 AM,2/21/2026 12:15:00 PM,2/21/2026 12:45:00 PM,Learn to Skate Sat 12:15,,c,1,1,False,,#04ba00
+2/21/2026 12:00:00 AM,2/21/2026 12:45:00 PM,2/21/2026 1:00:00 PM,LTS Open Time,,b,1,0,False,,#d1c9c9
+2/21/2026 12:00:00 AM,2/21/2026 1:00:00 PM,2/21/2026 3:30:00 PM,Public Skating (ice cut ,,11,1,0,False,,#f0f509
+2/21/2026 12:00:00 AM,2/21/2026 2:00:00 PM,2/21/2026 4:00:00 PM,Room rental - Amanda Fra,,13,3,0,False,,#fb42d3
+2/21/2026 12:00:00 AM,2/21/2026 3:30:00 PM,2/21/2026 3:40:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
+2/21/2026 12:00:00 AM,2/21/2026 3:40:00 PM,2/21/2026 4:40:00 PM,In-House,,8,1,0,False,,#6e8bf7
+2/21/2026 12:00:00 AM,2/21/2026 4:40:00 PM,2/21/2026 4:50:00 PM,Takedown - In-House,,b,1,0,False,,#d1c9c9
+2/21/2026 12:00:00 AM,2/21/2026 4:50:00 PM,2/21/2026 5:50:00 PM,In-House,,8,1,0,False,,#6e8bf7
+2/21/2026 12:00:00 AM,2/21/2026 5:50:00 PM,2/21/2026 6:00:00 PM,Takedown - In-House,,b,1,0,False,,#d1c9c9
+2/21/2026 12:00:00 AM,2/21/2026 6:00:00 PM,2/21/2026 7:00:00 PM,In-House,,8,1,0,False,,#6e8bf7
+2/21/2026 12:00:00 AM,2/21/2026 7:00:00 PM,2/21/2026 7:10:00 PM,Takedown - In-House,,b,1,0,False,,#d1c9c9
+2/21/2026 12:00:00 AM,2/21/2026 7:10:00 PM,2/21/2026 8:10:00 PM,In-House Game,,8,1,0,False,,#6e8bf7
+2/21/2026 12:00:00 AM,2/21/2026 8:10:00 PM,2/21/2026 8:20:00 PM,Takedown - In-House,,b,1,0,False,,#d1c9c9
+2/21/2026 12:00:00 AM,2/21/2026 8:20:00 PM,2/21/2026 9:35:00 PM,Game,,g,1,0,False,Gang Green vs Stars,#6e8bf7
+2/21/2026 12:00:00 AM,2/21/2026 9:45:00 PM,2/21/2026 11:00:00 PM,Game,,g,1,0,False,Sciphyn vs Ringers,#6e8bf7
