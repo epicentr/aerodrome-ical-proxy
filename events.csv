@@ -451,8 +451,7 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 2/22/2026 12:00:00 AM,2/22/2026 4:20:00 PM,2/22/2026 5:10:00 PM,Class: Winter Learn to P,,c,1,2,True,,#04ba00
 2/22/2026 12:00:00 AM,2/22/2026 5:20:00 PM,2/22/2026 6:20:00 PM,In-House,,8,1,0,False,,#6e8bf7
 2/22/2026 12:00:00 AM,2/22/2026 6:20:00 PM,2/22/2026 6:30:00 PM,Takedown - In-House,,b,1,0,False,,#d1c9c9
-2/22/2026 12:00:00 AM,2/22/2026 6:35:00 PM,2/22/2026 7:35:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
+2/22/2026 12:00:00 AM,2/22/2026 6:30:00 PM,2/22/2026 7:45:00 PM,Game,,g,1,0,False,,#6e8bf7
 2/22/2026 12:00:00 AM,2/22/2026 8:00:00 PM,2/22/2026 9:30:00 PM,ISHL Game,,8,1,0,False,,#6e8bf7
 2/22/2026 12:00:00 AM,2/22/2026 8:55:00 PM,2/22/2026 9:25:00 PM,Party room - TOI off-ice,,13,3,0,False,,#fb42d3
 2/22/2026 12:00:00 AM,2/22/2026 9:30:00 PM,2/22/2026 9:40:00 PM,Takedown - ISHL Game,,b,1,0,False,,#d1c9c9
-2/22/2026 12:00:00 AM,2/22/2026 9:45:00 PM,2/22/2026 10:45:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
