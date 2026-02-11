@@ -86,12 +86,12 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 2/13/2026 12:00:00 AM,2/13/2026 4:00:00 PM,2/13/2026 4:30:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 2/13/2026 12:00:00 AM,2/13/2026 4:30:00 PM,2/13/2026 5:30:00 PM,Junior Blades,,12,1,0,False,,#e8be55
 2/13/2026 12:00:00 AM,2/13/2026 5:30:00 PM,2/13/2026 5:40:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
-2/13/2026 12:00:00 AM,2/13/2026 5:40:00 PM,2/13/2026 6:55:00 PM,Game,,g,1,0,False,,#6e8bf7
-2/13/2026 12:00:00 AM,2/13/2026 7:10:00 PM,2/13/2026 8:10:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
-2/13/2026 12:00:00 AM,2/13/2026 7:30:00 PM,2/13/2026 8:30:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
-2/13/2026 12:00:00 AM,2/13/2026 8:45:00 PM,2/13/2026 10:15:00 PM,Game,,g,1,0,False,Winter Novice League 2026 GOALIE vs Winter Novice 2026 PLAYER,#6e8bf7
-2/13/2026 12:00:00 AM,2/13/2026 10:25:00 PM,2/13/2026 11:40:00 PM,Adult C/D League,,g,1,0,False,Stars vs Ringers,#6e8bf7
-2/13/2026 12:00:00 AM,2/13/2026 11:55:00 PM,2/14/2026 12:55:00 AM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
+2/13/2026 12:00:00 AM,2/13/2026 5:40:00 PM,2/13/2026 7:10:00 PM,Game,,g,1,0,False,,#6e8bf7
+2/13/2026 12:00:00 AM,2/13/2026 6:30:00 PM,2/13/2026 7:30:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
+2/13/2026 12:00:00 AM,2/13/2026 7:25:00 PM,2/13/2026 8:25:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
+2/13/2026 12:00:00 AM,2/13/2026 7:45:00 PM,2/13/2026 9:15:00 PM,Game,,g,1,0,False,Winter Novice League 2026 GOALIE vs Winter Novice 2026 PLAYER,#6e8bf7
+2/13/2026 12:00:00 AM,2/13/2026 9:25:00 PM,2/13/2026 10:40:00 PM,Game,,g,1,0,False,Stars vs Ringers,#6e8bf7
+2/13/2026 12:00:00 AM,2/13/2026 10:55:00 PM,2/13/2026 11:55:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
 2/14/2026 12:00:00 AM,2/14/2026 5:30:00 AM,2/14/2026 6:00:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 2/14/2026 12:00:00 AM,2/14/2026 6:00:00 AM,2/14/2026 6:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 2/14/2026 12:00:00 AM,2/14/2026 6:30:00 AM,2/14/2026 7:00:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
