@@ -404,6 +404,7 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 3/1/2026 12:00:00 AM,3/1/2026 11:50:00 AM,3/1/2026 12:50:00 PM,Blades of Texas Theatre ,,15,1,0,False,,#a09999
 3/1/2026 12:00:00 AM,3/1/2026 12:00:00 PM,3/1/2026 1:00:00 PM,Room rental - Amy Norden,,13,3,0,False,,#fb42d3
 3/1/2026 12:00:00 AM,3/1/2026 1:00:00 PM,3/1/2026 3:30:00 PM,Public Skating (ice cut ,,11,1,0,False,,#f0f509
+3/1/2026 12:00:00 AM,3/1/2026 1:45:00 PM,3/1/2026 2:45:00 PM,Room rental - Wendi Raff,,13,3,0,False,,#fb42d3
 3/1/2026 12:00:00 AM,3/1/2026 3:30:00 PM,3/1/2026 3:35:00 PM,NO CUT,,b,1,0,False,,#d1c9c9
 3/1/2026 12:00:00 AM,3/1/2026 3:35:00 PM,3/1/2026 4:05:00 PM,Learn to Skate Hockey 1 ,,c,1,4,False,,#04ba00
 3/1/2026 12:00:00 AM,3/1/2026 3:35:00 PM,3/1/2026 4:05:00 PM,Learn to Skate Hockey 2 ,,c,1,5,True,,#04ba00
