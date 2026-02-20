@@ -279,16 +279,7 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 2/27/2026 12:00:00 AM,2/27/2026 10:15:00 PM,2/27/2026 10:45:00 PM,NO CUT,,b,1,0,False,,#d1c9c9
 2/27/2026 12:00:00 AM,2/27/2026 10:45:00 PM,2/27/2026 11:45:00 PM,Broomball - Kats for Chr,,b,1,0,False,,#d1c9c9
 2/28/2026 12:00:00 AM,2/28/2026 12:00:00 AM,2/28/2026 1:00:00 AM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
-2/28/2026 12:00:00 AM,2/28/2026 5:30:00 AM,2/28/2026 6:00:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
-2/28/2026 12:00:00 AM,2/28/2026 6:00:00 AM,2/28/2026 6:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
-2/28/2026 12:00:00 AM,2/28/2026 6:30:00 AM,2/28/2026 7:00:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
-2/28/2026 12:00:00 AM,2/28/2026 7:00:00 AM,2/28/2026 7:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
-2/28/2026 12:00:00 AM,2/28/2026 7:30:00 AM,2/28/2026 8:00:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
-2/28/2026 12:00:00 AM,2/28/2026 9:00:00 AM,2/28/2026 9:10:00 AM,ICE CUT,,b,1,0,False,,#d1c9c9
-2/28/2026 12:00:00 AM,2/28/2026 9:10:00 AM,2/28/2026 10:10:00 AM,Junior Blades Practice Session,,12,1,0,False,,#e8be55
-2/28/2026 12:00:00 AM,2/28/2026 10:10:00 AM,2/28/2026 10:20:00 AM,LTS Preparation,,b,1,0,False,,#d1c9c9
-2/28/2026 12:00:00 AM,2/28/2026 10:50:00 AM,2/28/2026 11:00:00 AM,ICE CUT,,b,1,0,False,,#d1c9c9
-2/28/2026 12:00:00 AM,2/28/2026 11:00:00 AM,2/28/2026 12:00:00 PM,Junior Blades Practice Session,,12,1,0,False,,#e8be55
+2/28/2026 12:00:00 AM,2/28/2026 7:45:00 AM,2/28/2026 12:45:00 PM,Skating Club of Houston ,,b,1,0,False,,#d1c9c9
 2/28/2026 12:00:00 AM,2/28/2026 12:30:00 PM,2/28/2026 2:30:00 PM,Room rental - Kallie Hla,,13,3,0,False,,#fb42d3
 2/28/2026 12:00:00 AM,2/28/2026 1:00:00 PM,2/28/2026 3:30:00 PM,Public Skating (ice cut ,,11,1,0,False,,#f0f509
 2/28/2026 12:00:00 AM,2/28/2026 3:30:00 PM,2/28/2026 3:40:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
