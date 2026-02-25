@@ -256,8 +256,8 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 3/5/2026 12:00:00 AM,3/5/2026 4:30:00 PM,3/5/2026 5:00:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 3/5/2026 12:00:00 AM,3/5/2026 5:00:00 PM,3/5/2026 5:30:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 3/5/2026 12:00:00 AM,3/5/2026 5:30:00 PM,3/5/2026 5:40:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
-3/5/2026 12:00:00 AM,3/5/2026 9:10:00 PM,3/5/2026 10:25:00 PM,Adult B League,,8,1,0,False,,#6e8bf7
-3/5/2026 12:00:00 AM,3/5/2026 10:25:00 PM,3/5/2026 10:35:00 PM,Takedown - Adult B Leagu,,b,1,0,False,,#d1c9c9
+3/5/2026 12:00:00 AM,3/5/2026 9:40:00 PM,3/5/2026 10:55:00 PM,Adult B League,,8,1,0,False,,#6e8bf7
+3/5/2026 12:00:00 AM,3/5/2026 10:55:00 PM,3/5/2026 11:05:00 PM,Takedown - Adult B Leagu,,b,1,0,False,,#d1c9c9
 3/6/2026 12:00:00 AM,3/6/2026 5:30:00 AM,3/6/2026 9:00:00 PM,Houston Invitational  Co,,b,1,0,False,,#d1c9c9
 3/7/2026 12:00:00 AM,3/7/2026 5:30:00 AM,3/7/2026 9:00:00 PM,Houston Invitational  Co,,b,1,0,False,,#d1c9c9
 3/8/2026 12:00:00 AM,3/8/2026 5:30:00 AM,3/8/2026 1:00:00 PM,Houston Invitational  Co,,b,1,0,False,,#d1c9c9
