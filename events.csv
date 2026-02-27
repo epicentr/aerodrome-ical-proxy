@@ -317,5 +317,8 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 3/13/2026 12:00:00 AM,3/13/2026 4:30:00 PM,3/13/2026 5:30:00 PM,Junior Blades Practice S,,12,1,0,False,,#e8be55
 3/13/2026 12:00:00 AM,3/13/2026 5:30:00 PM,3/13/2026 5:40:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
 3/13/2026 12:00:00 AM,3/13/2026 5:40:00 PM,3/13/2026 7:10:00 PM,Game,,g,1,0,False,,#6e8bf7
-3/13/2026 12:00:00 AM,3/13/2026 7:10:00 PM,3/13/2026 8:45:00 PM,Youth Tournament,,b,1,0,False,,#d1c9c9
-3/13/2026 12:00:00 AM,3/13/2026 8:45:00 PM,3/13/2026 10:15:00 PM,Game,,g,1,0,False,Winter Novice League 2026 GOALIE vs Winter Novice 2026 PLAYER,#6e8bf7
+3/13/2026 12:00:00 AM,3/13/2026 7:20:00 PM,3/13/2026 8:20:00 PM,12U Gm1,,b,1,0,False,,#d1c9c9
+3/13/2026 12:00:00 AM,3/13/2026 8:20:00 PM,3/13/2026 8:30:00 PM,Takedown - 12U Gm1,,b,1,0,False,,#d1c9c9
+3/13/2026 12:00:00 AM,3/13/2026 8:30:00 PM,3/13/2026 9:30:00 PM,12U Gm2,,b,1,0,False,,#d1c9c9
+3/13/2026 12:00:00 AM,3/13/2026 9:30:00 PM,3/13/2026 9:40:00 PM,Takedown - 12U Gm2,,b,1,0,False,,#d1c9c9
+3/13/2026 12:00:00 AM,3/13/2026 9:40:00 PM,3/13/2026 11:10:00 PM,Game,,g,1,0,False,Winter Novice League 2026 GOALIE vs Winter Novice 2026 PLAYER,#6e8bf7
