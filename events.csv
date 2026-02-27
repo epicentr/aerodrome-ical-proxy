@@ -89,6 +89,8 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 3/2/2026 12:00:00 AM,3/2/2026 4:00:00 PM,3/2/2026 4:30:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 3/2/2026 12:00:00 AM,3/2/2026 4:30:00 PM,3/2/2026 5:00:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 3/2/2026 12:00:00 AM,3/2/2026 5:00:00 PM,3/2/2026 6:30:00 PM,Junior Blades Practice S,,12,1,0,False,,#e8be55
+3/2/2026 12:00:00 AM,3/2/2026 8:00:00 PM,3/2/2026 9:00:00 PM,ISHL Practice,,8,1,0,False,,#6e8bf7
+3/2/2026 12:00:00 AM,3/2/2026 9:00:00 PM,3/2/2026 9:10:00 PM,Takedown - ISHL Practice,,b,1,0,False,,#d1c9c9
 3/2/2026 12:00:00 AM,3/2/2026 9:10:00 PM,3/2/2026 10:25:00 PM,Adult B League,,8,1,0,False,,#6e8bf7
 3/2/2026 12:00:00 AM,3/2/2026 10:25:00 PM,3/2/2026 10:35:00 PM,Takedown - Adult B Leagu,,b,1,0,False,,#d1c9c9
 3/3/2026 12:00:00 AM,3/3/2026 5:00:00 AM,3/3/2026 5:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
@@ -114,6 +116,10 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 3/3/2026 12:00:00 AM,3/3/2026 4:30:00 PM,3/3/2026 5:00:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 3/3/2026 12:00:00 AM,3/3/2026 5:00:00 PM,3/3/2026 5:30:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 3/3/2026 12:00:00 AM,3/3/2026 5:30:00 PM,3/3/2026 5:40:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
+3/3/2026 12:00:00 AM,3/3/2026 6:50:00 PM,3/3/2026 7:50:00 PM,ISHL Practice,,8,1,0,False,,#6e8bf7
+3/3/2026 12:00:00 AM,3/3/2026 7:50:00 PM,3/3/2026 8:00:00 PM,Takedown - ISHL Practice,,b,1,0,False,,#d1c9c9
+3/3/2026 12:00:00 AM,3/3/2026 8:00:00 PM,3/3/2026 9:00:00 PM,ISHL Practice,,8,1,0,False,,#6e8bf7
+3/3/2026 12:00:00 AM,3/3/2026 9:00:00 PM,3/3/2026 9:10:00 PM,Takedown - ISHL Practice,,b,1,0,False,,#d1c9c9
 3/3/2026 12:00:00 AM,3/3/2026 9:10:00 PM,3/3/2026 10:25:00 PM,Adult B League,,8,1,0,False,,#6e8bf7
 3/3/2026 12:00:00 AM,3/3/2026 10:25:00 PM,3/3/2026 10:35:00 PM,Takedown - Adult B Leagu,,b,1,0,False,,#d1c9c9
 3/4/2026 12:00:00 AM,3/4/2026 5:15:00 AM,3/4/2026 5:45:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
@@ -137,6 +143,10 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 3/4/2026 12:00:00 AM,3/4/2026 4:00:00 PM,3/4/2026 4:30:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 3/4/2026 12:00:00 AM,3/4/2026 4:30:00 PM,3/4/2026 5:30:00 PM,Junior Blades Practice S,,12,1,0,False,,#e8be55
 3/4/2026 12:00:00 AM,3/4/2026 5:30:00 PM,3/4/2026 5:40:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
+3/4/2026 12:00:00 AM,3/4/2026 6:50:00 PM,3/4/2026 7:50:00 PM,ISHL Practice,,8,1,0,False,,#6e8bf7
+3/4/2026 12:00:00 AM,3/4/2026 7:50:00 PM,3/4/2026 8:00:00 PM,Takedown - ISHL Practice,,b,1,0,False,,#d1c9c9
+3/4/2026 12:00:00 AM,3/4/2026 8:00:00 PM,3/4/2026 9:00:00 PM,ISHL Practice,,8,1,0,False,,#6e8bf7
+3/4/2026 12:00:00 AM,3/4/2026 9:00:00 PM,3/4/2026 9:10:00 PM,Takedown - ISHL Practice,,b,1,0,False,,#d1c9c9
 3/4/2026 12:00:00 AM,3/4/2026 9:10:00 PM,3/4/2026 10:25:00 PM,Adult B League,,8,1,0,False,,#6e8bf7
 3/4/2026 12:00:00 AM,3/4/2026 10:25:00 PM,3/4/2026 10:35:00 PM,Takedown - Adult B Leagu,,b,1,0,False,,#d1c9c9
 3/5/2026 12:00:00 AM,3/5/2026 5:00:00 AM,3/5/2026 5:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
@@ -162,6 +172,8 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 3/5/2026 12:00:00 AM,3/5/2026 4:30:00 PM,3/5/2026 5:00:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 3/5/2026 12:00:00 AM,3/5/2026 5:00:00 PM,3/5/2026 5:30:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 3/5/2026 12:00:00 AM,3/5/2026 5:30:00 PM,3/5/2026 5:40:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
+3/5/2026 12:00:00 AM,3/5/2026 8:00:00 PM,3/5/2026 9:30:00 PM,High School Game,,8,1,0,False,,#6e8bf7
+3/5/2026 12:00:00 AM,3/5/2026 9:30:00 PM,3/5/2026 9:40:00 PM,Takedown - High School G,,b,1,0,False,,#d1c9c9
 3/5/2026 12:00:00 AM,3/5/2026 9:40:00 PM,3/5/2026 10:55:00 PM,Adult B League,,8,1,0,False,,#6e8bf7
 3/5/2026 12:00:00 AM,3/5/2026 10:55:00 PM,3/5/2026 11:05:00 PM,Takedown - Adult B Leagu,,b,1,0,False,,#d1c9c9
 3/6/2026 12:00:00 AM,3/6/2026 5:30:00 AM,3/6/2026 9:00:00 PM,Houston Invitational  Co,,b,1,0,False,,#d1c9c9
@@ -179,7 +191,9 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 3/8/2026 12:00:00 AM,3/8/2026 4:20:00 PM,3/8/2026 5:10:00 PM,Class: Winter Learn to P,,c,1,2,True,,#04ba00
 3/8/2026 12:00:00 AM,3/8/2026 5:20:00 PM,3/8/2026 6:20:00 PM,Blades of Texas Theatre ,,15,1,0,False,,#a09999
 3/8/2026 12:00:00 AM,3/8/2026 6:30:00 PM,3/8/2026 7:45:00 PM,Game,,g,1,0,False,,#6e8bf7
-3/8/2026 12:00:00 AM,3/8/2026 8:00:00 PM,3/8/2026 9:00:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
+3/8/2026 12:00:00 AM,3/8/2026 8:00:00 PM,3/8/2026 10:00:00 PM,ISHL Championship Game,,8,1,0,False,,#6e8bf7
+3/8/2026 12:00:00 AM,3/8/2026 10:00:00 PM,3/8/2026 10:10:00 PM,Takedown - ISHL Champion,,b,1,0,False,,#d1c9c9
+3/8/2026 12:00:00 AM,3/8/2026 10:15:00 PM,3/8/2026 11:15:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
 3/9/2026 12:00:00 AM,3/9/2026 5:15:00 AM,3/9/2026 5:45:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 3/9/2026 12:00:00 AM,3/9/2026 5:45:00 AM,3/9/2026 6:15:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 3/9/2026 12:00:00 AM,3/9/2026 6:15:00 AM,3/9/2026 6:45:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
