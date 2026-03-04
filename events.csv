@@ -19,7 +19,9 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 3/4/2026 12:00:00 AM,3/4/2026 3:30:00 PM,3/4/2026 4:00:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 3/4/2026 12:00:00 AM,3/4/2026 4:00:00 PM,3/4/2026 4:30:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 3/4/2026 12:00:00 AM,3/4/2026 4:30:00 PM,3/4/2026 5:30:00 PM,Junior Blades Practice S,,12,1,0,False,,#e8be55
-3/4/2026 12:00:00 AM,3/4/2026 5:30:00 PM,3/4/2026 5:40:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
+3/4/2026 12:00:00 AM,3/4/2026 5:30:00 PM,3/4/2026 6:40:00 PM,Stick and Puck Goalie Al,,7,1,2,False,,#59f005
+3/4/2026 12:00:00 AM,3/4/2026 5:30:00 PM,3/4/2026 6:40:00 PM,Stick and Puck Player Al,,7,1,1,True,,#59f005
+3/4/2026 12:00:00 AM,3/4/2026 6:40:00 PM,3/4/2026 6:50:00 PM,Takedown - Stick and Puc,,b,1,1,False,,#d1c9c9
 3/4/2026 12:00:00 AM,3/4/2026 6:50:00 PM,3/4/2026 7:50:00 PM,ISHL Practice,,8,1,0,False,,#6e8bf7
 3/4/2026 12:00:00 AM,3/4/2026 7:50:00 PM,3/4/2026 8:00:00 PM,Takedown - ISHL Practice,,b,1,0,False,,#d1c9c9
 3/4/2026 12:00:00 AM,3/4/2026 8:00:00 PM,3/4/2026 9:00:00 PM,ISHL Practice,,8,1,0,False,,#6e8bf7
@@ -48,7 +50,9 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 3/5/2026 12:00:00 AM,3/5/2026 4:00:00 PM,3/5/2026 4:30:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 3/5/2026 12:00:00 AM,3/5/2026 4:30:00 PM,3/5/2026 5:00:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 3/5/2026 12:00:00 AM,3/5/2026 5:00:00 PM,3/5/2026 5:30:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
-3/5/2026 12:00:00 AM,3/5/2026 5:30:00 PM,3/5/2026 5:40:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
+3/5/2026 12:00:00 AM,3/5/2026 5:30:00 PM,3/5/2026 6:40:00 PM,Stick and Puck Goalie Al,,7,1,2,False,,#59f005
+3/5/2026 12:00:00 AM,3/5/2026 5:30:00 PM,3/5/2026 6:40:00 PM,Stick and Puck Player Al,,7,1,1,True,,#59f005
+3/5/2026 12:00:00 AM,3/5/2026 6:40:00 PM,3/5/2026 6:50:00 PM,Takedown - Stick and Puc,,b,1,1,False,,#d1c9c9
 3/5/2026 12:00:00 AM,3/5/2026 8:00:00 PM,3/5/2026 9:30:00 PM,High School Game,,8,1,0,False,,#6e8bf7
 3/5/2026 12:00:00 AM,3/5/2026 9:30:00 PM,3/5/2026 9:40:00 PM,Takedown - High School G,,b,1,0,False,,#d1c9c9
 3/5/2026 12:00:00 AM,3/5/2026 9:40:00 PM,3/5/2026 10:55:00 PM,Adult B League,,8,1,0,False,,#6e8bf7
@@ -134,7 +138,10 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 3/10/2026 12:00:00 AM,3/10/2026 4:00:00 PM,3/10/2026 4:30:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 3/10/2026 12:00:00 AM,3/10/2026 4:30:00 PM,3/10/2026 5:00:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 3/10/2026 12:00:00 AM,3/10/2026 5:00:00 PM,3/10/2026 5:30:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
-3/10/2026 12:00:00 AM,3/10/2026 5:30:00 PM,3/10/2026 5:40:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
+3/10/2026 12:00:00 AM,3/10/2026 5:30:00 PM,3/10/2026 6:40:00 PM,Stick and Puck Goalie Al,,7,1,2,False,,#59f005
+3/10/2026 12:00:00 AM,3/10/2026 5:30:00 PM,3/10/2026 6:40:00 PM,Stick and Puck Player Al,,7,1,1,True,,#59f005
+3/10/2026 12:00:00 AM,3/10/2026 6:40:00 PM,3/10/2026 6:50:00 PM,Takedown - Stick and Puc,,b,1,1,False,,#d1c9c9
+3/10/2026 12:00:00 AM,3/10/2026 7:50:00 PM,3/10/2026 8:00:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
 3/10/2026 12:00:00 AM,3/10/2026 8:00:00 PM,3/10/2026 9:00:00 PM,TAC Ice - JA,,8,1,0,False,,#6e8bf7
 3/10/2026 12:00:00 AM,3/10/2026 9:00:00 PM,3/10/2026 9:10:00 PM,Takedown - TAC Ice - JA,,b,1,0,False,,#d1c9c9
 3/10/2026 12:00:00 AM,3/10/2026 9:10:00 PM,3/10/2026 10:25:00 PM,Adult B League,,8,1,0,False,,#6e8bf7
@@ -159,7 +166,10 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 3/11/2026 12:00:00 AM,3/11/2026 3:30:00 PM,3/11/2026 4:00:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 3/11/2026 12:00:00 AM,3/11/2026 4:00:00 PM,3/11/2026 4:30:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 3/11/2026 12:00:00 AM,3/11/2026 4:30:00 PM,3/11/2026 5:30:00 PM,Junior Blades Practice S,,12,1,0,False,,#e8be55
-3/11/2026 12:00:00 AM,3/11/2026 5:30:00 PM,3/11/2026 5:40:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
+3/11/2026 12:00:00 AM,3/11/2026 5:30:00 PM,3/11/2026 6:40:00 PM,Stick and Puck Goalie Al,,7,1,2,False,,#59f005
+3/11/2026 12:00:00 AM,3/11/2026 5:30:00 PM,3/11/2026 6:40:00 PM,Stick and Puck Player Al,,7,1,1,True,,#59f005
+3/11/2026 12:00:00 AM,3/11/2026 6:40:00 PM,3/11/2026 6:50:00 PM,Takedown - Stick and Puc,,b,1,1,False,,#d1c9c9
+3/11/2026 12:00:00 AM,3/11/2026 9:00:00 PM,3/11/2026 9:10:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
 3/11/2026 12:00:00 AM,3/11/2026 9:10:00 PM,3/11/2026 10:25:00 PM,Adult B League,,8,1,0,False,,#6e8bf7
 3/11/2026 12:00:00 AM,3/11/2026 10:25:00 PM,3/11/2026 10:35:00 PM,Takedown - Adult B Leagu,,b,1,0,False,,#d1c9c9
 3/12/2026 12:00:00 AM,3/12/2026 5:00:00 AM,3/12/2026 5:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
@@ -184,7 +194,10 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 3/12/2026 12:00:00 AM,3/12/2026 4:00:00 PM,3/12/2026 4:30:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 3/12/2026 12:00:00 AM,3/12/2026 4:30:00 PM,3/12/2026 5:00:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 3/12/2026 12:00:00 AM,3/12/2026 5:00:00 PM,3/12/2026 5:30:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
-3/12/2026 12:00:00 AM,3/12/2026 5:30:00 PM,3/12/2026 5:40:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
+3/12/2026 12:00:00 AM,3/12/2026 5:30:00 PM,3/12/2026 6:40:00 PM,Stick and Puck Goalie Al,,7,1,2,False,,#59f005
+3/12/2026 12:00:00 AM,3/12/2026 5:30:00 PM,3/12/2026 6:40:00 PM,Stick and Puck Player Al,,7,1,1,True,,#59f005
+3/12/2026 12:00:00 AM,3/12/2026 6:40:00 PM,3/12/2026 6:50:00 PM,Takedown - Stick and Puc,,b,1,1,False,,#d1c9c9
+3/12/2026 12:00:00 AM,3/12/2026 9:00:00 PM,3/12/2026 9:10:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
 3/12/2026 12:00:00 AM,3/12/2026 9:10:00 PM,3/12/2026 10:25:00 PM,Adult B League,,8,1,0,False,,#6e8bf7
 3/12/2026 12:00:00 AM,3/12/2026 10:25:00 PM,3/12/2026 10:35:00 PM,Takedown - Adult B Leagu,,b,1,0,False,,#d1c9c9
 3/13/2026 12:00:00 AM,3/13/2026 5:00:00 AM,3/13/2026 5:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
