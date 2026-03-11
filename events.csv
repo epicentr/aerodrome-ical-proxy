@@ -468,5 +468,11 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 3/25/2026 12:00:00 AM,3/25/2026 4:00:00 PM,3/25/2026 4:30:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 3/25/2026 12:00:00 AM,3/25/2026 4:30:00 PM,3/25/2026 5:30:00 PM,Junior Blades Practice S,,12,1,0,False,,#e8be55
 3/25/2026 12:00:00 AM,3/25/2026 5:30:00 PM,3/25/2026 5:40:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
+3/25/2026 12:00:00 AM,3/25/2026 5:40:00 PM,3/25/2026 6:40:00 PM,8U Evals,,8,1,0,False,,#6e8bf7
+3/25/2026 12:00:00 AM,3/25/2026 6:40:00 PM,3/25/2026 6:50:00 PM,Takedown - 8U Evals,,b,1,0,False,,#d1c9c9
+3/25/2026 12:00:00 AM,3/25/2026 6:50:00 PM,3/25/2026 7:50:00 PM,12U Evals,,8,1,0,False,,#6e8bf7
+3/25/2026 12:00:00 AM,3/25/2026 7:50:00 PM,3/25/2026 8:00:00 PM,Takedown - 12U Evals,,b,1,0,False,,#d1c9c9
+3/25/2026 12:00:00 AM,3/25/2026 8:00:00 PM,3/25/2026 9:00:00 PM,14U Evals,,8,1,0,False,,#6e8bf7
+3/25/2026 12:00:00 AM,3/25/2026 9:00:00 PM,3/25/2026 9:10:00 PM,Takedown - 14U Evals,,b,1,0,False,,#d1c9c9
 3/25/2026 12:00:00 AM,3/25/2026 9:10:00 PM,3/25/2026 10:25:00 PM,Adult B League,,8,1,0,False,,#6e8bf7
 3/25/2026 12:00:00 AM,3/25/2026 10:25:00 PM,3/25/2026 10:35:00 PM,Takedown - Adult B Leagu,,b,1,0,False,,#d1c9c9
