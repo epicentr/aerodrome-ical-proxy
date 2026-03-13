@@ -26,6 +26,7 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 3/13/2026 12:00:00 AM,3/13/2026 9:30:00 PM,3/13/2026 9:40:00 PM,Takedown - 12U - USA vs.,,b,1,0,False,,#d1c9c9
 3/13/2026 12:00:00 AM,3/13/2026 9:40:00 PM,3/13/2026 11:10:00 PM,Game,,g,1,0,False,Winter Novice League 2026 GOALIE vs Winter Novice 2026 PLAYER,#6e8bf7
 3/13/2026 12:00:00 AM,3/13/2026 11:25:00 PM,3/14/2026 12:25:00 AM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
+3/14/2026 12:00:00 AM,3/14/2026 5:00:00 AM,3/14/2026 5:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 3/14/2026 12:00:00 AM,3/14/2026 5:30:00 AM,3/14/2026 6:00:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 3/14/2026 12:00:00 AM,3/14/2026 6:00:00 AM,3/14/2026 6:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 3/14/2026 12:00:00 AM,3/14/2026 6:30:00 AM,3/14/2026 7:00:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
