@@ -82,6 +82,7 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 3/20/2026 12:00:00 AM,3/20/2026 4:30:00 PM,3/20/2026 5:30:00 PM,Junior Blades Practice S,,12,1,0,False,,#e8be55
 3/20/2026 12:00:00 AM,3/20/2026 5:30:00 PM,3/20/2026 5:40:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
 3/20/2026 12:00:00 AM,3/20/2026 5:40:00 PM,3/20/2026 7:10:00 PM,Game,,g,1,0,False,,#6e8bf7
+3/20/2026 12:00:00 AM,3/20/2026 6:00:00 PM,3/20/2026 9:30:00 PM,Party room - Mike Bellin,,13,3,0,False,,#fb42d3
 3/20/2026 12:00:00 AM,3/20/2026 7:10:00 PM,3/20/2026 9:20:00 PM,Youth Tournament,,b,1,0,False,,#d1c9c9
 3/20/2026 12:00:00 AM,3/20/2026 9:30:00 PM,3/20/2026 11:00:00 PM,Game,,g,1,0,False,Winter Novice League 2026 GOALIE vs Winter Novice 2026 PLAYER,#6e8bf7
 3/20/2026 12:00:00 AM,3/20/2026 11:15:00 PM,3/21/2026 12:15:00 AM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
@@ -294,8 +295,8 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 3/27/2026 12:00:00 AM,3/27/2026 5:45:00 PM,3/27/2026 6:45:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
 3/27/2026 12:00:00 AM,3/27/2026 6:05:00 PM,3/27/2026 7:05:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
 3/27/2026 12:00:00 AM,3/27/2026 7:20:00 PM,3/27/2026 8:50:00 PM,Game,,g,1,0,False,Winter Novice League 2026 GOALIE vs Winter Novice 2026 PLAYER,#6e8bf7
-3/27/2026 12:00:00 AM,3/27/2026 10:25:00 PM,3/27/2026 11:40:00 PM,Game,,g,1,0,False,Bandits vs Shamrocks,#6e8bf7
-3/27/2026 12:00:00 AM,3/27/2026 11:55:00 PM,3/28/2026 12:55:00 AM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
+3/27/2026 12:00:00 AM,3/27/2026 9:00:00 PM,3/27/2026 10:15:00 PM,Game,,g,1,0,False,Bandits vs Shamrocks,#6e8bf7
+3/27/2026 12:00:00 AM,3/27/2026 10:30:00 PM,3/27/2026 11:30:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
 3/28/2026 12:00:00 AM,3/28/2026 5:00:00 AM,3/28/2026 5:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 3/28/2026 12:00:00 AM,3/28/2026 5:30:00 AM,3/28/2026 6:00:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 3/28/2026 12:00:00 AM,3/28/2026 6:00:00 AM,3/28/2026 6:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
@@ -354,6 +355,7 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 3/28/2026 12:00:00 AM,3/28/2026 8:20:00 PM,3/28/2026 9:35:00 PM,Game,,g,1,0,False,Gang Green vs Ringers,#6e8bf7
 3/28/2026 12:00:00 AM,3/28/2026 9:45:00 PM,3/28/2026 11:00:00 PM,Game,,g,1,0,False,Hawks vs Pylons,#6e8bf7
 3/29/2026 12:00:00 AM,3/29/2026 9:30:00 AM,3/29/2026 9:45:00 AM,Party room - TOI off-ice,,13,3,0,False,,#fb42d3
+3/29/2026 12:00:00 AM,3/29/2026 2:00:00 PM,3/29/2026 4:00:00 PM,Room rental - Brittany M,,13,3,0,False,,#fb42d3
 3/29/2026 12:00:00 AM,3/29/2026 3:30:00 PM,3/29/2026 3:35:00 PM,NO CUT,,b,1,0,False,,#d1c9c9
 3/29/2026 12:00:00 AM,3/29/2026 4:05:00 PM,3/29/2026 5:05:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
 3/29/2026 12:00:00 AM,3/29/2026 5:20:00 PM,3/29/2026 6:20:00 PM,CanAm Youth,,r,1,0,False,,#ff7300
