@@ -413,6 +413,7 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 4/1/2026 12:00:00 AM,4/1/2026 3:30:00 PM,4/1/2026 4:00:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 4/1/2026 12:00:00 AM,4/1/2026 4:00:00 PM,4/1/2026 4:30:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 4/1/2026 12:00:00 AM,4/1/2026 4:30:00 PM,4/1/2026 5:30:00 PM,Junior Blades Practice S,,12,1,0,False,,#e8be55
+4/1/2026 12:00:00 AM,4/1/2026 5:30:00 PM,4/1/2026 5:40:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
 4/1/2026 12:00:00 AM,4/1/2026 9:10:00 PM,4/1/2026 10:25:00 PM,Adult B League,,8,1,0,False,,#6e8bf7
 4/1/2026 12:00:00 AM,4/1/2026 10:25:00 PM,4/1/2026 10:35:00 PM,Takedown - Adult B Leagu,,b,1,0,False,,#d1c9c9
 4/2/2026 12:00:00 AM,4/2/2026 5:00:00 AM,4/2/2026 5:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
