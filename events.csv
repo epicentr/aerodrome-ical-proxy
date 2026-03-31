@@ -247,10 +247,10 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 4/7/2026 12:00:00 AM,4/7/2026 6:40:00 PM,4/7/2026 6:50:00 PM,Takedown - In-House Prac,,b,1,0,False,,#d1c9c9
 4/7/2026 12:00:00 AM,4/7/2026 6:50:00 PM,4/7/2026 7:50:00 PM,In-House Practice (10U),,8,1,0,False,,#6e8bf7
 4/7/2026 12:00:00 AM,4/7/2026 7:50:00 PM,4/7/2026 8:00:00 PM,Takedown - In-House Prac,,b,1,0,False,,#d1c9c9
-4/7/2026 12:00:00 AM,4/7/2026 8:00:00 PM,4/7/2026 9:30:00 PM,In-House Practice (18U/H,,8,1,0,False,,#6e8bf7
-4/7/2026 12:00:00 AM,4/7/2026 9:30:00 PM,4/7/2026 9:40:00 PM,Takedown - In-House Prac,,b,1,0,False,,#d1c9c9
-4/7/2026 12:00:00 AM,4/7/2026 9:40:00 PM,4/7/2026 10:55:00 PM,Adult B League,,8,1,0,False,,#6e8bf7
-4/7/2026 12:00:00 AM,4/7/2026 10:55:00 PM,4/7/2026 11:05:00 PM,Takedown - Adult B Leagu,,b,1,0,False,,#d1c9c9
+4/7/2026 12:00:00 AM,4/7/2026 8:00:00 PM,4/7/2026 9:00:00 PM,In-House Practice (18U/H,,8,1,0,False,,#6e8bf7
+4/7/2026 12:00:00 AM,4/7/2026 9:00:00 PM,4/7/2026 9:10:00 PM,Takedown - In-House Prac,,b,1,0,False,,#d1c9c9
+4/7/2026 12:00:00 AM,4/7/2026 9:10:00 PM,4/7/2026 10:25:00 PM,Adult B League,,8,1,0,False,,#6e8bf7
+4/7/2026 12:00:00 AM,4/7/2026 10:25:00 PM,4/7/2026 10:35:00 PM,Takedown - Adult B Leagu,,b,1,0,False,,#d1c9c9
 4/8/2026 12:00:00 AM,4/8/2026 5:15:00 AM,4/8/2026 5:45:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 4/8/2026 12:00:00 AM,4/8/2026 5:45:00 AM,4/8/2026 6:15:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 4/8/2026 12:00:00 AM,4/8/2026 6:15:00 AM,4/8/2026 6:45:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
@@ -302,7 +302,11 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 4/9/2026 12:00:00 AM,4/9/2026 4:30:00 PM,4/9/2026 5:00:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 4/9/2026 12:00:00 AM,4/9/2026 5:00:00 PM,4/9/2026 5:30:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 4/9/2026 12:00:00 AM,4/9/2026 5:30:00 PM,4/9/2026 5:40:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
-4/9/2026 12:00:00 AM,4/9/2026 8:00:00 PM,4/9/2026 9:00:00 PM,In-House Practice (14U),,8,1,0,False,,#6e8bf7
+4/9/2026 12:00:00 AM,4/9/2026 5:40:00 PM,4/9/2026 6:40:00 PM,TBD,,8,1,0,False,,#6e8bf7
+4/9/2026 12:00:00 AM,4/9/2026 6:40:00 PM,4/9/2026 6:50:00 PM,Takedown - TBD,,b,1,0,False,,#d1c9c9
+4/9/2026 12:00:00 AM,4/9/2026 6:50:00 PM,4/9/2026 7:50:00 PM,In-House Practice (14U),,8,1,0,False,,#6e8bf7
+4/9/2026 12:00:00 AM,4/9/2026 7:50:00 PM,4/9/2026 8:00:00 PM,Takedown - In-House Prac,,b,1,0,False,,#d1c9c9
+4/9/2026 12:00:00 AM,4/9/2026 8:00:00 PM,4/9/2026 9:00:00 PM,In-House Practice (18U/H,,8,1,0,False,,#6e8bf7
 4/9/2026 12:00:00 AM,4/9/2026 9:00:00 PM,4/9/2026 9:10:00 PM,Takedown - In-House Prac,,b,1,0,False,,#d1c9c9
 4/9/2026 12:00:00 AM,4/9/2026 9:10:00 PM,4/9/2026 10:25:00 PM,Adult B League,,8,1,0,False,,#6e8bf7
 4/9/2026 12:00:00 AM,4/9/2026 10:25:00 PM,4/9/2026 10:35:00 PM,Takedown - Adult B Leagu,,b,1,0,False,,#d1c9c9
@@ -452,7 +456,7 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 4/14/2026 12:00:00 AM,4/14/2026 6:40:00 PM,4/14/2026 6:50:00 PM,Takedown - In-House Prac,,b,1,0,False,,#d1c9c9
 4/14/2026 12:00:00 AM,4/14/2026 6:50:00 PM,4/14/2026 7:50:00 PM,In-House Practice (10U),,8,1,0,False,,#6e8bf7
 4/14/2026 12:00:00 AM,4/14/2026 7:50:00 PM,4/14/2026 8:00:00 PM,Takedown - In-House Prac,,b,1,0,False,,#d1c9c9
-4/14/2026 12:00:00 AM,4/14/2026 8:00:00 PM,4/14/2026 9:30:00 PM,In-House Practice (18U/H,,8,1,0,False,,#6e8bf7
-4/14/2026 12:00:00 AM,4/14/2026 9:30:00 PM,4/14/2026 9:40:00 PM,Takedown - In-House Prac,,b,1,0,False,,#d1c9c9
-4/14/2026 12:00:00 AM,4/14/2026 9:40:00 PM,4/14/2026 10:55:00 PM,Adult B League,,8,1,0,False,,#6e8bf7
-4/14/2026 12:00:00 AM,4/14/2026 10:55:00 PM,4/14/2026 11:05:00 PM,Takedown - Adult B Leagu,,b,1,0,False,,#d1c9c9
+4/14/2026 12:00:00 AM,4/14/2026 8:00:00 PM,4/14/2026 9:00:00 PM,In-House Practice (18U/H,,8,1,0,False,,#6e8bf7
+4/14/2026 12:00:00 AM,4/14/2026 9:00:00 PM,4/14/2026 9:10:00 PM,Takedown - In-House Prac,,b,1,0,False,,#d1c9c9
+4/14/2026 12:00:00 AM,4/14/2026 9:10:00 PM,4/14/2026 10:25:00 PM,Adult B League,,8,1,0,False,,#6e8bf7
+4/14/2026 12:00:00 AM,4/14/2026 10:25:00 PM,4/14/2026 10:35:00 PM,Takedown - Adult B Leagu,,b,1,0,False,,#d1c9c9
