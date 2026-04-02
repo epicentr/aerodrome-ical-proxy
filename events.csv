@@ -107,7 +107,13 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 4/4/2026 12:00:00 AM,4/4/2026 1:45:00 PM,4/4/2026 2:45:00 PM,Room rental - Jessica Cr,,13,3,0,False,,#fb42d3
 4/4/2026 12:00:00 AM,4/4/2026 3:30:00 PM,4/4/2026 3:40:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
 4/4/2026 12:00:00 AM,4/4/2026 3:30:00 PM,4/4/2026 4:30:00 PM,Room rental - Kaneesha B,,13,3,0,True,,#fb42d3
-4/4/2026 12:00:00 AM,4/4/2026 3:40:00 PM,4/4/2026 8:10:00 PM,In-House Games,,8,1,0,False,,#6e8bf7
+4/4/2026 12:00:00 AM,4/4/2026 3:40:00 PM,4/4/2026 4:40:00 PM,In-House (8U),,8,1,0,False,,#6e8bf7
+4/4/2026 12:00:00 AM,4/4/2026 4:40:00 PM,4/4/2026 4:50:00 PM,Takedown - In-House (8U),,b,1,0,False,,#d1c9c9
+4/4/2026 12:00:00 AM,4/4/2026 4:50:00 PM,4/4/2026 5:50:00 PM,In-House (10U),,8,1,0,False,,#6e8bf7
+4/4/2026 12:00:00 AM,4/4/2026 5:50:00 PM,4/4/2026 6:00:00 PM,Takedown - In-House (10U,,b,1,0,False,,#d1c9c9
+4/4/2026 12:00:00 AM,4/4/2026 6:00:00 PM,4/4/2026 7:00:00 PM,In-House (12U),,8,1,0,False,,#6e8bf7
+4/4/2026 12:00:00 AM,4/4/2026 7:00:00 PM,4/4/2026 7:10:00 PM,Takedown - In-House (12U,,b,1,0,False,,#d1c9c9
+4/4/2026 12:00:00 AM,4/4/2026 7:10:00 PM,4/4/2026 8:10:00 PM,In-House Games,,8,1,0,False,,#6e8bf7
 4/4/2026 12:00:00 AM,4/4/2026 8:10:00 PM,4/4/2026 8:20:00 PM,Takedown - In-House Game,,b,1,0,False,,#d1c9c9
 4/4/2026 12:00:00 AM,4/4/2026 8:20:00 PM,4/4/2026 9:35:00 PM,Game,,g,1,0,False,Gunners vs Ringers,#6e8bf7
 4/4/2026 12:00:00 AM,4/4/2026 9:45:00 PM,4/4/2026 11:00:00 PM,Game,,g,1,0,False,Bandits vs Stars,#6e8bf7
