@@ -172,7 +172,7 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 4/13/2026 12:00:00 AM,4/13/2026 3:30:00 PM,4/13/2026 4:00:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 4/13/2026 12:00:00 AM,4/13/2026 4:00:00 PM,4/13/2026 4:30:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 4/13/2026 12:00:00 AM,4/13/2026 4:30:00 PM,4/13/2026 5:00:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
-4/13/2026 12:00:00 AM,4/13/2026 5:00:00 PM,4/13/2026 6:00:00 PM,Junior Blades Practice Session,,12,1,0,False,,#e8be55
+4/13/2026 12:00:00 AM,4/13/2026 5:00:00 PM,4/13/2026 6:40:00 PM,Junior Blades Practice S,,12,1,0,False,,#e8be55
 4/13/2026 12:00:00 AM,4/13/2026 6:50:00 PM,4/13/2026 7:50:00 PM,In-House Practice (10U),,8,1,0,False,,#6e8bf7
 4/13/2026 12:00:00 AM,4/13/2026 7:50:00 PM,4/13/2026 8:00:00 PM,Takedown - In-House Prac,,b,1,0,False,,#d1c9c9
 4/13/2026 12:00:00 AM,4/13/2026 8:00:00 PM,4/13/2026 9:00:00 PM,In-House Practice (14U),,8,1,0,False,,#6e8bf7
@@ -295,6 +295,7 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 4/17/2026 12:00:00 AM,4/17/2026 10:25:00 PM,4/17/2026 11:40:00 PM,Game,,g,1,0,False,Stars vs Hawks,#6e8bf7
 4/17/2026 12:00:00 AM,4/17/2026 11:40:00 PM,4/17/2026 11:55:00 PM,NO CUT,,b,1,0,False,,#d1c9c9
 4/17/2026 12:00:00 AM,4/17/2026 11:55:00 PM,4/18/2026 2:00:00 AM,Broomball - Woodland Oak,,b,1,0,False,,#d1c9c9
+4/18/2026 12:00:00 AM,4/18/2026 8:50:00 AM,4/18/2026 9:20:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 4/18/2026 12:00:00 AM,4/18/2026 9:20:00 AM,4/18/2026 9:50:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 4/18/2026 12:00:00 AM,4/18/2026 9:50:00 AM,4/18/2026 10:20:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 4/18/2026 12:00:00 AM,4/18/2026 10:20:00 AM,4/18/2026 10:50:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
@@ -343,7 +344,7 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 4/20/2026 12:00:00 AM,4/20/2026 3:30:00 PM,4/20/2026 4:00:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 4/20/2026 12:00:00 AM,4/20/2026 4:00:00 PM,4/20/2026 4:30:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 4/20/2026 12:00:00 AM,4/20/2026 4:30:00 PM,4/20/2026 5:00:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
-4/20/2026 12:00:00 AM,4/20/2026 5:00:00 PM,4/20/2026 6:00:00 PM,Junior Blades Practice Session,,12,1,0,False,,#e8be55
+4/20/2026 12:00:00 AM,4/20/2026 5:00:00 PM,4/20/2026 6:00:00 PM,Junior Blades Practice S,,12,1,0,False,,#e8be55
 4/20/2026 12:00:00 AM,4/20/2026 6:00:00 PM,4/20/2026 6:10:00 PM,LTS SET-UP,,b,1,0,False,,#d1c9c9
 4/20/2026 12:00:00 AM,4/20/2026 6:10:00 PM,4/20/2026 6:40:00 PM,Adult 1 - Monday,,c,1,12,False,,#04ba00
 4/20/2026 12:00:00 AM,4/20/2026 6:10:00 PM,4/20/2026 6:40:00 PM,Adult 2 - Monday,,c,1,14,True,,#04ba00
