@@ -150,8 +150,8 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 4/12/2026 12:00:00 AM,4/12/2026 4:20:00 PM,4/12/2026 5:10:00 PM,Class: Spring Learn to P,,c,1,1,False,,#04ba00
 4/12/2026 12:00:00 AM,4/12/2026 4:20:00 PM,4/12/2026 5:10:00 PM,Class: Spring Learn to P,,c,1,2,True,,#04ba00
 4/12/2026 12:00:00 AM,4/12/2026 5:25:00 PM,4/12/2026 6:25:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
-4/12/2026 12:00:00 AM,4/12/2026 6:30:00 PM,4/12/2026 7:45:00 PM,Game,,g,1,0,False,,#6e8bf7
-4/12/2026 12:00:00 AM,4/12/2026 8:00:00 PM,4/12/2026 9:00:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
+4/12/2026 12:00:00 AM,4/12/2026 6:30:00 PM,4/12/2026 8:00:00 PM,Game,,g,1,0,False,,#6e8bf7
+4/12/2026 12:00:00 AM,4/12/2026 8:15:00 PM,4/12/2026 9:15:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
 4/13/2026 12:00:00 AM,4/13/2026 5:15:00 AM,4/13/2026 5:45:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 4/13/2026 12:00:00 AM,4/13/2026 5:45:00 AM,4/13/2026 6:15:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 4/13/2026 12:00:00 AM,4/13/2026 6:15:00 AM,4/13/2026 6:45:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
