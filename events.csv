@@ -6,7 +6,7 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 4/16/2026 12:00:00 AM,4/16/2026 7:00:00 AM,4/16/2026 7:15:00 AM,ICE CUT,,b,1,0,False,,#d1c9c9
 4/16/2026 12:00:00 AM,4/16/2026 7:15:00 AM,4/16/2026 7:45:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 4/16/2026 12:00:00 AM,4/16/2026 7:45:00 AM,4/16/2026 8:15:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
-4/16/2026 12:00:00 AM,4/16/2026 8:15:00 AM,4/16/2026 8:45:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
+4/16/2026 12:00:00 AM,4/16/2026 8:15:00 AM,4/16/2026 8:45:00 AM,Freestyle,,10,1,15,False,,#0ae8ea
 4/16/2026 12:00:00 AM,4/16/2026 8:45:00 AM,4/16/2026 9:15:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 4/16/2026 12:00:00 AM,4/16/2026 9:15:00 AM,4/16/2026 9:30:00 AM,ICE CUT,,b,1,0,False,,#d1c9c9
 4/16/2026 12:00:00 AM,4/16/2026 9:30:00 AM,4/16/2026 10:00:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
