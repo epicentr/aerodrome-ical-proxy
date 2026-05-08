@@ -1,37 +1,4 @@
 start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id,isDupeStartTime,best_description,et_color
-5/7/2026 12:00:00 AM,5/7/2026 5:00:00 AM,5/7/2026 5:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
-5/7/2026 12:00:00 AM,5/7/2026 5:30:00 AM,5/7/2026 6:00:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
-5/7/2026 12:00:00 AM,5/7/2026 6:00:00 AM,5/7/2026 6:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
-5/7/2026 12:00:00 AM,5/7/2026 6:30:00 AM,5/7/2026 7:00:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
-5/7/2026 12:00:00 AM,5/7/2026 7:00:00 AM,5/7/2026 7:15:00 AM,ICE CUT,,b,1,0,False,,#d1c9c9
-5/7/2026 12:00:00 AM,5/7/2026 7:15:00 AM,5/7/2026 7:45:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
-5/7/2026 12:00:00 AM,5/7/2026 7:45:00 AM,5/7/2026 8:15:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
-5/7/2026 12:00:00 AM,5/7/2026 8:15:00 AM,5/7/2026 8:45:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
-5/7/2026 12:00:00 AM,5/7/2026 8:45:00 AM,5/7/2026 9:15:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
-5/7/2026 12:00:00 AM,5/7/2026 9:15:00 AM,5/7/2026 9:30:00 AM,ICE CUT,,b,1,0,False,,#d1c9c9
-5/7/2026 12:00:00 AM,5/7/2026 9:30:00 AM,5/7/2026 10:00:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
-5/7/2026 12:00:00 AM,5/7/2026 10:00:00 AM,5/7/2026 10:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
-5/7/2026 12:00:00 AM,5/7/2026 10:30:00 AM,5/7/2026 11:30:00 AM,Junior Blades Practice S,,12,1,0,False,,#e8be55
-5/7/2026 12:00:00 AM,5/7/2026 11:30:00 AM,5/7/2026 2:00:00 PM,Public Skating,,11,1,0,False,,#f0f509
-5/7/2026 12:00:00 AM,5/7/2026 2:00:00 PM,5/7/2026 2:10:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
-5/7/2026 12:00:00 AM,5/7/2026 2:10:00 PM,5/7/2026 3:20:00 PM,Drop-In Goalie,,7,1,2,False,,#59f005
-5/7/2026 12:00:00 AM,5/7/2026 2:10:00 PM,5/7/2026 3:20:00 PM,Drop-In Player,,7,1,1,True,,#59f005
-5/7/2026 12:00:00 AM,5/7/2026 3:20:00 PM,5/7/2026 3:30:00 PM,Takedown - Drop-In Playe,,b,1,1,False,,#d1c9c9
-5/7/2026 12:00:00 AM,5/7/2026 3:30:00 PM,5/7/2026 4:00:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
-5/7/2026 12:00:00 AM,5/7/2026 4:00:00 PM,5/7/2026 4:30:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
-5/7/2026 12:00:00 AM,5/7/2026 4:30:00 PM,5/7/2026 5:00:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
-5/7/2026 12:00:00 AM,5/7/2026 5:00:00 PM,5/7/2026 5:30:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
-5/7/2026 12:00:00 AM,5/7/2026 5:30:00 PM,5/7/2026 5:40:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
-5/7/2026 12:00:00 AM,5/7/2026 5:40:00 PM,5/7/2026 6:40:00 PM,Stick and Puck Goalie Al,,7,1,2,False,,#59f005
-5/7/2026 12:00:00 AM,5/7/2026 5:40:00 PM,5/7/2026 6:40:00 PM,Stick and Puck Player Al,,7,1,1,True,,#59f005
-5/7/2026 12:00:00 AM,5/7/2026 6:40:00 PM,5/7/2026 6:50:00 PM,Takedown - Stick and Puc,,b,1,1,False,,#d1c9c9
-5/7/2026 12:00:00 AM,5/7/2026 6:40:00 PM,5/7/2026 6:50:00 PM,Takedown - Stick and Puc,,b,1,2,True,,#d1c9c9
-5/7/2026 12:00:00 AM,5/7/2026 6:50:00 PM,5/7/2026 7:50:00 PM,In-House Practice (14U),,8,1,0,False,,#6e8bf7
-5/7/2026 12:00:00 AM,5/7/2026 7:50:00 PM,5/7/2026 8:00:00 PM,Takedown - In-House Prac,,b,1,0,False,,#d1c9c9
-5/7/2026 12:00:00 AM,5/7/2026 8:00:00 PM,5/7/2026 9:00:00 PM,In-House Practice (18U/H,,8,1,0,False,,#6e8bf7
-5/7/2026 12:00:00 AM,5/7/2026 9:00:00 PM,5/7/2026 9:10:00 PM,Takedown - In-House Prac,,b,1,0,False,,#d1c9c9
-5/7/2026 12:00:00 AM,5/7/2026 9:10:00 PM,5/7/2026 10:25:00 PM,Adult B League Playoffs ,,8,1,0,False,,#6e8bf7
-5/7/2026 12:00:00 AM,5/7/2026 10:25:00 PM,5/7/2026 10:35:00 PM,Takedown - Adult B Leagu,,b,1,0,False,,#d1c9c9
 5/8/2026 12:00:00 AM,5/8/2026 5:00:00 AM,5/8/2026 5:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 5/8/2026 12:00:00 AM,5/8/2026 5:30:00 AM,5/8/2026 6:00:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 5/8/2026 12:00:00 AM,5/8/2026 6:00:00 AM,5/8/2026 6:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
@@ -403,3 +370,5 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 5/21/2026 12:00:00 AM,5/21/2026 7:50:00 PM,5/21/2026 8:00:00 PM,Takedown - In-House Prac,,b,1,0,False,,#d1c9c9
 5/21/2026 12:00:00 AM,5/21/2026 8:00:00 PM,5/21/2026 9:00:00 PM,In-House Practice (18U/H,,8,1,0,False,,#6e8bf7
 5/21/2026 12:00:00 AM,5/21/2026 9:00:00 PM,5/21/2026 9:10:00 PM,Takedown - In-House Prac,,b,1,0,False,,#d1c9c9
+5/22/2026 12:00:00 AM,5/22/2026 7:45:00 AM,5/24/2026 7:20:00 PM,Memorial Day Tournament,,b,1,0,False,,#d1c9c9
+5/24/2026 12:00:00 AM,5/24/2026 7:35:00 PM,5/24/2026 8:35:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
