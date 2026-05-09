@@ -87,8 +87,7 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 5/11/2026 12:00:00 AM,5/11/2026 2:10:00 PM,5/11/2026 3:20:00 PM,Drop-In Goalie,,7,1,2,False,,#59f005
 5/11/2026 12:00:00 AM,5/11/2026 2:10:00 PM,5/11/2026 3:20:00 PM,Drop-In Player,,7,1,1,True,,#59f005
 5/11/2026 12:00:00 AM,5/11/2026 3:20:00 PM,5/11/2026 3:30:00 PM,Takedown - Drop-In Playe,,b,1,1,False,,#d1c9c9
-5/11/2026 12:00:00 AM,5/11/2026 3:30:00 PM,5/11/2026 4:00:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
-5/11/2026 12:00:00 AM,5/11/2026 4:00:00 PM,5/11/2026 6:40:00 PM,Show Rehearsal,,b,1,0,False,,#d1c9c9
+5/11/2026 12:00:00 AM,5/11/2026 3:30:00 PM,5/11/2026 6:40:00 PM,Show Rehearsal,,b,1,0,False,,#d1c9c9
 5/11/2026 12:00:00 AM,5/11/2026 6:40:00 PM,5/11/2026 6:50:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
 5/11/2026 12:00:00 AM,5/11/2026 6:50:00 PM,5/11/2026 7:50:00 PM,In-House Practice (10U),,8,1,0,False,,#6e8bf7
 5/11/2026 12:00:00 AM,5/11/2026 7:50:00 PM,5/11/2026 8:00:00 PM,Takedown - In-House Prac,,b,1,0,False,,#d1c9c9
@@ -174,8 +173,7 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 5/14/2026 12:00:00 AM,5/14/2026 2:10:00 PM,5/14/2026 3:20:00 PM,Drop-In Goalie,,7,1,2,False,,#59f005
 5/14/2026 12:00:00 AM,5/14/2026 2:10:00 PM,5/14/2026 3:20:00 PM,Drop-In Player,,7,1,1,True,,#59f005
 5/14/2026 12:00:00 AM,5/14/2026 3:20:00 PM,5/14/2026 3:30:00 PM,Takedown - Drop-In Playe,,b,1,1,False,,#d1c9c9
-5/14/2026 12:00:00 AM,5/14/2026 3:30:00 PM,5/14/2026 4:00:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
-5/14/2026 12:00:00 AM,5/14/2026 4:00:00 PM,5/14/2026 6:30:00 PM,Dress Rehearsal - Spring,,b,1,0,False,,#d1c9c9
+5/14/2026 12:00:00 AM,5/14/2026 3:30:00 PM,5/14/2026 6:30:00 PM,Dress Rehearsal - Spring,,b,1,0,False,,#d1c9c9
 5/14/2026 12:00:00 AM,5/14/2026 6:50:00 PM,5/14/2026 7:50:00 PM,In-House Practice (14U),,8,1,0,False,,#6e8bf7
 5/14/2026 12:00:00 AM,5/14/2026 7:50:00 PM,5/14/2026 8:00:00 PM,Takedown - In-House Prac,,b,1,0,False,,#d1c9c9
 5/14/2026 12:00:00 AM,5/14/2026 8:00:00 PM,5/14/2026 9:00:00 PM,In-House Practice (18U/H,,8,1,0,False,,#6e8bf7
@@ -190,10 +188,19 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 5/15/2026 12:00:00 AM,5/15/2026 7:30:00 AM,5/15/2026 8:00:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 5/15/2026 12:00:00 AM,5/15/2026 8:00:00 AM,5/15/2026 8:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 5/15/2026 12:00:00 AM,5/15/2026 8:30:00 AM,5/15/2026 9:00:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
-5/15/2026 12:00:00 AM,5/15/2026 9:00:00 AM,5/15/2026 3:00:00 PM,Set Up Spring Show,,b,1,0,False,,#d1c9c9
-5/15/2026 12:00:00 AM,5/15/2026 3:15:00 PM,5/15/2026 4:15:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
-5/15/2026 12:00:00 AM,5/15/2026 5:20:00 PM,5/15/2026 7:15:00 PM,Spring Show 7pm,,b,1,0,False,,#d1c9c9
-5/15/2026 12:00:00 AM,5/15/2026 7:30:00 PM,5/15/2026 8:30:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
+5/15/2026 12:00:00 AM,5/15/2026 9:00:00 AM,5/15/2026 5:10:00 PM,Set Up Spring Show,,b,1,0,False,,#d1c9c9
+5/15/2026 12:00:00 AM,5/15/2026 5:10:00 PM,5/15/2026 5:30:00 PM,Featured Skaters FS,,10,1,0,False,,#0ae8ea
+5/15/2026 12:00:00 AM,5/15/2026 5:30:00 PM,5/15/2026 5:50:00 PM,Featured Skaters FS,,10,1,0,False,,#0ae8ea
+5/15/2026 12:00:00 AM,5/15/2026 5:50:00 PM,5/15/2026 6:10:00 PM,Featured Skaters FS,,10,1,0,False,,#0ae8ea
+5/15/2026 12:00:00 AM,5/15/2026 6:10:00 PM,5/15/2026 6:30:00 PM,Featured Skaters FS,,10,1,0,False,,#0ae8ea
+5/15/2026 12:00:00 AM,5/15/2026 6:30:00 PM,5/15/2026 7:00:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
+5/15/2026 12:00:00 AM,5/15/2026 7:00:00 PM,5/15/2026 9:05:00 PM,Spring Show,,b,1,0,False,,#d1c9c9
+5/15/2026 12:00:00 AM,5/15/2026 9:20:00 PM,5/15/2026 10:20:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
+5/16/2026 12:00:00 AM,5/16/2026 8:40:00 AM,5/16/2026 9:00:00 AM,Featured Skater FS,,10,1,0,False,,#0ae8ea
+5/16/2026 12:00:00 AM,5/16/2026 9:00:00 AM,5/16/2026 9:20:00 AM,Featured Skater FS,,10,1,0,False,,#0ae8ea
+5/16/2026 12:00:00 AM,5/16/2026 9:20:00 AM,5/16/2026 9:40:00 AM,Featured Skater FS,,10,1,0,False,,#0ae8ea
+5/16/2026 12:00:00 AM,5/16/2026 9:40:00 AM,5/16/2026 10:00:00 AM,Featured Skater FS,,10,1,0,False,,#0ae8ea
+5/16/2026 12:00:00 AM,5/16/2026 10:00:00 AM,5/16/2026 10:30:00 AM,ICE CUT,,b,1,0,False,,#d1c9c9
 5/16/2026 12:00:00 AM,5/16/2026 10:30:00 AM,5/16/2026 12:30:00 PM,Spring Show ,,b,1,0,False,,#d1c9c9
 5/16/2026 12:00:00 AM,5/16/2026 1:00:00 PM,5/16/2026 3:30:00 PM,Public Skating (ice cut ,,11,1,1,False,,#f0f509
 5/16/2026 12:00:00 AM,5/16/2026 3:30:00 PM,5/16/2026 3:40:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
