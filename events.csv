@@ -132,7 +132,6 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 5/16/2026 12:00:00 AM,5/16/2026 9:40:00 AM,5/16/2026 10:00:00 AM,Featured Skater FS,,10,1,0,False,,#0ae8ea
 5/16/2026 12:00:00 AM,5/16/2026 10:00:00 AM,5/16/2026 10:30:00 AM,ICE CUT,,b,1,0,False,,#d1c9c9
 5/16/2026 12:00:00 AM,5/16/2026 10:30:00 AM,5/16/2026 12:30:00 PM,Spring Show ,,b,1,0,False,,#d1c9c9
-5/16/2026 12:00:00 AM,5/16/2026 1:00:00 PM,5/16/2026 3:30:00 PM,Public Skating (ice cut ,,11,1,1,False,,#f0f509
 5/16/2026 12:00:00 AM,5/16/2026 3:30:00 PM,5/16/2026 3:40:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
 5/16/2026 12:00:00 AM,5/16/2026 4:50:00 PM,5/16/2026 5:50:00 PM,in-House Game,,8,1,0,False,,#6e8bf7
 5/16/2026 12:00:00 AM,5/16/2026 5:50:00 PM,5/16/2026 6:00:00 PM,Takedown - in-House Game,,b,1,0,False,,#d1c9c9
