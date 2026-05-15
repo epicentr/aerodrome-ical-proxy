@@ -114,6 +114,8 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 5/19/2026 12:00:00 AM,5/19/2026 7:50:00 PM,5/19/2026 8:00:00 PM,Takedown - In-House Prac,,b,1,0,False,,#d1c9c9
 5/19/2026 12:00:00 AM,5/19/2026 8:00:00 PM,5/19/2026 9:00:00 PM,In-House Practice (18U/H,,8,1,0,False,,#6e8bf7
 5/19/2026 12:00:00 AM,5/19/2026 9:00:00 PM,5/19/2026 9:10:00 PM,Takedown - In-House Prac,,b,1,0,False,,#d1c9c9
+5/19/2026 12:00:00 AM,5/19/2026 9:10:00 PM,5/19/2026 10:25:00 PM,Private Ice,,8,1,0,False,,#6e8bf7
+5/19/2026 12:00:00 AM,5/19/2026 10:25:00 PM,5/19/2026 10:35:00 PM,Takedown - Private Ice,,b,1,0,False,,#d1c9c9
 5/20/2026 12:00:00 AM,5/20/2026 5:15:00 AM,5/20/2026 5:45:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 5/20/2026 12:00:00 AM,5/20/2026 5:45:00 AM,5/20/2026 6:15:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 5/20/2026 12:00:00 AM,5/20/2026 6:15:00 AM,5/20/2026 6:45:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
