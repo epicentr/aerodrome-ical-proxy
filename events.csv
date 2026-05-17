@@ -22,7 +22,7 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 5/17/2026 12:00:00 AM,5/17/2026 4:20:00 PM,5/17/2026 5:10:00 PM,Class: Spring Learn to P,,c,1,2,True,,#04ba00
 5/17/2026 12:00:00 AM,5/17/2026 5:20:00 PM,5/17/2026 6:20:00 PM,In-House Game,,8,1,0,False,,#6e8bf7
 5/17/2026 12:00:00 AM,5/17/2026 6:20:00 PM,5/17/2026 6:30:00 PM,Takedown - In-House Game,,b,1,0,False,,#d1c9c9
-5/17/2026 12:00:00 AM,5/17/2026 6:35:00 PM,5/17/2026 7:35:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
+5/17/2026 12:00:00 AM,5/17/2026 6:30:00 PM,5/17/2026 7:50:00 PM,Game,,g,1,0,False,,#6e8bf7
 5/17/2026 12:00:00 AM,5/17/2026 8:00:00 PM,5/17/2026 9:00:00 PM,in-House Game,,8,1,0,False,,#6e8bf7
 5/17/2026 12:00:00 AM,5/17/2026 9:00:00 PM,5/17/2026 9:10:00 PM,Takedown - in-House Game,,b,1,0,False,,#d1c9c9
 5/17/2026 12:00:00 AM,5/17/2026 9:15:00 PM,5/17/2026 10:15:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
@@ -111,6 +111,8 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 5/20/2026 12:00:00 AM,5/20/2026 6:40:00 PM,5/20/2026 6:50:00 PM,Takedown - In-House Prac,,b,1,0,False,,#d1c9c9
 5/20/2026 12:00:00 AM,5/20/2026 6:50:00 PM,5/20/2026 9:00:00 PM,In-House Practice (12U),,8,1,0,False,,#6e8bf7
 5/20/2026 12:00:00 AM,5/20/2026 9:00:00 PM,5/20/2026 9:10:00 PM,Takedown - In-House Prac,,b,1,0,False,,#d1c9c9
+5/20/2026 12:00:00 AM,5/20/2026 9:10:00 PM,5/20/2026 10:10:00 PM,Private Ice - Hockey,,8,1,0,False,,#6e8bf7
+5/20/2026 12:00:00 AM,5/20/2026 10:10:00 PM,5/20/2026 10:20:00 PM,Takedown - Private Ice -,,b,1,0,False,,#d1c9c9
 5/21/2026 12:00:00 AM,5/21/2026 5:00:00 AM,5/21/2026 5:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 5/21/2026 12:00:00 AM,5/21/2026 5:30:00 AM,5/21/2026 6:00:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 5/21/2026 12:00:00 AM,5/21/2026 6:00:00 AM,5/21/2026 6:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
