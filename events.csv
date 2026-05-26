@@ -202,6 +202,8 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 6/1/2026 12:00:00 AM,6/1/2026 10:15:00 AM,6/1/2026 10:45:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 6/1/2026 12:00:00 AM,6/1/2026 10:45:00 AM,6/1/2026 11:00:00 AM,ICE CUT,,b,1,0,False,,#d1c9c9
 6/1/2026 12:00:00 AM,6/1/2026 11:00:00 AM,6/1/2026 12:00:00 PM,Junior Blades Practice S,,12,1,0,False,,#e8be55
+6/1/2026 12:00:00 AM,6/1/2026 12:00:00 PM,6/1/2026 3:00:00 PM,Public Skating,,11,1,0,False,,#f0f509
+6/1/2026 12:00:00 AM,6/1/2026 3:00:00 PM,6/1/2026 3:10:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
 6/1/2026 12:00:00 AM,6/1/2026 3:30:00 PM,6/1/2026 4:00:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 6/1/2026 12:00:00 AM,6/1/2026 4:00:00 PM,6/1/2026 4:30:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 6/1/2026 12:00:00 AM,6/1/2026 4:30:00 PM,6/1/2026 5:00:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
@@ -242,6 +244,8 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 6/2/2026 12:00:00 AM,6/2/2026 10:15:00 AM,6/2/2026 10:45:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 6/2/2026 12:00:00 AM,6/2/2026 10:45:00 AM,6/2/2026 11:00:00 AM,ICE CUT,,b,1,0,False,,#d1c9c9
 6/2/2026 12:00:00 AM,6/2/2026 11:00:00 AM,6/2/2026 12:00:00 PM,Adult Freestyle (Over 21,,10,1,0,False,,#0ae8ea
+6/2/2026 12:00:00 AM,6/2/2026 12:00:00 PM,6/2/2026 3:00:00 PM,Public Skating,,11,1,0,False,,#f0f509
+6/2/2026 12:00:00 AM,6/2/2026 3:00:00 PM,6/2/2026 3:10:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
 6/2/2026 12:00:00 AM,6/2/2026 3:10:00 PM,6/2/2026 4:20:00 PM,Drop-in Goalie,,7,1,2,False,,#59f005
 6/2/2026 12:00:00 AM,6/2/2026 3:10:00 PM,6/2/2026 4:20:00 PM,Drop-in Player,,7,1,1,True,,#59f005
 6/2/2026 12:00:00 AM,6/2/2026 4:20:00 PM,6/2/2026 4:30:00 PM,Takedown - Drop-in Goali,,b,1,2,False,,#d1c9c9
@@ -274,6 +278,8 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 6/3/2026 12:00:00 AM,6/3/2026 10:15:00 AM,6/3/2026 10:45:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 6/3/2026 12:00:00 AM,6/3/2026 10:45:00 AM,6/3/2026 11:00:00 AM,ICE CUT,,b,1,0,False,,#d1c9c9
 6/3/2026 12:00:00 AM,6/3/2026 11:00:00 AM,6/3/2026 12:00:00 PM,Junior Blades Practice S,,12,1,0,False,,#e8be55
+6/3/2026 12:00:00 AM,6/3/2026 12:00:00 PM,6/3/2026 3:00:00 PM,Public Skating,,11,1,0,False,,#f0f509
+6/3/2026 12:00:00 AM,6/3/2026 3:00:00 PM,6/3/2026 3:10:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
 6/3/2026 12:00:00 AM,6/3/2026 3:10:00 PM,6/3/2026 4:20:00 PM,Drop-in Goalie,,7,1,2,False,,#59f005
 6/3/2026 12:00:00 AM,6/3/2026 3:10:00 PM,6/3/2026 4:20:00 PM,Drop-in Player,,7,1,1,True,,#59f005
 6/3/2026 12:00:00 AM,6/3/2026 4:20:00 PM,6/3/2026 4:30:00 PM,Takedown - Drop-in Goali,,b,1,2,False,,#d1c9c9
@@ -304,6 +310,8 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 6/4/2026 12:00:00 AM,6/4/2026 10:15:00 AM,6/4/2026 10:45:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 6/4/2026 12:00:00 AM,6/4/2026 10:45:00 AM,6/4/2026 11:00:00 AM,ICE CUT,,b,1,0,False,,#d1c9c9
 6/4/2026 12:00:00 AM,6/4/2026 11:00:00 AM,6/4/2026 12:00:00 PM,Adult Freestyle (Over 21,,10,1,0,False,,#0ae8ea
+6/4/2026 12:00:00 AM,6/4/2026 12:00:00 PM,6/4/2026 3:00:00 PM,Public Skating,,11,1,0,False,,#f0f509
+6/4/2026 12:00:00 AM,6/4/2026 3:00:00 PM,6/4/2026 3:10:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
 6/4/2026 12:00:00 AM,6/4/2026 3:10:00 PM,6/4/2026 4:20:00 PM,Drop-in Goalie,,7,1,2,False,,#59f005
 6/4/2026 12:00:00 AM,6/4/2026 3:10:00 PM,6/4/2026 4:20:00 PM,Drop-in Player,,7,1,1,True,,#59f005
 6/4/2026 12:00:00 AM,6/4/2026 4:20:00 PM,6/4/2026 4:30:00 PM,Takedown - Drop-in Goali,,b,1,2,False,,#d1c9c9
@@ -335,8 +343,10 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 6/5/2026 12:00:00 AM,6/5/2026 10:15:00 AM,6/5/2026 10:45:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 6/5/2026 12:00:00 AM,6/5/2026 10:45:00 AM,6/5/2026 11:00:00 AM,ICE CUT,,b,1,0,False,,#d1c9c9
 6/5/2026 12:00:00 AM,6/5/2026 11:00:00 AM,6/5/2026 12:00:00 PM,Junior Blades Practice S,,12,1,0,False,,#e8be55
-6/5/2026 12:00:00 AM,6/5/2026 12:15:00 PM,6/5/2026 1:15:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
+6/5/2026 12:00:00 AM,6/5/2026 12:00:00 PM,6/5/2026 2:00:00 PM,Public Skating,,11,1,0,False,,#f0f509
 6/5/2026 12:00:00 AM,6/5/2026 1:55:00 PM,6/5/2026 2:55:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
+6/5/2026 12:00:00 AM,6/5/2026 2:00:00 PM,6/5/2026 2:10:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
+6/5/2026 12:00:00 AM,6/5/2026 2:15:00 PM,6/5/2026 3:15:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
 6/5/2026 12:00:00 AM,6/5/2026 3:10:00 PM,6/5/2026 4:20:00 PM,Drop-in Goalie,,7,1,2,False,,#59f005
 6/5/2026 12:00:00 AM,6/5/2026 3:10:00 PM,6/5/2026 4:20:00 PM,Drop-in Player,,7,1,1,True,,#59f005
 6/5/2026 12:00:00 AM,6/5/2026 4:20:00 PM,6/5/2026 4:30:00 PM,Takedown - Drop-in Goali,,b,1,2,False,,#d1c9c9
@@ -442,6 +452,8 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 6/8/2026 12:00:00 AM,6/8/2026 10:15:00 AM,6/8/2026 10:45:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 6/8/2026 12:00:00 AM,6/8/2026 10:45:00 AM,6/8/2026 11:00:00 AM,ICE CUT,,b,1,0,False,,#d1c9c9
 6/8/2026 12:00:00 AM,6/8/2026 11:00:00 AM,6/8/2026 12:00:00 PM,Junior Blades Practice S,,12,1,0,False,,#e8be55
+6/8/2026 12:00:00 AM,6/8/2026 12:00:00 PM,6/8/2026 3:00:00 PM,Public Skating,,11,1,0,False,,#f0f509
+6/8/2026 12:00:00 AM,6/8/2026 3:00:00 PM,6/8/2026 3:10:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
 6/8/2026 12:00:00 AM,6/8/2026 3:30:00 PM,6/8/2026 4:00:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 6/8/2026 12:00:00 AM,6/8/2026 4:00:00 PM,6/8/2026 4:30:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 6/8/2026 12:00:00 AM,6/8/2026 4:30:00 PM,6/8/2026 5:00:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
@@ -482,6 +494,8 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 6/9/2026 12:00:00 AM,6/9/2026 10:15:00 AM,6/9/2026 10:45:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 6/9/2026 12:00:00 AM,6/9/2026 10:45:00 AM,6/9/2026 11:00:00 AM,ICE CUT,,b,1,0,False,,#d1c9c9
 6/9/2026 12:00:00 AM,6/9/2026 11:00:00 AM,6/9/2026 12:00:00 PM,Adult Freestyle (Over 21,,10,1,0,False,,#0ae8ea
+6/9/2026 12:00:00 AM,6/9/2026 12:00:00 PM,6/9/2026 3:00:00 PM,Public Skating,,11,1,0,False,,#f0f509
+6/9/2026 12:00:00 AM,6/9/2026 3:00:00 PM,6/9/2026 3:10:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
 6/9/2026 12:00:00 AM,6/9/2026 3:10:00 PM,6/9/2026 4:20:00 PM,Drop-in Goalie,,7,1,2,False,,#59f005
 6/9/2026 12:00:00 AM,6/9/2026 3:10:00 PM,6/9/2026 4:20:00 PM,Drop-in Player,,7,1,1,True,,#59f005
 6/9/2026 12:00:00 AM,6/9/2026 4:20:00 PM,6/9/2026 4:30:00 PM,Takedown - Drop-in Goali,,b,1,2,False,,#d1c9c9
