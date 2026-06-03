@@ -171,7 +171,6 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 6/7/2026 12:00:00 AM,6/7/2026 4:20:00 PM,6/7/2026 5:10:00 PM,ADULT Summer Learn to Pl,,c,1,1,False,,#04ba00
 6/7/2026 12:00:00 AM,6/7/2026 4:20:00 PM,6/7/2026 5:10:00 PM,YOUTH Summer Learn to Pl,,c,1,2,True,,#04ba00
 6/7/2026 12:00:00 AM,6/7/2026 5:20:00 PM,6/7/2026 6:20:00 PM,In-House Game,,8,1,0,False,,#6e8bf7
-6/7/2026 12:00:00 AM,6/7/2026 6:00:00 PM,6/7/2026 7:30:00 PM,Party room - TOI adult s,,13,3,0,False,,#fb42d3
 6/7/2026 12:00:00 AM,6/7/2026 6:20:00 PM,6/7/2026 6:30:00 PM,Takedown - In-House Game,,b,1,0,False,,#d1c9c9
 6/7/2026 12:00:00 AM,6/7/2026 6:30:00 PM,6/7/2026 7:50:00 PM,Game,,g,1,0,False,,#6e8bf7
 6/7/2026 12:00:00 AM,6/7/2026 8:00:00 PM,6/7/2026 9:00:00 PM,in-House Game,,8,1,0,False,,#6e8bf7
