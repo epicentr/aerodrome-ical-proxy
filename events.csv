@@ -363,6 +363,7 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 6/27/2026 12:00:00 AM,6/27/2026 12:45:00 PM,6/27/2026 1:15:00 PM,Adaptive Skaters - Learn,,c,1,2,False,,#04ba00
 6/27/2026 12:00:00 AM,6/27/2026 1:00:00 PM,6/27/2026 3:30:00 PM,Public Skating (ice cut ,,11,1,1,False,,#f0f509
 6/27/2026 12:00:00 AM,6/27/2026 1:45:00 PM,6/27/2026 2:45:00 PM,Room rental - Brittani K,,13,3,0,False,,#fb42d3
+6/27/2026 12:00:00 AM,6/27/2026 3:30:00 PM,6/27/2026 4:30:00 PM,Room rental - Megan Kimb,,13,3,0,False,,#fb42d3
 6/27/2026 12:00:00 AM,6/27/2026 3:40:00 PM,6/27/2026 4:40:00 PM,in-House Game,,8,1,0,False,,#6e8bf7
 6/27/2026 12:00:00 AM,6/27/2026 4:40:00 PM,6/27/2026 4:50:00 PM,Takedown - in-House Game,,b,1,0,False,,#d1c9c9
 6/27/2026 12:00:00 AM,6/27/2026 4:50:00 PM,6/27/2026 5:50:00 PM,in-House Game,,8,1,0,False,,#6e8bf7
