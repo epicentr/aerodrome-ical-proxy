@@ -185,6 +185,7 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 6/27/2026 12:00:00 AM,6/27/2026 7:30:00 AM,6/27/2026 8:00:00 AM,Pre-Freeskate - Saturday,,c,1,2,True,,#04ba00
 6/27/2026 12:00:00 AM,6/27/2026 8:00:00 AM,6/27/2026 8:30:00 AM,Freeskate - Power Builde,,c,1,0,False,,#04ba00
 6/27/2026 12:00:00 AM,6/27/2026 8:30:00 AM,6/27/2026 9:00:00 AM,30 Min Free Practice,,b,1,0,False,,#d1c9c9
+6/27/2026 12:00:00 AM,6/27/2026 9:00:00 AM,6/27/2026 1:00:00 PM,RINK CLOSED,,b,1,0,False,,#d1c9c9
 6/27/2026 12:00:00 AM,6/27/2026 12:00:00 PM,6/27/2026 1:00:00 PM,Room rental - Amanda Ors,,13,3,0,False,,#fb42d3
 6/27/2026 12:00:00 AM,6/27/2026 1:00:00 PM,6/27/2026 3:30:00 PM,Public Skating (ice cut ,,11,1,0,False,,#f0f509
 6/27/2026 12:00:00 AM,6/27/2026 1:45:00 PM,6/27/2026 2:45:00 PM,Room rental - Brittani K,,13,3,0,False,,#fb42d3
