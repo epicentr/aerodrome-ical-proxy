@@ -194,7 +194,9 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 7/5/2026 12:00:00 AM,7/5/2026 4:20:00 PM,7/5/2026 5:10:00 PM,YOUTH Summer Learn to Pl,,c,1,2,True,,#04ba00
 7/5/2026 12:00:00 AM,7/5/2026 5:20:00 PM,7/5/2026 6:10:00 PM,ADULT Learn to Play Summ,,c,1,2,False,,#04ba00
 7/5/2026 12:00:00 AM,7/5/2026 5:20:00 PM,7/5/2026 6:10:00 PM,YOUTH Learn to Play Hock,,c,1,1,True,,#04ba00
-7/5/2026 12:00:00 AM,7/5/2026 6:25:00 PM,7/5/2026 7:25:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
+7/5/2026 12:00:00 AM,7/5/2026 6:30:00 PM,7/5/2026 7:50:00 PM,Private Ice - Hockey,,8,1,0,False,,#6e8bf7
+7/5/2026 12:00:00 AM,7/5/2026 7:50:00 PM,7/5/2026 8:00:00 PM,Takedown - Private Ice -,,b,1,0,False,,#d1c9c9
+7/5/2026 12:00:00 AM,7/5/2026 8:05:00 PM,7/5/2026 9:05:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
 7/6/2026 12:00:00 AM,7/6/2026 5:00:00 AM,7/6/2026 5:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 7/6/2026 12:00:00 AM,7/6/2026 5:30:00 AM,7/6/2026 6:00:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 7/6/2026 12:00:00 AM,7/6/2026 6:00:00 AM,7/6/2026 6:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
