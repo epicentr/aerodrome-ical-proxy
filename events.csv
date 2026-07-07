@@ -187,7 +187,11 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 7/13/2026 12:00:00 AM,7/13/2026 7:15:00 AM,7/13/2026 7:45:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 7/13/2026 12:00:00 AM,7/13/2026 7:45:00 AM,7/13/2026 8:15:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 7/13/2026 12:00:00 AM,7/13/2026 8:15:00 AM,7/13/2026 8:45:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
+7/13/2026 12:00:00 AM,7/13/2026 9:00:00 AM,7/13/2026 11:00:00 AM,Planet Hockey,,b,1,0,False,,#d1c9c9
+7/13/2026 12:00:00 AM,7/13/2026 11:00:00 AM,7/13/2026 11:15:00 AM,ICE CUT,,b,1,0,False,,#d1c9c9
 7/13/2026 12:00:00 AM,7/13/2026 11:15:00 AM,7/13/2026 1:00:00 PM,Public Skating,,11,1,0,False,,#f0f509
+7/13/2026 12:00:00 AM,7/13/2026 1:00:00 PM,7/13/2026 1:15:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
+7/13/2026 12:00:00 AM,7/13/2026 1:15:00 PM,7/13/2026 2:15:00 PM,Planet Hockey,,b,1,0,False,,#d1c9c9
 7/13/2026 12:00:00 AM,7/13/2026 3:00:00 PM,7/13/2026 3:10:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
 7/13/2026 12:00:00 AM,7/13/2026 3:30:00 PM,7/13/2026 4:00:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 7/13/2026 12:00:00 AM,7/13/2026 4:00:00 PM,7/13/2026 4:30:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
@@ -220,7 +224,11 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 7/14/2026 12:00:00 AM,7/14/2026 7:15:00 AM,7/14/2026 7:45:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 7/14/2026 12:00:00 AM,7/14/2026 7:45:00 AM,7/14/2026 8:15:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 7/14/2026 12:00:00 AM,7/14/2026 8:15:00 AM,7/14/2026 8:45:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
+7/14/2026 12:00:00 AM,7/14/2026 9:00:00 AM,7/14/2026 11:00:00 AM,Planet Hockey,,b,1,0,False,,#d1c9c9
+7/14/2026 12:00:00 AM,7/14/2026 11:00:00 AM,7/14/2026 11:15:00 AM,ICE CUT,,b,1,0,False,,#d1c9c9
 7/14/2026 12:00:00 AM,7/14/2026 11:15:00 AM,7/14/2026 1:00:00 PM,Public Skating,,11,1,0,False,,#f0f509
+7/14/2026 12:00:00 AM,7/14/2026 1:00:00 PM,7/14/2026 1:15:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
+7/14/2026 12:00:00 AM,7/14/2026 1:15:00 PM,7/14/2026 2:15:00 PM,Planet Hockey,,b,1,0,False,,#d1c9c9
 7/14/2026 12:00:00 AM,7/14/2026 3:00:00 PM,7/14/2026 3:10:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
 7/14/2026 12:00:00 AM,7/14/2026 3:10:00 PM,7/14/2026 4:20:00 PM,Drop-in Goalie,,7,1,2,False,,#59f005
 7/14/2026 12:00:00 AM,7/14/2026 3:10:00 PM,7/14/2026 4:20:00 PM,Drop-in Player,,7,1,1,True,,#59f005
@@ -242,7 +250,11 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 7/15/2026 12:00:00 AM,7/15/2026 7:15:00 AM,7/15/2026 7:45:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 7/15/2026 12:00:00 AM,7/15/2026 7:45:00 AM,7/15/2026 8:15:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 7/15/2026 12:00:00 AM,7/15/2026 8:15:00 AM,7/15/2026 8:45:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
+7/15/2026 12:00:00 AM,7/15/2026 9:00:00 AM,7/15/2026 11:00:00 AM,Planet Hockey,,b,1,0,False,,#d1c9c9
+7/15/2026 12:00:00 AM,7/15/2026 11:00:00 AM,7/15/2026 11:15:00 AM,ICE CUT,,b,1,0,False,,#d1c9c9
 7/15/2026 12:00:00 AM,7/15/2026 11:15:00 AM,7/15/2026 1:00:00 PM,Public Skating,,11,1,0,False,,#f0f509
+7/15/2026 12:00:00 AM,7/15/2026 1:00:00 PM,7/15/2026 1:15:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
+7/15/2026 12:00:00 AM,7/15/2026 1:15:00 PM,7/15/2026 2:15:00 PM,Planet Hockey,,b,1,0,False,,#d1c9c9
 7/15/2026 12:00:00 AM,7/15/2026 3:00:00 PM,7/15/2026 3:10:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
 7/15/2026 12:00:00 AM,7/15/2026 3:10:00 PM,7/15/2026 4:20:00 PM,Drop-in Goalie,,7,1,2,False,,#59f005
 7/15/2026 12:00:00 AM,7/15/2026 3:10:00 PM,7/15/2026 4:20:00 PM,Drop-in Player,,7,1,1,True,,#59f005
@@ -264,7 +276,11 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 7/16/2026 12:00:00 AM,7/16/2026 7:15:00 AM,7/16/2026 7:45:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 7/16/2026 12:00:00 AM,7/16/2026 7:45:00 AM,7/16/2026 8:15:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 7/16/2026 12:00:00 AM,7/16/2026 8:15:00 AM,7/16/2026 8:45:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
+7/16/2026 12:00:00 AM,7/16/2026 9:00:00 AM,7/16/2026 11:00:00 AM,Planet Hockey,,b,1,0,False,,#d1c9c9
+7/16/2026 12:00:00 AM,7/16/2026 11:00:00 AM,7/16/2026 11:15:00 AM,ICE CUT,,b,1,0,False,,#d1c9c9
 7/16/2026 12:00:00 AM,7/16/2026 11:15:00 AM,7/16/2026 1:00:00 PM,Public Skating,,11,1,0,False,,#f0f509
+7/16/2026 12:00:00 AM,7/16/2026 1:00:00 PM,7/16/2026 1:15:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
+7/16/2026 12:00:00 AM,7/16/2026 1:15:00 PM,7/16/2026 2:15:00 PM,Planet Hockey,,b,1,0,False,,#d1c9c9
 7/16/2026 12:00:00 AM,7/16/2026 3:00:00 PM,7/16/2026 3:10:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
 7/16/2026 12:00:00 AM,7/16/2026 3:10:00 PM,7/16/2026 4:20:00 PM,Drop-in Goalie,,7,1,2,False,,#59f005
 7/16/2026 12:00:00 AM,7/16/2026 3:10:00 PM,7/16/2026 4:20:00 PM,Drop-in Player,,7,1,1,True,,#59f005
@@ -286,10 +302,11 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 7/17/2026 12:00:00 AM,7/17/2026 7:15:00 AM,7/17/2026 7:45:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 7/17/2026 12:00:00 AM,7/17/2026 7:45:00 AM,7/17/2026 8:15:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 7/17/2026 12:00:00 AM,7/17/2026 8:15:00 AM,7/17/2026 8:45:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
-7/17/2026 12:00:00 AM,7/17/2026 9:00:00 AM,7/17/2026 10:00:00 AM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
-7/17/2026 12:00:00 AM,7/17/2026 10:00:00 AM,7/17/2026 11:00:00 AM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
+7/17/2026 12:00:00 AM,7/17/2026 9:00:00 AM,7/17/2026 11:00:00 AM,Planet Hockey,,b,1,0,False,,#d1c9c9
+7/17/2026 12:00:00 AM,7/17/2026 11:00:00 AM,7/17/2026 11:15:00 AM,ICE CUT,,b,1,0,False,,#d1c9c9
 7/17/2026 12:00:00 AM,7/17/2026 11:15:00 AM,7/17/2026 1:00:00 PM,Public Skating,,11,1,0,False,,#f0f509
 7/17/2026 12:00:00 AM,7/17/2026 12:55:00 PM,7/17/2026 1:55:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
+7/17/2026 12:00:00 AM,7/17/2026 1:15:00 PM,7/17/2026 2:15:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
 7/17/2026 12:00:00 AM,7/17/2026 2:00:00 PM,7/17/2026 2:10:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
 7/17/2026 12:00:00 AM,7/17/2026 2:10:00 PM,7/17/2026 3:10:00 PM,Ice Maintenance,,b,1,0,False,,#d1c9c9
 7/17/2026 12:00:00 AM,7/17/2026 3:10:00 PM,7/17/2026 4:20:00 PM,Drop-in Goalie,,7,1,2,False,,#59f005
