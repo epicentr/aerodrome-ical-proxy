@@ -435,7 +435,9 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 7/25/2026 12:00:00 AM,7/25/2026 3:30:00 PM,7/25/2026 5:30:00 PM,Party room - 12U Ruis ho,,13,3,0,False,,#fb42d3
 7/25/2026 12:00:00 AM,7/25/2026 3:40:00 PM,7/25/2026 4:40:00 PM,Private Ice - Hockey,,8,1,0,False,,#6e8bf7
 7/25/2026 12:00:00 AM,7/25/2026 4:40:00 PM,7/25/2026 4:50:00 PM,Takedown - Private Ice -,,b,1,0,False,,#d1c9c9
-7/26/2026 12:00:00 AM,7/26/2026 8:50:00 AM,7/26/2026 9:50:00 AM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
+7/26/2026 12:00:00 AM,7/26/2026 7:40:00 AM,7/26/2026 8:40:00 AM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
+7/26/2026 12:00:00 AM,7/26/2026 8:55:00 AM,7/26/2026 9:55:00 AM,In-House,,8,1,0,False,,#6e8bf7
+7/26/2026 12:00:00 AM,7/26/2026 9:55:00 AM,7/26/2026 10:05:00 AM,Takedown - In-House,,b,1,0,False,,#d1c9c9
 7/26/2026 12:00:00 AM,7/26/2026 10:05:00 AM,7/26/2026 11:05:00 AM,ISHL Clinic,,8,1,0,False,,#6e8bf7
 7/26/2026 12:00:00 AM,7/26/2026 11:05:00 AM,7/26/2026 11:15:00 AM,Takedown - ISHL Clinic,,b,1,0,False,,#d1c9c9
 7/26/2026 12:00:00 AM,7/26/2026 11:15:00 AM,7/26/2026 12:45:00 PM,Tommy Anderson College,,8,1,0,False,,#6e8bf7
