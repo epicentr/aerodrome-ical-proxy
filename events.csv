@@ -430,7 +430,9 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 7/31/2026 12:00:00 AM,7/31/2026 5:30:00 PM,7/31/2026 5:40:00 PM,Takedown - Stick & Puck ,,b,1,1,True,,#d1c9c9
 7/31/2026 12:00:00 AM,7/31/2026 5:30:00 PM,7/31/2026 5:40:00 PM,Takedown - Stick & Puck ,,b,1,2,True,,#d1c9c9
 7/31/2026 12:00:00 AM,7/31/2026 5:40:00 PM,7/31/2026 7:10:00 PM,Game,,g,1,0,False,,#6e8bf7
-7/31/2026 12:00:00 AM,7/31/2026 7:25:00 PM,7/31/2026 8:25:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
+7/31/2026 12:00:00 AM,7/31/2026 7:20:00 PM,7/31/2026 8:50:00 PM,Game,,g,1,0,False,Fall 1 Novice Adult Players vs Fall 1 Novice Adult Goalie,#6e8bf7
+7/31/2026 12:00:00 AM,7/31/2026 8:50:00 PM,7/31/2026 9:00:00 PM,Takedown - Fall 1 Novice,,b,1,0,False,,#d1c9c9
+7/31/2026 12:00:00 AM,7/31/2026 9:05:00 PM,7/31/2026 10:05:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
 8/1/2026 12:00:00 AM,8/1/2026 6:00:00 AM,8/1/2026 6:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 8/1/2026 12:00:00 AM,8/1/2026 6:30:00 AM,8/1/2026 7:00:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 8/1/2026 12:00:00 AM,8/1/2026 7:00:00 AM,8/1/2026 7:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
