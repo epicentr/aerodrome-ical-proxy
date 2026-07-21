@@ -445,6 +445,7 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 8/3/2026 12:00:00 AM,8/3/2026 3:30:00 PM,8/3/2026 4:00:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 8/3/2026 12:00:00 AM,8/3/2026 4:00:00 PM,8/3/2026 4:30:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 8/3/2026 12:00:00 AM,8/3/2026 4:30:00 PM,8/3/2026 5:00:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
+8/3/2026 12:00:00 AM,8/3/2026 5:00:00 PM,8/3/2026 6:00:00 PM,Junior Blades Practice S,,12,1,0,False,,#e8be55
 8/3/2026 12:00:00 AM,8/3/2026 6:10:00 PM,8/3/2026 7:10:00 PM,Class: 12U/14U Clinic,,c,1,0,False,,#04ba00
 8/3/2026 12:00:00 AM,8/3/2026 7:10:00 PM,8/3/2026 7:20:00 PM,Takedown - 12U/14U Clini,,b,1,0,False,,#d1c9c9
 8/3/2026 12:00:00 AM,8/3/2026 7:20:00 PM,8/3/2026 8:20:00 PM,ISHL Clinic,,8,1,0,False,,#6e8bf7
