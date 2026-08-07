@@ -1,30 +1,4 @@
 start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id,isDupeStartTime,best_description,et_color
-8/6/2026 12:00:00 AM,8/6/2026 5:00:00 AM,8/6/2026 5:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
-8/6/2026 12:00:00 AM,8/6/2026 5:30:00 AM,8/6/2026 6:00:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
-8/6/2026 12:00:00 AM,8/6/2026 6:00:00 AM,8/6/2026 6:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
-8/6/2026 12:00:00 AM,8/6/2026 6:30:00 AM,8/6/2026 7:00:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
-8/6/2026 12:00:00 AM,8/6/2026 7:00:00 AM,8/6/2026 7:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
-8/6/2026 12:00:00 AM,8/6/2026 7:30:00 AM,8/6/2026 8:00:00 AM,Jump & Spins (Level 2),,10,1,0,False,,#0ae8ea
-8/6/2026 12:00:00 AM,8/6/2026 8:00:00 AM,8/6/2026 8:15:00 AM,ICE CUT,,b,1,0,False,,#d1c9c9
-8/6/2026 12:00:00 AM,8/6/2026 8:05:00 AM,8/6/2026 8:35:00 AM,Open-Off-Ice Class,,10,3,0,False,,#0ae8ea
-8/6/2026 12:00:00 AM,8/6/2026 8:15:00 AM,8/6/2026 8:45:00 AM,Jump & Spins (Level 2),,10,1,0,False,,#0ae8ea
-8/6/2026 12:00:00 AM,8/6/2026 8:45:00 AM,8/6/2026 9:15:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
-8/6/2026 12:00:00 AM,8/6/2026 9:15:00 AM,8/6/2026 9:45:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
-8/6/2026 12:00:00 AM,8/6/2026 9:45:00 AM,8/6/2026 10:15:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
-8/6/2026 12:00:00 AM,8/6/2026 10:15:00 AM,8/6/2026 10:45:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
-8/6/2026 12:00:00 AM,8/6/2026 10:45:00 AM,8/6/2026 11:00:00 AM,ICE CUT,,b,1,0,False,,#d1c9c9
-8/6/2026 12:00:00 AM,8/6/2026 11:00:00 AM,8/6/2026 12:00:00 PM,Adult Freestyle (Over 21,,10,1,0,False,,#0ae8ea
-8/6/2026 12:00:00 AM,8/6/2026 12:00:00 PM,8/6/2026 3:00:00 PM,Public Skating,,11,1,0,False,,#f0f509
-8/6/2026 12:00:00 AM,8/6/2026 3:00:00 PM,8/6/2026 3:10:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
-8/6/2026 12:00:00 AM,8/6/2026 3:10:00 PM,8/6/2026 4:20:00 PM,Drop-in Goalie,,7,1,2,False,,#59f005
-8/6/2026 12:00:00 AM,8/6/2026 3:10:00 PM,8/6/2026 4:20:00 PM,Drop-in Player,,7,1,1,True,,#59f005
-8/6/2026 12:00:00 AM,8/6/2026 4:20:00 PM,8/6/2026 4:30:00 PM,Takedown - Drop-in Goali,,b,1,2,False,,#d1c9c9
-8/6/2026 12:00:00 AM,8/6/2026 4:20:00 PM,8/6/2026 4:30:00 PM,Takedown - Drop-in Playe,,b,1,1,True,,#d1c9c9
-8/6/2026 12:00:00 AM,8/6/2026 4:30:00 PM,8/6/2026 5:45:00 PM,Class: 8U/10U Clinic,,c,1,0,False,,#04ba00
-8/6/2026 12:00:00 AM,8/6/2026 5:55:00 PM,8/6/2026 7:50:00 PM,Class: 12U/14U Clinic,,c,1,0,False,,#04ba00
-8/6/2026 12:00:00 AM,8/6/2026 7:50:00 PM,8/6/2026 8:00:00 PM,Takedown - 12U/14U Clini,,b,1,0,False,,#d1c9c9
-8/6/2026 12:00:00 AM,8/6/2026 8:00:00 PM,8/6/2026 9:15:00 PM,Adult B League,,8,1,0,False,,#6e8bf7
-8/6/2026 12:00:00 AM,8/6/2026 9:15:00 PM,8/6/2026 9:25:00 PM,Takedown - Adult B Leagu,,b,1,0,False,,#d1c9c9
 8/7/2026 12:00:00 AM,8/7/2026 5:00:00 AM,8/7/2026 5:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 8/7/2026 12:00:00 AM,8/7/2026 5:30:00 AM,8/7/2026 6:00:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 8/7/2026 12:00:00 AM,8/7/2026 6:00:00 AM,8/7/2026 6:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
@@ -378,3 +352,26 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 8/20/2026 12:00:00 AM,8/20/2026 4:30:00 PM,8/20/2026 5:00:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 8/20/2026 12:00:00 AM,8/20/2026 5:00:00 PM,8/20/2026 5:30:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 8/20/2026 12:00:00 AM,8/20/2026 5:30:00 PM,8/20/2026 5:40:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
+8/21/2026 12:00:00 AM,8/21/2026 5:00:00 AM,8/21/2026 5:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
+8/21/2026 12:00:00 AM,8/21/2026 5:30:00 AM,8/21/2026 6:00:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
+8/21/2026 12:00:00 AM,8/21/2026 6:00:00 AM,8/21/2026 6:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
+8/21/2026 12:00:00 AM,8/21/2026 6:30:00 AM,8/21/2026 7:00:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
+8/21/2026 12:00:00 AM,8/21/2026 7:00:00 AM,8/21/2026 7:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
+8/21/2026 12:00:00 AM,8/21/2026 7:30:00 AM,8/21/2026 8:00:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
+8/21/2026 12:00:00 AM,8/21/2026 8:00:00 AM,8/21/2026 8:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
+8/21/2026 12:00:00 AM,8/21/2026 8:30:00 AM,8/21/2026 9:00:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
+8/21/2026 12:00:00 AM,8/21/2026 9:00:00 AM,8/21/2026 11:00:00 AM,ICE MAINTENANCE,,b,1,0,False,,#d1c9c9
+8/21/2026 12:00:00 AM,8/21/2026 11:15:00 AM,8/21/2026 12:15:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
+8/21/2026 12:00:00 AM,8/21/2026 12:55:00 PM,8/21/2026 1:55:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
+8/21/2026 12:00:00 AM,8/21/2026 2:10:00 PM,8/21/2026 3:20:00 PM,Drop-in Goalie,,7,1,2,False,,#59f005
+8/21/2026 12:00:00 AM,8/21/2026 2:10:00 PM,8/21/2026 3:20:00 PM,Drop-in Player,,7,1,1,True,,#59f005
+8/21/2026 12:00:00 AM,8/21/2026 3:20:00 PM,8/21/2026 3:30:00 PM,Takedown - Drop-in Playe,,b,1,1,False,,#d1c9c9
+8/21/2026 12:00:00 AM,8/21/2026 3:30:00 PM,8/21/2026 4:00:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
+8/21/2026 12:00:00 AM,8/21/2026 4:00:00 PM,8/21/2026 4:30:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
+8/21/2026 12:00:00 AM,8/21/2026 4:30:00 PM,8/21/2026 5:30:00 PM,Junior Blades Practice s,,12,1,0,False,,#e8be55
+8/21/2026 12:00:00 AM,8/21/2026 5:30:00 PM,8/21/2026 5:40:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
+8/21/2026 12:00:00 AM,8/21/2026 5:40:00 PM,8/21/2026 7:10:00 PM,Game,,g,1,0,False,,#6e8bf7
+8/21/2026 12:00:00 AM,8/21/2026 7:20:00 PM,8/21/2026 8:50:00 PM,Game,,g,1,0,False,Fall 1 Novice Adult Players vs Fall 1 Novice Adult Goalie,#6e8bf7
+8/21/2026 12:00:00 AM,8/21/2026 8:50:00 PM,8/21/2026 9:00:00 PM,Takedown - Fall 1 Novice,,b,1,0,False,,#d1c9c9
+8/21/2026 12:00:00 AM,8/21/2026 9:00:00 PM,8/21/2026 10:15:00 PM,Game,,g,1,0,False,Gang Green vs Shamrocks,#6e8bf7
+8/21/2026 12:00:00 AM,8/21/2026 10:25:00 PM,8/21/2026 11:40:00 PM,Game,,g,1,0,False,Stars vs Ringers,#6e8bf7
