@@ -146,6 +146,8 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 8/19/2026 12:00:00 AM,8/19/2026 4:00:00 PM,8/19/2026 4:30:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 8/19/2026 12:00:00 AM,8/19/2026 4:30:00 PM,8/19/2026 5:30:00 PM,Junior Blades Practice s,,12,1,0,False,,#e8be55
 8/19/2026 12:00:00 AM,8/19/2026 5:30:00 PM,8/19/2026 5:40:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
+8/19/2026 12:00:00 AM,8/19/2026 5:40:00 PM,8/19/2026 6:40:00 PM,Game,,g,1,0,False,10u player vs 10u goalie,#6e8bf7
+8/19/2026 12:00:00 AM,8/19/2026 6:50:00 PM,8/19/2026 7:50:00 PM,Game,,g,1,0,False,12u player vs 12u goalie,#6e8bf7
 8/20/2026 12:00:00 AM,8/20/2026 5:00:00 AM,8/20/2026 5:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 8/20/2026 12:00:00 AM,8/20/2026 5:30:00 AM,8/20/2026 6:00:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 8/20/2026 12:00:00 AM,8/20/2026 6:00:00 AM,8/20/2026 6:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
@@ -169,6 +171,9 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 8/20/2026 12:00:00 AM,8/20/2026 4:30:00 PM,8/20/2026 5:00:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 8/20/2026 12:00:00 AM,8/20/2026 5:00:00 PM,8/20/2026 5:30:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 8/20/2026 12:00:00 AM,8/20/2026 5:30:00 PM,8/20/2026 5:40:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
+8/20/2026 12:00:00 AM,8/20/2026 5:40:00 PM,8/20/2026 6:40:00 PM,Game,,g,1,1,False,8u Developmental Player vs 8u Developmental Player,#6e8bf7
+8/20/2026 12:00:00 AM,8/20/2026 5:40:00 PM,8/20/2026 6:40:00 PM,Game,,g,1,2,True,8U player vs 8U player,#6e8bf7
+8/20/2026 12:00:00 AM,8/20/2026 6:50:00 PM,8/20/2026 7:50:00 PM,Game,,g,1,0,False,14u player vs 14u goalie,#6e8bf7
 8/21/2026 12:00:00 AM,8/21/2026 5:00:00 AM,8/21/2026 5:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 8/21/2026 12:00:00 AM,8/21/2026 5:30:00 AM,8/21/2026 6:00:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 8/21/2026 12:00:00 AM,8/21/2026 6:00:00 AM,8/21/2026 6:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
