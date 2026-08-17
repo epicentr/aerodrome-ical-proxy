@@ -219,7 +219,9 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 8/23/2026 12:00:00 AM,8/23/2026 4:20:00 PM,8/23/2026 5:10:00 PM,Class: Fall 1 YOUTH Lear,,c,1,1,True,,#04ba00
 8/23/2026 12:00:00 AM,8/23/2026 5:10:00 PM,8/23/2026 5:20:00 PM,Takedown - Fall 1 ADULT ,,b,1,2,False,,#d1c9c9
 8/23/2026 12:00:00 AM,8/23/2026 5:10:00 PM,8/23/2026 5:20:00 PM,Takedown - Fall 1 YOUTH ,,b,1,1,True,,#d1c9c9
-8/23/2026 12:00:00 AM,8/23/2026 5:25:00 PM,8/23/2026 6:25:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
+8/23/2026 12:00:00 AM,8/23/2026 5:20:00 PM,8/23/2026 6:20:00 PM,12U Evals,,8,1,0,False,,#6e8bf7
+8/23/2026 12:00:00 AM,8/23/2026 6:20:00 PM,8/23/2026 6:30:00 PM,Takedown - 12U Evals,,b,1,0,False,,#d1c9c9
+8/23/2026 12:00:00 AM,8/23/2026 6:35:00 PM,8/23/2026 7:35:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
 8/24/2026 12:00:00 AM,8/24/2026 5:00:00 AM,8/24/2026 5:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 8/24/2026 12:00:00 AM,8/24/2026 5:30:00 AM,8/24/2026 6:00:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 8/24/2026 12:00:00 AM,8/24/2026 6:00:00 AM,8/24/2026 6:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
