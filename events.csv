@@ -69,6 +69,7 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 8/20/2026 12:00:00 AM,8/20/2026 4:00:00 PM,8/20/2026 4:30:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 8/20/2026 12:00:00 AM,8/20/2026 4:30:00 PM,8/20/2026 5:00:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 8/20/2026 12:00:00 AM,8/20/2026 5:00:00 PM,8/20/2026 5:30:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
+8/20/2026 12:00:00 AM,8/20/2026 5:00:00 PM,8/20/2026 7:00:00 PM,Party Room A/B/C (8U Dev,,13,3,0,True,,#fb42d3
 8/20/2026 12:00:00 AM,8/20/2026 5:30:00 PM,8/20/2026 5:40:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
 8/20/2026 12:00:00 AM,8/20/2026 5:40:00 PM,8/20/2026 6:40:00 PM,Game,,g,1,1,False,8u Developmental Player vs 8u Developmental Player,#6e8bf7
 8/20/2026 12:00:00 AM,8/20/2026 5:40:00 PM,8/20/2026 6:40:00 PM,Game,,g,1,2,True,8U player vs 8U player,#6e8bf7
@@ -139,6 +140,7 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 8/22/2026 12:00:00 AM,8/22/2026 12:30:00 PM,8/22/2026 2:30:00 PM,Room rental - Connor Mar,,13,3,0,False,,#fb42d3
 8/22/2026 12:00:00 AM,8/22/2026 1:00:00 PM,8/22/2026 3:30:00 PM,Public Skating (ice cut ,,11,1,0,False,,#f0f509
 8/22/2026 12:00:00 AM,8/22/2026 3:40:00 PM,8/22/2026 4:40:00 PM,In-House,,8,1,0,False,,#6e8bf7
+8/22/2026 12:00:00 AM,8/22/2026 4:30:00 PM,8/22/2026 6:00:00 PM,Party room - 8U Legacy,,13,3,0,False,,#fb42d3
 8/22/2026 12:00:00 AM,8/22/2026 4:40:00 PM,8/22/2026 4:50:00 PM,Takedown - In-House,,b,1,0,False,,#d1c9c9
 8/22/2026 12:00:00 AM,8/22/2026 4:50:00 PM,8/22/2026 5:50:00 PM,ISHL,,8,1,0,False,,#6e8bf7
 8/22/2026 12:00:00 AM,8/22/2026 5:50:00 PM,8/22/2026 6:00:00 PM,Takedown - ISHL,,b,1,0,False,,#d1c9c9
@@ -227,6 +229,7 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 8/25/2026 12:00:00 AM,8/25/2026 4:00:00 PM,8/25/2026 4:30:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 8/25/2026 12:00:00 AM,8/25/2026 4:30:00 PM,8/25/2026 5:00:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 8/25/2026 12:00:00 AM,8/25/2026 5:00:00 PM,8/25/2026 5:30:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
+8/25/2026 12:00:00 AM,8/25/2026 5:00:00 PM,8/25/2026 7:00:00 PM,Party Room A/B/C (8U Leg,,13,3,0,True,,#fb42d3
 8/25/2026 12:00:00 AM,8/25/2026 5:30:00 PM,8/25/2026 5:40:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
 8/26/2026 12:00:00 AM,8/26/2026 5:00:00 AM,8/26/2026 5:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 8/26/2026 12:00:00 AM,8/26/2026 5:30:00 AM,8/26/2026 6:00:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
@@ -249,6 +252,7 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 8/26/2026 12:00:00 AM,8/26/2026 3:30:00 PM,8/26/2026 4:00:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 8/26/2026 12:00:00 AM,8/26/2026 4:00:00 PM,8/26/2026 4:30:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 8/26/2026 12:00:00 AM,8/26/2026 4:30:00 PM,8/26/2026 5:30:00 PM,Junior Blades Practice s,,12,1,0,False,,#e8be55
+8/26/2026 12:00:00 AM,8/26/2026 5:00:00 PM,8/26/2026 8:00:00 PM,Party Room A (8U Legacy),,13,3,0,False,,#fb42d3
 8/26/2026 12:00:00 AM,8/26/2026 5:30:00 PM,8/26/2026 5:40:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
 8/27/2026 12:00:00 AM,8/27/2026 5:00:00 AM,8/27/2026 5:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 8/27/2026 12:00:00 AM,8/27/2026 5:30:00 AM,8/27/2026 6:00:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
@@ -404,4 +408,6 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 9/1/2026 12:00:00 AM,9/1/2026 4:00:00 PM,9/1/2026 4:30:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 9/1/2026 12:00:00 AM,9/1/2026 4:30:00 PM,9/1/2026 5:00:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 9/1/2026 12:00:00 AM,9/1/2026 5:00:00 PM,9/1/2026 5:30:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
+9/1/2026 12:00:00 AM,9/1/2026 5:00:00 PM,9/1/2026 7:00:00 PM,Party Room A/B/C (8U Leg,,13,3,0,True,,#fb42d3
 9/1/2026 12:00:00 AM,9/1/2026 5:30:00 PM,9/1/2026 5:40:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
+9/1/2026 12:00:00 AM,9/1/2026 8:00:00 PM,9/1/2026 8:30:00 PM,Party room - Jr Aeros ,,13,3,0,False,,#fb42d3
