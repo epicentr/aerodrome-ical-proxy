@@ -400,3 +400,8 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 9/1/2026 12:00:00 AM,9/1/2026 2:10:00 PM,9/1/2026 3:20:00 PM,Drop-in Goalie,,7,1,2,False,,#59f005
 9/1/2026 12:00:00 AM,9/1/2026 2:10:00 PM,9/1/2026 3:20:00 PM,Drop-in Player,,7,1,1,True,,#59f005
 9/1/2026 12:00:00 AM,9/1/2026 3:20:00 PM,9/1/2026 3:30:00 PM,Takedown - Drop-in Playe,,b,1,1,False,,#d1c9c9
+9/1/2026 12:00:00 AM,9/1/2026 3:30:00 PM,9/1/2026 4:00:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
+9/1/2026 12:00:00 AM,9/1/2026 4:00:00 PM,9/1/2026 4:30:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
+9/1/2026 12:00:00 AM,9/1/2026 4:30:00 PM,9/1/2026 5:00:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
+9/1/2026 12:00:00 AM,9/1/2026 5:00:00 PM,9/1/2026 5:30:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
+9/1/2026 12:00:00 AM,9/1/2026 5:30:00 PM,9/1/2026 5:40:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
