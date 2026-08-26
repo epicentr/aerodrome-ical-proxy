@@ -110,6 +110,14 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 8/29/2026 12:00:00 AM,8/29/2026 12:15:00 PM,8/29/2026 12:45:00 PM,Basic 6 - Saturdays,,c,1,4,True,,#04ba00
 8/29/2026 12:00:00 AM,8/29/2026 12:15:00 PM,8/29/2026 12:45:00 PM,Learn to Skate Sat 12:15,,c,1,1,True,,#04ba00
 8/29/2026 12:00:00 AM,8/29/2026 1:00:00 PM,8/29/2026 3:30:00 PM,Public Skating (ice cut ,,11,1,0,False,,#f0f509
+8/29/2026 12:00:00 AM,8/29/2026 3:40:00 PM,8/29/2026 4:40:00 PM,In-House 8U/8UDev,,8,1,0,False,,#6e8bf7
+8/29/2026 12:00:00 AM,8/29/2026 4:40:00 PM,8/29/2026 4:50:00 PM,Takedown - In-House 8U/8,,b,1,0,False,,#d1c9c9
+8/29/2026 12:00:00 AM,8/29/2026 4:50:00 PM,8/29/2026 5:50:00 PM,In-House 10U,,8,1,0,False,,#6e8bf7
+8/29/2026 12:00:00 AM,8/29/2026 5:50:00 PM,8/29/2026 6:00:00 PM,Takedown - In-House 10U,,b,1,0,False,,#d1c9c9
+8/29/2026 12:00:00 AM,8/29/2026 6:00:00 PM,8/29/2026 7:00:00 PM,In-House 12U 2T,,8,1,0,False,,#6e8bf7
+8/29/2026 12:00:00 AM,8/29/2026 7:00:00 PM,8/29/2026 7:10:00 PM,Takedown - In-House 12U ,,b,1,0,False,,#d1c9c9
+8/29/2026 12:00:00 AM,8/29/2026 7:10:00 PM,8/29/2026 8:10:00 PM,In-House 14U/12 1T,,8,1,0,False,,#6e8bf7
+8/29/2026 12:00:00 AM,8/29/2026 8:10:00 PM,8/29/2026 8:20:00 PM,Takedown - In-House 14U/,,b,1,0,False,,#d1c9c9
 8/29/2026 12:00:00 AM,8/29/2026 8:20:00 PM,8/29/2026 9:35:00 PM,Game,,g,1,0,False,Gunners vs Ringers,#6e8bf7
 8/29/2026 12:00:00 AM,8/29/2026 9:45:00 PM,8/29/2026 11:00:00 PM,Game,,g,1,0,False,Hawks vs Shamrocks,#6e8bf7
 8/30/2026 12:00:00 AM,8/30/2026 6:50:00 AM,8/30/2026 8:05:00 AM,Jr Aeros Game,,8,1,0,False,,#6e8bf7
@@ -132,7 +140,8 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 8/30/2026 12:00:00 AM,8/30/2026 4:20:00 PM,8/30/2026 5:10:00 PM,Class: Fall 1 YOUTH Lear,,c,1,1,True,,#04ba00
 8/30/2026 12:00:00 AM,8/30/2026 5:10:00 PM,8/30/2026 5:20:00 PM,Takedown - Fall 1 ADULT ,,b,1,2,False,,#d1c9c9
 8/30/2026 12:00:00 AM,8/30/2026 5:10:00 PM,8/30/2026 5:20:00 PM,Takedown - Fall 1 YOUTH ,,b,1,1,True,,#d1c9c9
-8/30/2026 12:00:00 AM,8/30/2026 5:25:00 PM,8/30/2026 6:25:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
+8/30/2026 12:00:00 AM,8/30/2026 5:20:00 PM,8/30/2026 6:20:00 PM,In-House 8ULeg,,8,1,0,False,,#6e8bf7
+8/30/2026 12:00:00 AM,8/30/2026 6:20:00 PM,8/30/2026 6:30:00 PM,Takedown - In-House 8ULe,,b,1,0,False,,#d1c9c9
 8/30/2026 12:00:00 AM,8/30/2026 6:30:00 PM,8/30/2026 8:00:00 PM,Game,,g,1,0,False,,#6e8bf7
 8/30/2026 12:00:00 AM,8/30/2026 8:15:00 PM,8/30/2026 9:15:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
 8/31/2026 12:00:00 AM,8/31/2026 5:00:00 AM,8/31/2026 5:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
@@ -338,6 +347,14 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 9/5/2026 12:00:00 AM,9/5/2026 12:15:00 PM,9/5/2026 12:45:00 PM,Learn to Skate Sat 12:15,,c,1,1,True,,#04ba00
 9/5/2026 12:00:00 AM,9/5/2026 1:00:00 PM,9/5/2026 3:30:00 PM,Public Skating (ice cut ,,11,1,0,False,,#f0f509
 9/5/2026 12:00:00 AM,9/5/2026 2:00:00 PM,9/5/2026 4:00:00 PM,Room rental - Michael Se,,13,3,0,False,,#fb42d3
+9/5/2026 12:00:00 AM,9/5/2026 3:40:00 PM,9/5/2026 4:40:00 PM,In-House 8UDev/8ULeg,,8,1,0,False,,#6e8bf7
+9/5/2026 12:00:00 AM,9/5/2026 4:40:00 PM,9/5/2026 4:50:00 PM,Takedown - In-House 8UDe,,b,1,0,False,,#d1c9c9
+9/5/2026 12:00:00 AM,9/5/2026 4:50:00 PM,9/5/2026 5:50:00 PM,In-House 10U,,8,1,0,False,,#6e8bf7
+9/5/2026 12:00:00 AM,9/5/2026 5:50:00 PM,9/5/2026 6:00:00 PM,Takedown - In-House 10U,,b,1,0,False,,#d1c9c9
+9/5/2026 12:00:00 AM,9/5/2026 6:00:00 PM,9/5/2026 7:00:00 PM,In-House 12U 2T,,8,1,0,False,,#6e8bf7
+9/5/2026 12:00:00 AM,9/5/2026 7:00:00 PM,9/5/2026 7:10:00 PM,Takedown - In-House 12U ,,b,1,0,False,,#d1c9c9
+9/5/2026 12:00:00 AM,9/5/2026 7:10:00 PM,9/5/2026 8:10:00 PM,In-House 14U/12U 1T,,8,1,0,False,,#6e8bf7
+9/5/2026 12:00:00 AM,9/5/2026 8:10:00 PM,9/5/2026 8:20:00 PM,Takedown - In-House 14U/,,b,1,0,False,,#d1c9c9
 9/5/2026 12:00:00 AM,9/5/2026 8:20:00 PM,9/5/2026 9:35:00 PM,Game,,g,1,0,False,Hawks vs Stars,#6e8bf7
 9/5/2026 12:00:00 AM,9/5/2026 9:45:00 PM,9/5/2026 11:00:00 PM,Game,,g,1,0,False,Bandits vs Ringers,#6e8bf7
 9/6/2026 12:00:00 AM,9/6/2026 10:35:00 AM,9/6/2026 11:35:00 AM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
@@ -345,6 +362,9 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 9/6/2026 12:00:00 AM,9/6/2026 12:50:00 PM,9/6/2026 1:00:00 PM,Takedown - Private Tush,,b,1,0,False,,#d1c9c9
 9/6/2026 12:00:00 AM,9/6/2026 1:00:00 PM,9/6/2026 3:30:00 PM,Public Skating (ice cut ,,11,1,0,False,,#f0f509
 9/6/2026 12:00:00 AM,9/6/2026 3:45:00 PM,9/6/2026 4:45:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
+9/6/2026 12:00:00 AM,9/6/2026 4:05:00 PM,9/6/2026 5:05:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
+9/6/2026 12:00:00 AM,9/6/2026 5:20:00 PM,9/6/2026 6:20:00 PM,In-House 10U,,8,1,0,False,,#6e8bf7
+9/6/2026 12:00:00 AM,9/6/2026 6:20:00 PM,9/6/2026 6:30:00 PM,Takedown - In-House 10U,,b,1,0,False,,#d1c9c9
 9/6/2026 12:00:00 AM,9/6/2026 6:30:00 PM,9/6/2026 8:00:00 PM,Game,,g,1,0,False,,#6e8bf7
 9/6/2026 12:00:00 AM,9/6/2026 8:15:00 PM,9/6/2026 9:15:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
 9/7/2026 12:00:00 AM,9/7/2026 5:00:00 AM,9/7/2026 5:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
