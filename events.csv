@@ -1,40 +1,4 @@
 start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id,isDupeStartTime,best_description,et_color
-8/29/2026 12:00:00 AM,8/29/2026 6:00:00 AM,8/29/2026 10:10:00 AM,SC of Houston Test Sessi,,b,1,0,False,,#d1c9c9
-8/29/2026 12:00:00 AM,8/29/2026 8:00:00 AM,8/29/2026 8:00:00 PM,Party room - HOCKEY SALE,,13,3,0,False,,#fb42d3
-8/29/2026 12:00:00 AM,8/29/2026 10:10:00 AM,8/29/2026 10:20:00 AM,LTS SET-UP,,b,1,0,False,,#d1c9c9
-8/29/2026 12:00:00 AM,8/29/2026 10:20:00 AM,8/29/2026 10:50:00 AM,Basic 1 (9-16) Saturdays,,c,1,7,False,,#04ba00
-8/29/2026 12:00:00 AM,8/29/2026 10:20:00 AM,8/29/2026 10:50:00 AM,Basic 1(Ages 6-8) - Satu,,c,1,6,True,,#04ba00
-8/29/2026 12:00:00 AM,8/29/2026 10:20:00 AM,8/29/2026 10:50:00 AM,Basic 2 Saturday,,c,1,8,True,,#04ba00
-8/29/2026 12:00:00 AM,8/29/2026 10:20:00 AM,8/29/2026 10:50:00 AM,Basic 3 -Saturdays,,c,1,9,True,,#04ba00
-8/29/2026 12:00:00 AM,8/29/2026 10:20:00 AM,8/29/2026 10:50:00 AM,Learn to Skate Sat 10:20,,c,1,1,True,,#04ba00
-8/29/2026 12:00:00 AM,8/29/2026 10:20:00 AM,8/29/2026 10:50:00 AM,Snowplow Sam 1 - Saturda,,c,1,2,True,,#04ba00
-8/29/2026 12:00:00 AM,8/29/2026 10:20:00 AM,8/29/2026 10:50:00 AM,Snowplow Sam 2 - Saturda,,c,1,3,True,,#04ba00
-8/29/2026 12:00:00 AM,8/29/2026 10:20:00 AM,8/29/2026 10:50:00 AM,Snowplow Sam 3 - Saturda,,c,1,4,True,,#04ba00
-8/29/2026 12:00:00 AM,8/29/2026 10:20:00 AM,8/29/2026 10:50:00 AM,Snowplow Sam 4 - Saturda,,c,1,5,True,,#04ba00
-8/29/2026 12:00:00 AM,8/29/2026 10:50:00 AM,8/29/2026 11:00:00 AM,ICE CUT,,b,1,0,False,,#d1c9c9
-8/29/2026 12:00:00 AM,8/29/2026 11:00:00 AM,8/29/2026 12:00:00 PM,Junior Blades Practice s,,12,1,0,False,,#e8be55
-8/29/2026 12:00:00 AM,8/29/2026 12:00:00 PM,8/29/2026 12:15:00 PM,LTS SET-UP,,b,1,0,False,,#d1c9c9
-8/29/2026 12:00:00 AM,8/29/2026 12:15:00 PM,8/29/2026 12:45:00 PM,Adult 1 - Saturday,,c,1,5,False,,#04ba00
-8/29/2026 12:00:00 AM,8/29/2026 12:15:00 PM,8/29/2026 12:45:00 PM,Adult 2 - Saturday,,c,1,6,True,,#04ba00
-8/29/2026 12:00:00 AM,8/29/2026 12:15:00 PM,8/29/2026 12:45:00 PM,Adult 3- Saturdays,,c,1,7,True,,#04ba00
-8/29/2026 12:00:00 AM,8/29/2026 12:15:00 PM,8/29/2026 12:45:00 PM,Adult 4 (Sat),,c,1,8,True,,#04ba00
-8/29/2026 12:00:00 AM,8/29/2026 12:15:00 PM,8/29/2026 12:45:00 PM,Adult 5 - Saturday,,c,1,9,True,,#04ba00
-8/29/2026 12:00:00 AM,8/29/2026 12:15:00 PM,8/29/2026 12:45:00 PM,Adult 6 (Sat),,c,1,10,True,,#04ba00
-8/29/2026 12:00:00 AM,8/29/2026 12:15:00 PM,8/29/2026 12:45:00 PM,Basic 4 - Saturdays,,c,1,2,True,,#04ba00
-8/29/2026 12:00:00 AM,8/29/2026 12:15:00 PM,8/29/2026 12:45:00 PM,Basic 5 - Saturdays,,c,1,3,True,,#04ba00
-8/29/2026 12:00:00 AM,8/29/2026 12:15:00 PM,8/29/2026 12:45:00 PM,Basic 6 - Saturdays,,c,1,4,True,,#04ba00
-8/29/2026 12:00:00 AM,8/29/2026 12:15:00 PM,8/29/2026 12:45:00 PM,Learn to Skate Sat 12:15,,c,1,1,True,,#04ba00
-8/29/2026 12:00:00 AM,8/29/2026 1:00:00 PM,8/29/2026 3:30:00 PM,Public Skating (ice cut ,,11,1,0,False,,#f0f509
-8/29/2026 12:00:00 AM,8/29/2026 3:40:00 PM,8/29/2026 4:40:00 PM,In-House 8U/8UDev,,8,1,0,False,,#6e8bf7
-8/29/2026 12:00:00 AM,8/29/2026 4:40:00 PM,8/29/2026 4:50:00 PM,Takedown - In-House 8U/8,,b,1,0,False,,#d1c9c9
-8/29/2026 12:00:00 AM,8/29/2026 4:50:00 PM,8/29/2026 5:50:00 PM,In-House 10U,,8,1,0,False,,#6e8bf7
-8/29/2026 12:00:00 AM,8/29/2026 5:50:00 PM,8/29/2026 6:00:00 PM,Takedown - In-House 10U,,b,1,0,False,,#d1c9c9
-8/29/2026 12:00:00 AM,8/29/2026 6:00:00 PM,8/29/2026 7:00:00 PM,In-House 12U 2T,,8,1,0,False,,#6e8bf7
-8/29/2026 12:00:00 AM,8/29/2026 7:00:00 PM,8/29/2026 7:10:00 PM,Takedown - In-House 12U ,,b,1,0,False,,#d1c9c9
-8/29/2026 12:00:00 AM,8/29/2026 7:10:00 PM,8/29/2026 8:10:00 PM,In-House 14U/12 1T,,8,1,0,False,,#6e8bf7
-8/29/2026 12:00:00 AM,8/29/2026 8:10:00 PM,8/29/2026 8:20:00 PM,Takedown - In-House 14U/,,b,1,0,False,,#d1c9c9
-8/29/2026 12:00:00 AM,8/29/2026 8:20:00 PM,8/29/2026 9:35:00 PM,Game,,g,1,0,False,Gunners vs Ringers,#6e8bf7
-8/29/2026 12:00:00 AM,8/29/2026 9:45:00 PM,8/29/2026 11:00:00 PM,Game,,g,1,0,False,Hawks vs Shamrocks,#6e8bf7
 8/30/2026 12:00:00 AM,8/30/2026 6:50:00 AM,8/30/2026 8:05:00 AM,Jr Aeros Game,,8,1,0,False,,#6e8bf7
 8/30/2026 12:00:00 AM,8/30/2026 8:00:00 AM,8/30/2026 8:00:00 PM,Party room - HOCKEY SALE,,13,3,0,False,,#fb42d3
 8/30/2026 12:00:00 AM,8/30/2026 8:05:00 AM,8/30/2026 8:15:00 AM,Takedown - Jr Aeros Game,,b,1,0,False,,#d1c9c9
@@ -485,3 +449,28 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 9/12/2026 12:00:00 AM,9/12/2026 1:00:00 PM,9/12/2026 3:30:00 PM,Public Skating (ice cut ,,11,1,0,False,,#f0f509
 9/12/2026 12:00:00 AM,9/12/2026 8:20:00 PM,9/12/2026 9:35:00 PM,Game,,g,1,0,False,Ringers vs Pylons,#6e8bf7
 9/12/2026 12:00:00 AM,9/12/2026 9:45:00 PM,9/12/2026 11:00:00 PM,Game,,g,1,0,False,Gunners vs Hawks,#6e8bf7
+9/13/2026 12:00:00 AM,9/13/2026 6:35:00 AM,9/13/2026 7:35:00 AM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
+9/13/2026 12:00:00 AM,9/13/2026 7:30:00 AM,9/13/2026 11:00:00 AM,Party room - Ref Clinic,,13,3,0,False,,#fb42d3
+9/13/2026 12:00:00 AM,9/13/2026 7:50:00 AM,9/13/2026 9:20:00 AM,Jr Aeros Practice,,8,1,0,False,,#6e8bf7
+9/13/2026 12:00:00 AM,9/13/2026 9:20:00 AM,9/13/2026 9:30:00 AM,Takedown - Jr Aeros Prac,,b,1,0,False,,#d1c9c9
+9/13/2026 12:00:00 AM,9/13/2026 9:30:00 AM,9/13/2026 10:30:00 AM,Jr Aeros Practice,,8,1,0,False,,#6e8bf7
+9/13/2026 12:00:00 AM,9/13/2026 10:30:00 AM,9/13/2026 10:40:00 AM,Takedown - Jr Aeros Prac,,b,1,0,False,,#d1c9c9
+9/13/2026 12:00:00 AM,9/13/2026 10:40:00 AM,9/13/2026 11:40:00 AM,Jr Aeros Practice,,8,1,0,False,,#6e8bf7
+9/13/2026 12:00:00 AM,9/13/2026 11:40:00 AM,9/13/2026 11:50:00 AM,Takedown - Jr Aeros Prac,,b,1,0,False,,#d1c9c9
+9/13/2026 12:00:00 AM,9/13/2026 11:50:00 AM,9/13/2026 12:50:00 PM,HIHOA Officiating Clinic,,8,1,0,False,,#6e8bf7
+9/13/2026 12:00:00 AM,9/13/2026 12:30:00 PM,9/13/2026 3:30:00 PM,Room rental - Judy Hsian,,13,3,0,False,,#fb42d3
+9/13/2026 12:00:00 AM,9/13/2026 12:50:00 PM,9/13/2026 1:00:00 PM,Takedown - HIHOA Officia,,b,1,0,False,,#d1c9c9
+9/13/2026 12:00:00 AM,9/13/2026 1:00:00 PM,9/13/2026 3:30:00 PM,Public Skating (ice cut ,,11,1,0,False,,#f0f509
+9/13/2026 12:00:00 AM,9/13/2026 3:35:00 PM,9/13/2026 4:05:00 PM,Learn to Skate Hockey 1 ,,c,1,4,False,,#04ba00
+9/13/2026 12:00:00 AM,9/13/2026 3:35:00 PM,9/13/2026 4:05:00 PM,Learn to Skate Hockey 2 ,,c,1,5,True,,#04ba00
+9/13/2026 12:00:00 AM,9/13/2026 3:35:00 PM,9/13/2026 4:05:00 PM,Learn to Skate Hockey 3 ,,c,1,6,True,,#04ba00
+9/13/2026 12:00:00 AM,9/13/2026 3:35:00 PM,9/13/2026 4:05:00 PM,Snowplow Sam 1 Hockey Su,,c,1,1,True,,#04ba00
+9/13/2026 12:00:00 AM,9/13/2026 3:35:00 PM,9/13/2026 4:05:00 PM,Snowplow Sam 2  Hockey 3,,c,1,2,True,,#04ba00
+9/13/2026 12:00:00 AM,9/13/2026 3:35:00 PM,9/13/2026 4:05:00 PM,Snowplow Sam 3 Hockey 3:,,c,1,3,True,,#04ba00
+9/13/2026 12:00:00 AM,9/13/2026 4:20:00 PM,9/13/2026 5:10:00 PM,Class: Fall 1 ADULT Lear,,c,1,2,False,,#04ba00
+9/13/2026 12:00:00 AM,9/13/2026 4:20:00 PM,9/13/2026 5:10:00 PM,Class: Fall 1 YOUTH Lear,,c,1,1,True,,#04ba00
+9/13/2026 12:00:00 AM,9/13/2026 5:10:00 PM,9/13/2026 5:20:00 PM,Takedown - Fall 1 ADULT ,,b,1,2,False,,#d1c9c9
+9/13/2026 12:00:00 AM,9/13/2026 5:10:00 PM,9/13/2026 5:20:00 PM,Takedown - Fall 1 YOUTH ,,b,1,1,True,,#d1c9c9
+9/13/2026 12:00:00 AM,9/13/2026 5:25:00 PM,9/13/2026 6:25:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
+9/13/2026 12:00:00 AM,9/13/2026 6:30:00 PM,9/13/2026 7:50:00 PM,Game,,g,1,0,False,,#6e8bf7
+9/13/2026 12:00:00 AM,9/13/2026 8:05:00 PM,9/13/2026 9:05:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
