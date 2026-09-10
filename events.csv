@@ -26,8 +26,8 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 9/10/2026 12:00:00 AM,9/10/2026 6:40:00 PM,9/10/2026 6:50:00 PM,Takedown - 8U/8U DG In-H,,b,1,0,False,,#d1c9c9
 9/10/2026 12:00:00 AM,9/10/2026 6:50:00 PM,9/10/2026 7:50:00 PM,In-House Practice (12U) ,,8,1,0,False,,#6e8bf7
 9/10/2026 12:00:00 AM,9/10/2026 7:50:00 PM,9/10/2026 8:00:00 PM,Takedown - In-House Prac,,b,1,0,False,,#d1c9c9
-9/10/2026 12:00:00 AM,9/10/2026 8:00:00 PM,9/10/2026 9:00:00 PM,ISHL / In-House Practice,,8,1,0,False,,#6e8bf7
-9/10/2026 12:00:00 AM,9/10/2026 9:00:00 PM,9/10/2026 9:10:00 PM,Takedown - ISHL / In-Hou,,b,1,0,False,,#d1c9c9
+9/10/2026 12:00:00 AM,9/10/2026 8:00:00 PM,9/10/2026 9:00:00 PM,In-House Practice (14U/1,,8,1,0,False,,#6e8bf7
+9/10/2026 12:00:00 AM,9/10/2026 9:00:00 PM,9/10/2026 9:10:00 PM,Takedown - In-House Prac,,b,1,0,False,,#d1c9c9
 9/10/2026 12:00:00 AM,9/10/2026 9:10:00 PM,9/10/2026 10:10:00 PM,ISHL Practice,,8,1,0,False,,#6e8bf7
 9/10/2026 12:00:00 AM,9/10/2026 10:10:00 PM,9/10/2026 10:20:00 PM,Takedown - ISHL Practice,,b,1,0,False,,#d1c9c9
 9/10/2026 12:00:00 AM,9/10/2026 10:20:00 PM,9/10/2026 11:35:00 PM,Adult B League,,8,1,0,False,,#6e8bf7
@@ -52,9 +52,9 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 9/11/2026 12:00:00 AM,9/11/2026 4:00:00 PM,9/11/2026 4:30:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 9/11/2026 12:00:00 AM,9/11/2026 4:30:00 PM,9/11/2026 5:30:00 PM,Junior Blades Practice s,,12,1,0,False,,#e8be55
 9/11/2026 12:00:00 AM,9/11/2026 5:30:00 PM,9/11/2026 5:40:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
-9/11/2026 12:00:00 AM,9/11/2026 5:40:00 PM,9/11/2026 7:10:00 PM,Game,,g,1,0,False,,#6e8bf7
-9/11/2026 12:00:00 AM,9/11/2026 7:25:00 PM,9/11/2026 8:25:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
-9/11/2026 12:00:00 AM,9/11/2026 7:30:00 PM,9/11/2026 8:30:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
+9/11/2026 12:00:00 AM,9/11/2026 5:40:00 PM,9/11/2026 6:55:00 PM,Game,,g,1,0,False,,#6e8bf7
+9/11/2026 12:00:00 AM,9/11/2026 7:05:00 PM,9/11/2026 8:35:00 PM,ISHL Game,,8,1,0,False,,#6e8bf7
+9/11/2026 12:00:00 AM,9/11/2026 8:35:00 PM,9/11/2026 8:45:00 PM,Takedown - ISHL Game,,b,1,0,False,,#d1c9c9
 9/11/2026 12:00:00 AM,9/11/2026 8:45:00 PM,9/11/2026 10:15:00 PM,Game,,g,1,0,False,Fall 1 Novice Adult Players vs Fall 1 Novice Adult Goalie,#6e8bf7
 9/11/2026 12:00:00 AM,9/11/2026 10:15:00 PM,9/11/2026 10:25:00 PM,Takedown - Fall 1 Novice,,b,1,0,False,,#d1c9c9
 9/11/2026 12:00:00 AM,9/11/2026 10:25:00 PM,9/11/2026 11:40:00 PM,Game,,g,1,0,False,Bandits vs Shamrocks,#6e8bf7
@@ -97,6 +97,14 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 9/12/2026 12:00:00 AM,9/12/2026 12:15:00 PM,9/12/2026 12:45:00 PM,Basic 6 - Saturdays,,c,1,4,True,,#04ba00
 9/12/2026 12:00:00 AM,9/12/2026 12:15:00 PM,9/12/2026 12:45:00 PM,Learn to Skate Sat 12:15,,c,1,1,True,,#04ba00
 9/12/2026 12:00:00 AM,9/12/2026 1:00:00 PM,9/12/2026 3:30:00 PM,Public Skating (ice cut ,,11,1,0,False,,#f0f509
+9/12/2026 12:00:00 AM,9/12/2026 3:40:00 PM,9/12/2026 4:40:00 PM,In-House Game,,8,1,0,False,,#6e8bf7
+9/12/2026 12:00:00 AM,9/12/2026 4:40:00 PM,9/12/2026 4:50:00 PM,Takedown - In-House Game,,b,1,0,False,,#d1c9c9
+9/12/2026 12:00:00 AM,9/12/2026 4:50:00 PM,9/12/2026 5:50:00 PM,In-House Game,,8,1,0,False,,#6e8bf7
+9/12/2026 12:00:00 AM,9/12/2026 5:50:00 PM,9/12/2026 6:00:00 PM,Takedown - In-House Game,,b,1,0,False,,#d1c9c9
+9/12/2026 12:00:00 AM,9/12/2026 6:00:00 PM,9/12/2026 7:00:00 PM,In-House Game,,8,1,0,False,,#6e8bf7
+9/12/2026 12:00:00 AM,9/12/2026 7:00:00 PM,9/12/2026 7:10:00 PM,Takedown - In-House Game,,b,1,0,False,,#d1c9c9
+9/12/2026 12:00:00 AM,9/12/2026 7:10:00 PM,9/12/2026 8:10:00 PM,In-House Game,,8,1,0,False,,#6e8bf7
+9/12/2026 12:00:00 AM,9/12/2026 8:10:00 PM,9/12/2026 8:20:00 PM,Takedown - In-House Game,,b,1,0,False,,#d1c9c9
 9/12/2026 12:00:00 AM,9/12/2026 8:20:00 PM,9/12/2026 9:35:00 PM,Game,,g,1,0,False,Ringers vs Pylons,#6e8bf7
 9/12/2026 12:00:00 AM,9/12/2026 9:45:00 PM,9/12/2026 11:00:00 PM,Game,,g,1,0,False,Gunners vs Hawks,#6e8bf7
 9/13/2026 12:00:00 AM,9/13/2026 6:35:00 AM,9/13/2026 7:35:00 AM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
@@ -122,9 +130,12 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 9/13/2026 12:00:00 AM,9/13/2026 4:20:00 PM,9/13/2026 5:10:00 PM,Class: Fall 1 YOUTH Lear,,c,1,1,True,,#04ba00
 9/13/2026 12:00:00 AM,9/13/2026 5:10:00 PM,9/13/2026 5:20:00 PM,Takedown - Fall 1 ADULT ,,b,1,2,False,,#d1c9c9
 9/13/2026 12:00:00 AM,9/13/2026 5:10:00 PM,9/13/2026 5:20:00 PM,Takedown - Fall 1 YOUTH ,,b,1,1,True,,#d1c9c9
-9/13/2026 12:00:00 AM,9/13/2026 5:25:00 PM,9/13/2026 6:25:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
+9/13/2026 12:00:00 AM,9/13/2026 5:20:00 PM,9/13/2026 6:20:00 PM,In-House Game,,8,1,0,False,,#6e8bf7
+9/13/2026 12:00:00 AM,9/13/2026 6:20:00 PM,9/13/2026 6:30:00 PM,Takedown - In-House Game,,b,1,0,False,,#d1c9c9
 9/13/2026 12:00:00 AM,9/13/2026 6:30:00 PM,9/13/2026 7:50:00 PM,Game,,g,1,0,False,,#6e8bf7
-9/13/2026 12:00:00 AM,9/13/2026 8:05:00 PM,9/13/2026 9:05:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
+9/13/2026 12:00:00 AM,9/13/2026 8:00:00 PM,9/13/2026 9:30:00 PM,ISHL Game,,8,1,0,False,,#6e8bf7
+9/13/2026 12:00:00 AM,9/13/2026 9:30:00 PM,9/13/2026 9:40:00 PM,Takedown - ISHL Game,,b,1,0,False,,#d1c9c9
+9/13/2026 12:00:00 AM,9/13/2026 9:45:00 PM,9/13/2026 10:45:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
 9/14/2026 12:00:00 AM,9/14/2026 5:00:00 AM,9/14/2026 5:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 9/14/2026 12:00:00 AM,9/14/2026 5:30:00 AM,9/14/2026 6:00:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 9/14/2026 12:00:00 AM,9/14/2026 6:00:00 AM,9/14/2026 6:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
@@ -291,9 +302,9 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 9/18/2026 12:00:00 AM,9/18/2026 4:00:00 PM,9/18/2026 4:30:00 PM,Freestyle,,10,1,0,False,,#0ae8ea
 9/18/2026 12:00:00 AM,9/18/2026 4:30:00 PM,9/18/2026 5:30:00 PM,Junior Blades Practice s,,12,1,0,False,,#e8be55
 9/18/2026 12:00:00 AM,9/18/2026 5:30:00 PM,9/18/2026 5:40:00 PM,ICE CUT,,b,1,0,False,,#d1c9c9
-9/18/2026 12:00:00 AM,9/18/2026 5:40:00 PM,9/18/2026 7:10:00 PM,Game,,g,1,0,False,,#6e8bf7
-9/18/2026 12:00:00 AM,9/18/2026 7:25:00 PM,9/18/2026 8:25:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
-9/18/2026 12:00:00 AM,9/18/2026 7:30:00 PM,9/18/2026 8:30:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
+9/18/2026 12:00:00 AM,9/18/2026 5:40:00 PM,9/18/2026 6:55:00 PM,Game,,g,1,0,False,,#6e8bf7
+9/18/2026 12:00:00 AM,9/18/2026 7:05:00 PM,9/18/2026 8:35:00 PM,ISHL Game,,8,1,0,False,,#6e8bf7
+9/18/2026 12:00:00 AM,9/18/2026 8:35:00 PM,9/18/2026 8:45:00 PM,Takedown - ISHL Game,,b,1,0,False,,#d1c9c9
 9/18/2026 12:00:00 AM,9/18/2026 8:45:00 PM,9/18/2026 10:15:00 PM,Game,,g,1,0,False,Fall 1 Novice Adult Players vs Fall 1 Novice Adult Goalie,#6e8bf7
 9/18/2026 12:00:00 AM,9/18/2026 10:15:00 PM,9/18/2026 10:25:00 PM,Takedown - Fall 1 Novice,,b,1,0,False,,#d1c9c9
 9/18/2026 12:00:00 AM,9/18/2026 10:25:00 PM,9/18/2026 11:40:00 PM,Game,,g,1,0,False,Shamrocks vs Gunners,#6e8bf7
@@ -337,6 +348,14 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 9/19/2026 12:00:00 AM,9/19/2026 12:15:00 PM,9/19/2026 12:45:00 PM,Learn to Skate Sat 12:15,,c,1,1,True,,#04ba00
 9/19/2026 12:00:00 AM,9/19/2026 1:00:00 PM,9/19/2026 3:30:00 PM,Public Skating (ice cut ,,11,1,0,False,,#f0f509
 9/19/2026 12:00:00 AM,9/19/2026 2:00:00 PM,9/19/2026 4:00:00 PM,Room rental - Shannon Gr,,13,3,0,False,,#fb42d3
+9/19/2026 12:00:00 AM,9/19/2026 3:40:00 PM,9/19/2026 4:40:00 PM,In-House Game,,8,1,0,False,,#6e8bf7
+9/19/2026 12:00:00 AM,9/19/2026 4:40:00 PM,9/19/2026 4:50:00 PM,Takedown - In-House Game,,b,1,0,False,,#d1c9c9
+9/19/2026 12:00:00 AM,9/19/2026 4:50:00 PM,9/19/2026 5:50:00 PM,In-House Game,,8,1,0,False,,#6e8bf7
+9/19/2026 12:00:00 AM,9/19/2026 5:50:00 PM,9/19/2026 6:00:00 PM,Takedown - In-House Game,,b,1,0,False,,#d1c9c9
+9/19/2026 12:00:00 AM,9/19/2026 6:00:00 PM,9/19/2026 7:00:00 PM,In-House Game,,8,1,0,False,,#6e8bf7
+9/19/2026 12:00:00 AM,9/19/2026 7:00:00 PM,9/19/2026 7:10:00 PM,Takedown - In-House Game,,b,1,0,False,,#d1c9c9
+9/19/2026 12:00:00 AM,9/19/2026 7:10:00 PM,9/19/2026 8:10:00 PM,In-House Game,,8,1,0,False,,#6e8bf7
+9/19/2026 12:00:00 AM,9/19/2026 8:10:00 PM,9/19/2026 8:20:00 PM,Takedown - In-House Game,,b,1,0,False,,#d1c9c9
 9/19/2026 12:00:00 AM,9/19/2026 8:20:00 PM,9/19/2026 9:35:00 PM,Game,,g,1,0,False,Hawks vs Gang Green,#6e8bf7
 9/19/2026 12:00:00 AM,9/19/2026 9:45:00 PM,9/19/2026 11:00:00 PM,Game,,g,1,0,False,Pylons vs Stars,#6e8bf7
 9/20/2026 12:00:00 AM,9/20/2026 6:05:00 AM,9/20/2026 7:05:00 AM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
@@ -361,9 +380,12 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 9/20/2026 12:00:00 AM,9/20/2026 4:20:00 PM,9/20/2026 5:10:00 PM,Class: Fall 1 YOUTH Lear,,c,1,1,True,,#04ba00
 9/20/2026 12:00:00 AM,9/20/2026 5:10:00 PM,9/20/2026 5:20:00 PM,Takedown - Fall 1 ADULT ,,b,1,2,False,,#d1c9c9
 9/20/2026 12:00:00 AM,9/20/2026 5:10:00 PM,9/20/2026 5:20:00 PM,Takedown - Fall 1 YOUTH ,,b,1,1,True,,#d1c9c9
-9/20/2026 12:00:00 AM,9/20/2026 5:25:00 PM,9/20/2026 6:25:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
+9/20/2026 12:00:00 AM,9/20/2026 5:20:00 PM,9/20/2026 6:20:00 PM,In-House Game,,8,1,0,False,,#6e8bf7
+9/20/2026 12:00:00 AM,9/20/2026 6:20:00 PM,9/20/2026 6:30:00 PM,Takedown - In-House Game,,b,1,0,False,,#d1c9c9
 9/20/2026 12:00:00 AM,9/20/2026 6:30:00 PM,9/20/2026 7:50:00 PM,Game,,g,1,0,False,,#6e8bf7
-9/20/2026 12:00:00 AM,9/20/2026 8:05:00 PM,9/20/2026 9:05:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
+9/20/2026 12:00:00 AM,9/20/2026 8:00:00 PM,9/20/2026 9:30:00 PM,ISHL Game,,8,1,0,False,,#6e8bf7
+9/20/2026 12:00:00 AM,9/20/2026 9:30:00 PM,9/20/2026 9:40:00 PM,Takedown - ISHL Game,,b,1,0,False,,#d1c9c9
+9/20/2026 12:00:00 AM,9/20/2026 9:45:00 PM,9/20/2026 10:45:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
 9/21/2026 12:00:00 AM,9/21/2026 5:00:00 AM,9/21/2026 5:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 9/21/2026 12:00:00 AM,9/21/2026 5:30:00 AM,9/21/2026 6:00:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 9/21/2026 12:00:00 AM,9/21/2026 6:00:00 AM,9/21/2026 6:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
