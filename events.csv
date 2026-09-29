@@ -26,7 +26,8 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 9/29/2026 12:00:00 AM,9/29/2026 6:40:00 PM,9/29/2026 6:50:00 PM,Takedown - In-House Prac,,b,1,0,False,,#d1c9c9
 9/29/2026 12:00:00 AM,9/29/2026 6:50:00 PM,9/29/2026 7:50:00 PM,Jr. Aeros (10U),,8,1,0,False,,#6e8bf7
 9/29/2026 12:00:00 AM,9/29/2026 7:50:00 PM,9/29/2026 8:00:00 PM,Takedown - Jr. Aeros - 1,,b,1,0,False,,#d1c9c9
-9/29/2026 12:00:00 AM,9/29/2026 8:00:00 PM,9/29/2026 9:00:00 PM,Jr. Aeros (14U),,8,1,0,False,,#6e8bf7
+9/29/2026 12:00:00 AM,9/29/2026 8:00:00 PM,9/29/2026 8:30:00 PM,Party room - Jr 12UA2,,13,3,0,False,,#fb42d3
+9/29/2026 12:00:00 AM,9/29/2026 8:00:00 PM,9/29/2026 9:00:00 PM,Jr. Aeros (14U),,8,1,0,True,,#6e8bf7
 9/29/2026 12:00:00 AM,9/29/2026 9:00:00 PM,9/29/2026 9:10:00 PM,Takedown - Jr. Aeros - 1,,b,1,0,False,,#d1c9c9
 9/29/2026 12:00:00 AM,9/29/2026 9:10:00 PM,9/29/2026 10:25:00 PM,Adult B League,,8,1,0,False,,#6e8bf7
 9/29/2026 12:00:00 AM,9/29/2026 10:25:00 PM,9/29/2026 10:35:00 PM,Takedown - Adult B Leagu,,b,1,0,False,,#d1c9c9
