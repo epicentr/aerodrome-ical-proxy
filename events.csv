@@ -426,6 +426,7 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 11/8/2026 12:00:00 AM,11/8/2026 12:30:00 PM,11/8/2026 2:30:00 PM,Room rental - Kristyn Re,,13,3,0,False,,#fb42d3
 11/8/2026 12:00:00 AM,11/8/2026 1:00:00 PM,11/8/2026 3:30:00 PM,Public Skating (ice cut ,,11,1,0,False,,#f0f509
 11/8/2026 12:00:00 AM,11/8/2026 1:00:00 PM,11/8/2026 5:00:00 PM,Viewing room - Private e,,13,2,0,True,,#fb42d3
+11/8/2026 12:00:00 AM,11/8/2026 3:30:00 PM,11/8/2026 4:30:00 PM,Room rental - Bridget Du,,13,3,0,False,,#fb42d3
 11/8/2026 12:00:00 AM,11/8/2026 3:35:00 PM,11/8/2026 4:05:00 PM,Learn to Skate Hockey 1 ,,c,1,4,False,,#04ba00
 11/8/2026 12:00:00 AM,11/8/2026 3:35:00 PM,11/8/2026 4:05:00 PM,Learn to Skate Hockey 2 ,,c,1,5,True,,#04ba00
 11/8/2026 12:00:00 AM,11/8/2026 3:35:00 PM,11/8/2026 4:05:00 PM,Learn to Skate Hockey 3 ,,c,1,6,True,,#04ba00
