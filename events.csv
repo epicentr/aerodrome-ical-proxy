@@ -112,8 +112,6 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 10/31/2026 12:00:00 AM,10/31/2026 7:00:00 PM,10/31/2026 7:10:00 PM,Takedown - In-House Game,,b,1,0,False,,#d1c9c9
 10/31/2026 12:00:00 AM,10/31/2026 7:10:00 PM,10/31/2026 8:10:00 PM,In-House Game,,8,1,0,False,,#6e8bf7
 10/31/2026 12:00:00 AM,10/31/2026 8:10:00 PM,10/31/2026 8:20:00 PM,Takedown - In-House Game,,b,1,0,False,,#d1c9c9
-10/31/2026 12:00:00 AM,10/31/2026 8:20:00 PM,10/31/2026 9:35:00 PM,Game,,g,1,0,False,Bandits vs Hawks,#6e8bf7
-10/31/2026 12:00:00 AM,10/31/2026 9:45:00 PM,10/31/2026 11:00:00 PM,Game,,g,1,0,False,Ringers vs Gang Green,#6e8bf7
 11/1/2026 12:00:00 AM,11/1/2026 7:00:00 AM,11/1/2026 8:00:00 AM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
 11/1/2026 12:00:00 AM,11/1/2026 8:15:00 AM,11/1/2026 9:15:00 AM,Jr Aeros Practice,,8,1,0,False,,#6e8bf7
 11/1/2026 12:00:00 AM,11/1/2026 9:15:00 AM,11/1/2026 9:25:00 AM,Takedown - Jr Aeros Prac,,b,1,0,False,,#d1c9c9
@@ -307,9 +305,9 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 11/6/2026 12:00:00 AM,11/6/2026 5:40:00 PM,11/6/2026 7:10:00 PM,Game,,g,1,0,False,,#6e8bf7
 11/6/2026 12:00:00 AM,11/6/2026 7:10:00 PM,11/6/2026 8:40:00 PM,Game,,g,1,0,False,Player Adult Novice League Fall 2 2026 vs Goalie Adult Novice League Fall 2 2026,#6e8bf7
 11/6/2026 12:00:00 AM,11/6/2026 8:40:00 PM,11/6/2026 8:50:00 PM,Takedown - Player Adult ,,b,1,0,False,,#d1c9c9
-11/6/2026 12:00:00 AM,11/6/2026 8:50:00 PM,11/6/2026 10:05:00 PM,C/D League 1st and 4th P,,8,1,0,False,,#6e8bf7
-11/6/2026 12:00:00 AM,11/6/2026 10:05:00 PM,11/6/2026 10:15:00 PM,Takedown - C/D League 1s,,b,1,0,False,,#d1c9c9
-11/6/2026 12:00:00 AM,11/6/2026 10:20:00 PM,11/6/2026 11:20:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
+11/6/2026 12:00:00 AM,11/6/2026 8:50:00 PM,11/6/2026 10:05:00 PM,Game,,g,1,0,False,Ringers vs Gang Green,#6e8bf7
+11/6/2026 12:00:00 AM,11/6/2026 10:15:00 PM,11/6/2026 11:30:00 PM,Game,,g,1,0,False,Bandits vs Hawks,#6e8bf7
+11/6/2026 12:00:00 AM,11/6/2026 11:45:00 PM,11/7/2026 12:45:00 AM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
 11/7/2026 12:00:00 AM,11/7/2026 5:00:00 AM,11/7/2026 5:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 11/7/2026 12:00:00 AM,11/7/2026 5:30:00 AM,11/7/2026 6:00:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
 11/7/2026 12:00:00 AM,11/7/2026 6:00:00 AM,11/7/2026 6:30:00 AM,Freestyle,,10,1,0,False,,#0ae8ea
@@ -361,6 +359,8 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 11/7/2026 12:00:00 AM,11/7/2026 9:00:00 PM,11/7/2026 9:10:00 PM,Takedown - Rice Universi,,b,1,0,False,,#d1c9c9
 11/7/2026 12:00:00 AM,11/7/2026 9:10:00 PM,11/7/2026 10:25:00 PM,2nd and 3rd C/D League P,,8,1,0,False,,#6e8bf7
 11/7/2026 12:00:00 AM,11/7/2026 10:25:00 PM,11/7/2026 10:35:00 PM,Takedown - 2nd and 3rd C,,b,1,0,False,,#d1c9c9
+11/7/2026 12:00:00 AM,11/7/2026 10:35:00 PM,11/7/2026 11:50:00 PM,C/D League 1st and 4th P,,8,1,0,False,,#6e8bf7
+11/7/2026 12:00:00 AM,11/7/2026 11:50:00 PM,11/8/2026 12:00:00 AM,Takedown - C/D League 1s,,b,1,0,False,,#d1c9c9
 11/8/2026 12:00:00 AM,11/8/2026 11:45:00 AM,11/8/2026 12:45:00 PM,For Sale,,999,1,0,False,$450.00 per hour - Click for info,#8c8888
 11/8/2026 12:00:00 AM,11/8/2026 12:30:00 PM,11/8/2026 2:30:00 PM,Room rental - Kristyn Re,,13,3,0,False,,#fb42d3
 11/8/2026 12:00:00 AM,11/8/2026 1:00:00 PM,11/8/2026 3:30:00 PM,Public Skating (ice cut ,,11,1,0,False,,#f0f509
