@@ -167,10 +167,13 @@ start_date,start,end,desc,description,event_type_id,resource_id,resource_area_id
 11/7/2026 12:00:00 AM,11/7/2026 12:15:00 PM,11/7/2026 12:45:00 PM,LEARN TO SKATE (ADULTS &,,b,1,1,True,,#d1c9c9
 11/7/2026 12:00:00 AM,11/7/2026 1:00:00 PM,11/7/2026 3:30:00 PM,Public Skating (ice cut ,,11,1,0,False,,#f0f509
 11/7/2026 12:00:00 AM,11/7/2026 3:40:00 PM,11/7/2026 4:40:00 PM,In-House Game,,8,1,0,False,,#6e8bf7
+11/7/2026 12:00:00 AM,11/7/2026 4:30:00 PM,11/7/2026 7:00:00 PM,Party room - InHouse gam,,13,3,0,False,,#fb42d3
 11/7/2026 12:00:00 AM,11/7/2026 4:40:00 PM,11/7/2026 4:50:00 PM,Takedown - In-House Game,,b,1,0,False,,#d1c9c9
 11/7/2026 12:00:00 AM,11/7/2026 4:50:00 PM,11/7/2026 5:50:00 PM,In-House Game,,8,1,0,False,,#6e8bf7
 11/7/2026 12:00:00 AM,11/7/2026 5:50:00 PM,11/7/2026 6:00:00 PM,Takedown - In-House Game,,b,1,0,False,,#d1c9c9
 11/7/2026 12:00:00 AM,11/7/2026 6:00:00 PM,11/7/2026 9:00:00 PM,Rice University Game,,8,1,0,False,,#6e8bf7
+11/7/2026 12:00:00 AM,11/7/2026 7:00:00 PM,11/7/2026 8:00:00 PM,Party room - DevGroup ho,,13,3,0,False,,#fb42d3
+11/7/2026 12:00:00 AM,11/7/2026 8:00:00 PM,11/7/2026 10:00:00 PM,Party room - D League 1s,,13,3,0,False,,#fb42d3
 11/7/2026 12:00:00 AM,11/7/2026 9:00:00 PM,11/7/2026 9:10:00 PM,Takedown - Rice Universi,,b,1,0,False,,#d1c9c9
 11/7/2026 12:00:00 AM,11/7/2026 9:10:00 PM,11/7/2026 10:25:00 PM,2nd and 3rd C/D League P,,8,1,0,False,,#6e8bf7
 11/7/2026 12:00:00 AM,11/7/2026 10:25:00 PM,11/7/2026 10:35:00 PM,Takedown - 2nd and 3rd C,,b,1,0,False,,#d1c9c9
